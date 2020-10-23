@@ -1,0 +1,25 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  align-items: center;
+  background-color: #2F2F2F;
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__image {
+    width: 48px;
+    fill: white;
+  }
+
+  &__link { 
+    padding: 0 25px 0;
+  }
+
+  &__title {
+    color: white;
+  }
+}

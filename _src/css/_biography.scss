@@ -1,0 +1,18 @@
+.biography {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+
+  @media screen and (max-width: $web-up){
+    height: auto;;
+  }
+
+  &__bio {
+    width: 85%;
+    text-align: center;
+  }
+
+
+}
