@@ -1,29 +1,25 @@
 .portfolio {
   display: flex;
   align-items: center;
-  height: 475px;
   flex-direction: column;
-  // background-color: gray;
-  // background-image: linear-gradient(white, black);
+  padding-bottom: 25px;
 
   @media screen and (max-width: $web-up) {
-    width: 100%;
     padding: 25px;
     height: auto;
   }
     
-
   &__wrap {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    
 
     @media screen and (max-width: $web-up) {
       flex-direction: column;
-      justify-content: unset;
-      align-items: center;
-      padding: 25px;
+      width: 85%;
+      border-top: 2px solid lightgray;
     }
   }
 
@@ -38,16 +34,19 @@
     overflow: hidden;
 
     @media screen and (max-width: $web-up) {
-
+      margin-bottom: 100px;
+      // margin: auto auto 100px;
+      width: 100%;
+      
     }
   }
 
   &__box:hover {
-    box-shadow: 3px 2px 3px 3px rgba(229, 226, 226, 0.2);
+    box-shadow: 3px 2px 3px 3px rgba(106, 104, 104, 0.2);
   }
 
-  &__box:hover .portfolio__link {
-    color: white;
+  &__box:hover .portfolio__tag {
+    color: #77773c;
   }
 
   &__box:hover .portfolio__image {
@@ -58,6 +57,10 @@
     text-decoration: none;
     color: black;
     transition: all .35s linear;
+
+    @media screen and (max-width: $web-up) {
+      // overflow: hidden;
+    }
   }
   
   &__image {
@@ -66,8 +69,13 @@
     height: 250px;
     width: 350px;
     transition: all .35s linear;
- 
-    
+
+    @media screen and (max-width: $web-up) {
+      // transform: scale(1.5);
+      height: unset;
+      width: unset;
+      overflow: hidden;
+    }
   }
 
   &__descriptive {
@@ -75,9 +83,32 @@
     width: 100%;
     padding: 0 15px;
     flex-direction: column;
+
+    @media screen and (max-width: $web-up) {
+      height: 450px;
+      margin-left: 35px;
+    }
+  }
+
+  &__tag,
+  &__desc {
+    color: black;
+  }
+
+  &__tag {
+    @media screen and (max-width: $web-up) {
+    font-size: 40px;
+    }
   }
 
   &__desc {
     line-height: 24px;
+    font-size: 14px;
+
+    @media screen and (max-width: $web-up) {
+      font-size: 34px;
+      line-height: 64px;
+      width: 90%;
+    }
   }
 } 

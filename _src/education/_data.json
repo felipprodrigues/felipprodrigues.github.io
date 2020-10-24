@@ -1,0 +1,14 @@
+{
+  "icon-1": {
+    "icon": "html"
+  },
+  "icon-2": {
+    "icon": "css"
+  },
+  "icon-3": {
+    "icon": "pug"
+  },
+  "icon-4": {
+    "icon": "sass"
+  }
+}

@@ -1,25 +1,39 @@
 .contact {
   display: flex;
   flex-direction: column;
-  height: 150px;
   align-items: center;
   background-color: #2F2F2F;
+  padding: 50px;
 
   &__wrap {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+
   }
 
-  &__image {
+  &__icon,
+  &__icon--resized {
     width: 48px;
     fill: white;
+    height: 48px;
+
+    @media screen and (max-width: $web-up){
+      width: 85px;
+      height: 85px;
+    }
   }
 
+
   &__link { 
-    padding: 0 25px 0;
+    margin: 35px 25px;
   }
 
   &__title {
     color: white;
+
+    @media screen and (max-width: $web-up) {
+      font-size: 58px;
+    }
   }
 }

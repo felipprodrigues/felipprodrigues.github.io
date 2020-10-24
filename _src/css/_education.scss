@@ -1,0 +1,63 @@
+.education {
+  display: flex;
+  width: 100%;
+  border-bottom-width: 50px;
+  padding: 50px;
+  background-color: #f5f5f5;
+
+  @media screen and (max-width: $web-up) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__box,
+  &__list {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: $web-up) {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    border-left: 1px solid lightgray;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (max-width: $web-up) {
+      border-top: 2px solid lightgray;
+      border-left: none;
+      flex-direction: row;
+      padding: 50px;
+      justify-content: space-around;
+    }
+  }
+
+  &__box {
+    text-align: center;
+    padding: 50px;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+
+    @media screen and (min-width: $web) {
+    margin: 0 15px;
+    }
+
+    @media screen and (max-width: $web-up) {
+      width: 85px;
+      height: 85px;
+    }
+  }
+
+
+
+
+  
+}
