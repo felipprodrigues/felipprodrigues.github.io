@@ -1,5 +1,4 @@
 .header {
-  // height: 300px;
   display: flex;
   background-color: black;
   color: white;
@@ -36,11 +35,6 @@
     max-width: 100%;
     padding: 50px;
     overflow: hidden;
-
-    
-    // @media screen and (max-width: $web-up){
-    //   display: none;
-    // }
   }
 
   &__image {
