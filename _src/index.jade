@@ -3,9 +3,8 @@
     .header__title
       h1.header__name Felipe Rodrigues
       span Freelance Web Developer 
-    .header__image
-      //- img.header__image(src="#", alt="#")
-      span IMAGEM
+    .header__frame
+      img.header__image(src="/assets/profile.png", alt="Oops!")
 
   .bio
     h2.container__title Hi there!
@@ -23,23 +22,26 @@
     != partial("education/_education")  
 
   #portfolio.portfolio
-    h2.container__title Portfolio
+    h2.container__title--port Portfolio
     .portfolio__wrap  
       .portfolio__box 
         a.portfolio__link(href="https://camelias-residencial.github.io/produtos-servicos/" target="_blank") 
-          img.portfolio__image(src="assets/camelias.png", alt="Ooops")
+          .portfolio__frame
+            img.portfolio__image(src="assets/camelias.png", alt="Ooops")
           .portfolio__descriptive
             h4.portfolio__tag Camélias Produtos e Serviços
             p.portfolio__desc Project designed aiming to ease and help locals and service providers from within a community
       .portfolio__box 
         a.portfolio__link(href="https://tainasilva.com.br/" target="_blank")
-          img.portfolio__image(src="assets/taina.png", alt="Ooops")
+          .portfolio__frame
+            img.portfolio__image(src="assets/taina.png", alt="Ooops")
           .portfolio__descriptive
             h4.portfolio__tag Tainá's Website
             p.portfolio__desc A project for an architect and researcher's new website
       .portfolio__box 
         a.portfolio__link(href="https://theater-theme.github.io/theater-theme/" target="_blank") 
-          img.portfolio__image(src="assets/theater.png", alt="Ooops")
+          .portfolio__frame
+            img.portfolio__image(src="assets/theater.png", alt="Ooops")
           .portfolio__descriptive
             h4.portfolio__tag Theater-themed Template
             p.portfolio__desc Study case of a theater-themed template laying it out afterwards to the open source community
@@ -53,6 +55,9 @@
       a.contact__link(href="https://github.com/felipprodrigues")
         svg.contact__icon 
           use(xlink:href="assets/defs.svg#icon-github")
+      a.contact__link(href="https://codepen.io/rodriguesfelipp")
+        svg.contact__icon 
+          use(xlink:href="assets/defs.svg#icon-codepen")
 
     
 

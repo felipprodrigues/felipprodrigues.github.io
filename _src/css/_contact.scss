@@ -14,14 +14,19 @@
 
   &__icon,
   &__icon--resized {
-    width: 48px;
+    width: 36px;
     fill: white;
-    height: 48px;
+    height: 36px;
+    transition: all .25s linear;
 
     @media screen and (max-width: $web-up){
       width: 85px;
       height: 85px;
     }
+  }
+
+  &__icon:hover {
+    fill: #568c06;;
   }
 
 

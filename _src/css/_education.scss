@@ -15,7 +15,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 
     @media screen and (max-width: $web-up) {
       width: 100%;
@@ -27,6 +27,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: $web-up) {
       border-top: 2px solid lightgray;
@@ -38,8 +39,11 @@
   }
 
   &__box {
-    text-align: center;
     padding: 50px;
+
+    @media screen and (max-width: $web-up) {
+      align-items: center;
+    }
   }
 
   &__icon {
