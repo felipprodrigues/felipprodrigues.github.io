@@ -22,7 +22,7 @@
   }
 
   &__list {
-    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -38,9 +38,10 @@
   }
 
   &__box {
-    align-items: center;
+    padding-left: 50px;
 
     @media screen and (max-width: $web-up) {
+      text-align: center;
       padding: 50px 0;
     }
   }
@@ -69,6 +70,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
   }
 
   &__tag {
@@ -88,6 +90,12 @@
   &__icon:hover ~ .education__tag {
     visibility: visible;
     width: 65%;
-    
+  }
+
+  &__frame {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    justify-content: center;
   }
 }

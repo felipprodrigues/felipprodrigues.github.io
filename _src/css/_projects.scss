@@ -43,11 +43,11 @@
     box-shadow: 1px 2px 10px 3px rgba(106, 104, 104, 0.47);
   }
 
-  &__box:hover .portfolio__tag {
+  &__box:hover .projects__tag {
     color: #77773c;
   }
 
-  &__box:hover .portfolio__image {
+  &__box:hover .projects__image {
     transform: scale(1.1)
   }
 
@@ -55,16 +55,13 @@
     text-decoration: none;
     color: black;
     transition: all .35s linear;
-
-    @media screen and (max-width: $web-up) {
-      // overflow: hidden;
-    }
   }
 
   &__frame {
     max-height: 202px;
     max-width: 350px;
     overflow: hidden;
+    padding: 10px;
 
     @media screen and (max-width: $web-up) {
       max-height: 100%;
@@ -75,11 +72,9 @@
   &__image {
     max-width: 100%;
     max-width: 100%;
-
     transition: all .35s linear;
 
     @media screen and (max-width: $web-up) {
-      // transform: scale(1.5);
       height: unset;
       width: unset;
       overflow: hidden;
