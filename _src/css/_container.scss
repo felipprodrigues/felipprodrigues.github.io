@@ -46,8 +46,8 @@
   &__text--center,
   &__text--padded {
     width: 85%;
-    line-height: 32px;
-    font-size: large;
+    line-height: 36px;
+    font-size: 20px;
 
     @media screen and (max-width: $web-up) {
       font-size: 36px;
