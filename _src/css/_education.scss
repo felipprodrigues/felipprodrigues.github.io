@@ -64,10 +64,6 @@
   &__icon:hover {
     cursor: pointer;
     fill: #568c06;
-
-    @media screen and (max-width: $web){
-      fill: none;
-   }
   }
 
   &__wrap {
@@ -88,15 +84,15 @@
     width: 0;
     text-align: center;
     transition: all .25s linear;
+
+    @media screen and (max-width: $web-up) {
+      visibility: hidden;
+    }
   }
 
   &__icon:hover ~ .education__tag {
     visibility: visible;
     width: 65%;
-    
-    @media screen and (min-width: $web) {
-      visibility: hidden;
-    }
   }
 
   &__frame {
