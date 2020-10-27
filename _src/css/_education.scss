@@ -15,7 +15,6 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    
 
     @media screen and (max-width: $web-up) {
       width: 100%;
@@ -39,19 +38,20 @@
   }
 
   &__box {
-    padding: 50px;
+    align-items: center;
 
     @media screen and (max-width: $web-up) {
-      align-items: center;
+      padding: 50px 0;
     }
   }
 
   &__icon {
     width: 70px;
     height: 70px;
+    transition: all .25s linear;
 
     @media screen and (min-width: $web) {
-    margin: 0 15px;
+      margin: 0 15px;
     }
 
     @media screen and (max-width: $web-up) {
@@ -60,8 +60,34 @@
     }
   }
 
+  &__icon:hover {
+    cursor: pointer;
+    fill: #568c06;
+  }
 
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
+  &__tag {
+    visibility: hidden;
+    position: relative;
+    margin-top: 25px;
+    border: 2px solid lightgray;
+    background-color: lightgray;
+    color: white;
+    border-radius: 5px;
+    width: 0;
+   
+    text-align: center;
+    transition: all .25s linear;
+  }
 
-  
+  &__icon:hover ~ .education__tag {
+    visibility: visible;
+    width: 65%;
+    
+  }
 }

@@ -1,18 +1,19 @@
 .container 
   #header.header  
+    .header__frame
+      img.header__image(src="/assets/profile.png", alt="Oops!")
     .header__title
       h1.header__name Felipe Rodrigues
       span Freelance Web Developer 
-    .header__frame
-      img.header__image(src="/assets/profile.png", alt="Oops!")
+
 
   .bio
     h2.container__title Hi there!
-    p.container__text   My name is Felipe Rodrigues and I have been studying and working with web development as a freelancer. My education has led me to coding which is a fundamental and relevant structure for negotiations and made to ease daily life overall. Due to a paper I personally wrote during my graduate studies on blockchain technology, I found great opportunity in employing coding to the virtualization of modern international, professional e personal concepts. 
+    p.container__text--padded  My name is Felipe Rodrigues and I have been studying and working with web development as a freelancer. My education has led me to coding which is a fundamental and relevant structure for negotiations and made to ease daily life overall. Due to a paper I personally wrote during my graduate studies on blockchain technology, I found great opportunity in employing coding to the virtualization of modern international, professional e personal concepts. 
       br
       br
       | All the projects I have worked on are open source. I invite you to check out further some of my work in the 
-      a.bio__hook(href="#portfolio") portfolio
+      a.bio__hook(href="#projects") projects
       | &nbsp; section or my coding on my 
       a.bio__hook(href="https://github.com/felipprodrigues") github
       | &nbsp; page.
@@ -21,30 +22,30 @@
   .education
     != partial("education/_education")  
 
-  #portfolio.portfolio
-    h2.container__title--port Portfolio
-    .portfolio__wrap  
-      .portfolio__box 
-        a.portfolio__link(href="https://camelias-residencial.github.io/produtos-servicos/" target="_blank") 
-          .portfolio__frame
-            img.portfolio__image(src="assets/camelias.png", alt="Ooops")
-          .portfolio__descriptive
-            h4.portfolio__tag Camélias Produtos e Serviços
-            p.portfolio__desc Project designed aiming to ease and help locals and service providers from within a community
-      .portfolio__box 
-        a.portfolio__link(href="https://tainasilva.com.br/" target="_blank")
-          .portfolio__frame
-            img.portfolio__image(src="assets/taina.png", alt="Ooops")
-          .portfolio__descriptive
-            h4.portfolio__tag Tainá's Website
-            p.portfolio__desc A project for an architect and researcher's new website
-      .portfolio__box 
-        a.portfolio__link(href="https://theater-theme.github.io/theater-theme/" target="_blank") 
-          .portfolio__frame
-            img.portfolio__image(src="assets/theater.png", alt="Ooops")
-          .portfolio__descriptive
-            h4.portfolio__tag Theater-themed Template
-            p.portfolio__desc Study case of a theater-themed template laying it out afterwards to the open source community
+  #projects.projects
+    h2.container__title--port Projects
+    .projects__wrap  
+      .projects__box 
+        a.projects__link(href="https://camelias-residencial.github.io/produtos-servicos/" target="_blank") 
+          .projects__frame
+            img.projects__image(src="assets/camelias.png", alt="Ooops")
+          .projects__descriptive
+            h4.projects__tag Camélias Produtos e Serviços
+            p.projects__desc Project designed aiming to ease and help locals and service providers from within a community
+      .projects__box 
+        a.projects__link(href="https://tainasilva.com.br/" target="_blank")
+          .projects__frame
+            img.projects__image(src="assets/taina.png", alt="Ooops")
+          .projects__descriptive
+            h4.projects__tag Tainá's Website
+            p.projects__desc A project for an architect and researcher's new website
+      .projects__box 
+        a.projects__link(href="https://theater-theme.github.io/theater-theme/" target="_blank") 
+          .projects__frame
+            img.projects__image(src="assets/theater.png", alt="Ooops")
+          .projects__descriptive
+            h4.projects__tag Theater-themed Template
+            p.projects__desc Study case of a theater-themed template laying it out afterwards to the open source community
 
   .contact
     h2.contact__title Get in Touch

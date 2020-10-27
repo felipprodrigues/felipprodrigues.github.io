@@ -27,7 +27,8 @@
   }
 
   &__text,
-  &__text--center {
+  &__text--center,
+  &__text--padded {
     width: 85%;
     line-height: 32px;
 
@@ -42,8 +43,20 @@
   }
 
   &__text--center {
-    @media screen and (max-width: $web-up){
     text-align: center;
+  }
+
+  &__text--padded {
+    @media screen and (min-width: $web){
+      padding-left: 14%;
+    }
+
+    @media screen and (min-width: $hd-up) {
+      padding-left: 13%
+    }
+
+    @media screen and (max-width: $web-up){
+      text-align: center;
     }
   }
 }
