@@ -62,8 +62,10 @@
   }
 
   &__icon:hover {
-    cursor: pointer;
-    fill: #568c06;
+    @media screen and (min-width: $web){
+      cursor: pointer;
+      fill: #568c06;
+    }
   }
 
   &__wrap {
