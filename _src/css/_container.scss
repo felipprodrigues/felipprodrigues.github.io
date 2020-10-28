@@ -8,7 +8,7 @@
   &__title--port,
   &__title--padded {
     @media screen and (max-width: $web-up) {
-      font-size: 84px;
+      font-size: 22px;
     }
   }
 
@@ -23,7 +23,6 @@
 
     @media screen and (max-width: $web-up) {
       width: unset;
-      
     }
   }
 
@@ -37,7 +36,7 @@
 
   &__subtitle {
     @media screen and (max-width: $web-up) {
-      font-size: 36px;
+      font-size: 16px;
       font-weight: bold;
     }
   }
@@ -46,12 +45,15 @@
   &__text--center,
   &__text--padded {
     width: 85%;
-    line-height: 36px;
-    font-size: 20px;
+    
+    @media screen and (min-width: web) {
+      line-height: 36px;
+      font-size: 20px;
+    }
 
     @media screen and (max-width: $web-up) {
-      font-size: 36px;
-      line-height: 64px;
+      font-size: 16px;
+      line-height: 30px;
     }
   }
 
@@ -76,7 +78,7 @@
     }
 
     @media screen and (max-width: $web-up){
-      text-align: center;
+      text-align: left;
     }
   }
 }

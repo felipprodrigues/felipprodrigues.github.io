@@ -20,13 +20,13 @@
     transition: all .25s linear;
 
     @media screen and (max-width: $web-up){
-      width: 85px;
-      height: 85px;
+      width: 30px;
+      height: 30px;
     }
   }
 
   &__icon:hover {
-    fill: #568c06;;
+    fill: #568c06;
   }
 
 
@@ -38,7 +38,7 @@
     color: white;
 
     @media screen and (max-width: $web-up) {
-      font-size: 58px;
+      font-size: 22px;
     }
   }
 }

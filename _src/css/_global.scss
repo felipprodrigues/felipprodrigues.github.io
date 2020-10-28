@@ -13,22 +13,19 @@ body {
 body {
   width: 100%;
   margin: 0;
-  top: 0;
 }
 
 h1,
 h2,
 h3,
 h4 { 
-  
+  line-height: 1.2;
   font-family: 'Ledger', serif;
 }
 
-p {
-  
-  font-family: 'Libre Baskerville', serif;
 
+p {
+  line-height: 1.8;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
 }
-// p {
-//   font-size: 48px;
-// }

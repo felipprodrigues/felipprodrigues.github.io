@@ -30,7 +30,7 @@
 
     @media screen and (max-width: $web-up){
       align-items: center;
-      font-size: 36px;
+      font-size: 22px;
     }
   }
   
@@ -58,11 +58,23 @@
     top: 150px;
 
     @media screen and (max-width: $web-up) {
-      min-width: 300px;
-      width: 300px;
-      height: 300px;      
+      min-width: 150px;
+      width: 150px;
+      height: 150px;      
       border: 5px solid #f5f5f5;
       position: unset;
+    }
+  }
+
+  &__name {
+    @media screen and (max-width: $web-up) {
+    font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    @media screen and (max-width: $web-up) {
+    font-size: 18px;
     }
   }
 }

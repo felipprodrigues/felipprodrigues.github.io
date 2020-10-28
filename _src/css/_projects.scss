@@ -5,20 +5,19 @@
   padding: 50px;
 
   @media screen and (max-width: $web-up) {
-    height: auto;
+    padding: 25px;
   }
     
   &__wrap {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     
 
     @media screen and (max-width: $web-up) {
       flex-direction: column;
       width: 85%;
-      border-top: 2px solid lightgray;
     }
   }
 
@@ -31,6 +30,7 @@
     width: 350px;
     transition: all .25s linear;
     overflow: hidden;
+    margin: 0 2%;
 
     @media screen and (max-width: $web-up) {
       margin-bottom: 100px;
@@ -47,9 +47,9 @@
     color: #77773c;
   }
 
-  &__box:hover .projects__image {
-    transform: scale(1.1)
-  }
+  // &__box:hover .projects__image {
+  //   transform: scale(1.1)
+  // }
 
   &__link {
     text-decoration: none;
@@ -71,12 +71,8 @@
   
   &__image {
     max-width: 100%;
-    max-width: 100%;
-    transition: all .35s linear;
 
     @media screen and (max-width: $web-up) {
-      height: unset;
-      width: unset;
       overflow: hidden;
     }
   }
@@ -84,12 +80,15 @@
   &__descriptive {
     display: flex;
     width: 100%;
-    padding: 0 15px;
+
     flex-direction: column;
 
+    @media screen and (min-width: $web) {
+      padding: 0 15px;
+    }
+
     @media screen and (max-width: $web-up) {
-      height: 450px;
-      margin-left: 35px;
+      padding: 0 15px;
     }
   }
 
@@ -100,17 +99,16 @@
 
   &__tag {
     @media screen and (max-width: $web-up) {
-    font-size: 40px;
+    font-size: 16px;
     }
   }
 
   &__desc {
-    line-height: 24px;
     font-size: 14px;
+    color: #555;
 
     @media screen and (max-width: $web-up) {
-      font-size: 34px;
-      line-height: 64px;
+      line-height: 26px;
       width: 90%;
     }
   }
