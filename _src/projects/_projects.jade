@@ -1,0 +1,10 @@
+h2.container__title--port Projects
+.projects__wrap  
+  each projects, slug in public.projects._data
+    .projects__box 
+      a.projects__link(href="https://theater-theme.github.io/" target="_blank") 
+        .projects__frame
+          img.projects__image(src="assets/projects-#{ projects.image }.png") 
+        .projects__descriptive
+          h4.projects__tag #{ projects.title }
+          p.projects__desc #{ projects.desc }

@@ -1,25 +1,10 @@
 .education__list
   .education__frame  
-    .education__wrap
-      svg.education__icon  
-        use(xlink:href="assets/defs.svg#icon-html")
-      span.education__tag Html
-    .education__wrap
-      svg.education__icon  
-        use(xlink:href="assets/defs.svg#icon-css")
-      span.education__tag CSS
-    .education__wrap
-      svg.education__icon  
-        use(xlink:href="assets/defs.svg#icon-pug")
-      span.education__tag Pug
-    .education__wrap
-      svg.education__icon  
-        use(xlink:href="assets/defs.svg#icon-sass")
-      span.education__tag Sass
-    .education__wrap 
-      svg.education__icon  
-        use(xlink:href="assets/defs.svg#icon-git")
-      span.education__tag Git
+    each icon, slug in public.education._data
+      .education__wrap
+        svg.education__icon  
+          use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
+        span.education__tag #{ icon.title }
 
 .education__box
   h2.container__title Education
