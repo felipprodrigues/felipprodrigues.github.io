@@ -48,8 +48,8 @@
 
   &__icon {
     @media screen and (min-width: $web) {
-      width: 70px;
-      height: 70px;  
+      width: 56px;
+      height: 56px;
       margin: 0 15px;
       cursor: pointer;
       transition: all .25s linear;
@@ -108,7 +108,6 @@
 
     @media screen and (max-width: $web-up) {
       width: 100%;
-      
     }
   }
 }

@@ -14,7 +14,6 @@
     width: 100%;
     justify-content: center;
     
-
     @media screen and (max-width: $web-up) {
       flex-direction: column;
       width: 85%;
@@ -35,7 +34,6 @@
     @media screen and (max-width: $web-up) {
       margin-bottom: 100px;
       width: 100%;
-      
     }
   }
 
@@ -46,10 +44,6 @@
   &__box:hover .projects__tag {
     color: #77773c;
   }
-
-  // &__box:hover .projects__image {
-  //   transform: scale(1.1)
-  // }
 
   &__link {
     text-decoration: none;
@@ -80,7 +74,6 @@
   &__descriptive {
     display: flex;
     width: 100%;
-
     flex-direction: column;
 
     @media screen and (min-width: $web) {

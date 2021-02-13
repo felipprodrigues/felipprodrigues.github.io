@@ -1,14 +1,22 @@
 {
   "icon-1": {
-    "icon": "html"
+    "icon": "html",
+    "title": "Html"
   },
   "icon-2": {
-    "icon": "css"
+    "icon": "css",
+    "title": "CSS"
   },
   "icon-3": {
-    "icon": "pug"
+    "icon": "pug",
+    "title": "Pug"
   },
   "icon-4": {
-    "icon": "sass"
+    "icon": "sass",
+    "title": "Sass"
+  },
+  "icon-5": {
+    "icon": "git",
+    "title": "Git"
   }
 }

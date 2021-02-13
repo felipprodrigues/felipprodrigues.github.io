@@ -1,0 +1,20 @@
+{
+  "proj-1": {
+    "sites": "https://camelias-residencial.github.io/produtos-servicos/",
+    "image": "1",
+    "title": "Camélias Produtos e Serviços",
+    "desc": "Project designed aiming to ease and help locals and service providers from within a community"
+  },
+  "proj-2": {
+    "sites": "https://tainasilva.com.br/",
+    "image": "2",
+    "title": "Tainá's Website",
+    "desc": "A project for an architect and researcher's new website"
+  },
+  "proj-3": {
+    "sites": "https://theater-theme.github.io/",
+    "image": "3",
+    "title": "Theater-themed Template",
+    "desc": "Study case of a theater-themed template laying it out afterwards to the open source community"
+  }
+}
