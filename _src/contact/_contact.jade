@@ -1,0 +1,7 @@
+
+h2.contact__title Get in Touch
+.contact__wrap  
+  each contact, slug in public.contact._data
+    a.contact__link(href="#{ contact.links }" target="_blank")
+      svg.contact__icon 
+        use(xlink:href="assets/defs.svg#icon-#{ contact.icon }")
