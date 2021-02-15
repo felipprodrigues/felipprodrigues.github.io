@@ -8,12 +8,15 @@
 
   .bio
     h2.container__title--padded Hi there!
-    p.container__text--padded  My name is Felipe Rodrigues and I have been studying and working with web development as a freelancer. My education has led me to coding which is a fundamental and relevant aspect of the current century made to ease daily life overall. Due to a paper I personally wrote during my graduate studies on blockchain technology, I found great opportunity in learning and expanding my knowledge with regards the key elements of web development.
+    p.container__text--padded I’m Felipe Rodrigues, a junior web developer who is eager to learn, code and deploy new projects.
       br
       br
-      | All the projects I have worked on are open source. I invite you to check out further some of my work in the 
+      | Not long ago I wrote a paper on blockchain technology during graduation and fell in love with its complexity which soon after drove me to employ my communication notions to achieve the clearest ideas in a front-end perspective.
+      br
+      br
+      | Given the nature of open source environment, I invite you to check out further some of my work in the 
       a.bio__hook(href="#projects") projects
-      | &nbsp; section or my coding on my 
+      | &nbsp;section, but if you really want to dive deep on how I coded them I strongly recommend visiting my 
       a.bio__hook(href="https://github.com/felipprodrigues") github
       | &nbsp; page.
 
@@ -24,14 +27,4 @@
     != partial("projects/_projects") 
 
   .contact
-    h2.contact__title Get in Touch
-    .contact__wrap  
-        a.contact__link(href="mailto:dev.rodriguesfelipp@gmail.com")  
-          svg.contact__icon
-            use(xlink:href="assets/defs.svg#icon-email")
-        a.contact__link(href="https://github.com/felipprodrigues" target="_blank")
-          svg.contact__icon 
-            use(xlink:href="assets/defs.svg#icon-github")
-        a.contact__link(href="https://codepen.io/rodriguesfelipp" target="_blank")
-          svg.contact__icon 
-            use(xlink:href="assets/defs.svg#icon-codepen")
+    != partial("contact/_contact")
