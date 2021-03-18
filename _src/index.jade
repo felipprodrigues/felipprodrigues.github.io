@@ -6,7 +6,7 @@
       h1.header__name Felipe Rodrigues
       span.header__subtitle Freelance Web Developer 
 
-  .bio
+  section.bio
     h2.container__title--padded Hi there!
     p.container__text--padded I’m Felipe Rodrigues, a junior front-end developer who is eager to learn, code and deploy new projects.
       br
@@ -20,11 +20,11 @@
       a.bio__hook(href="https://github.com/felipprodrigues") github
       | &nbsp; page.
 
-  .education
+  section.education
     != partial("education/_education")  
 
-  #projects.projects
+  section#projects.projects
     != partial("projects/_projects") 
 
-  .contact
+  section.contact
     != partial("contact/_contact")
