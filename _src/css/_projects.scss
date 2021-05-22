@@ -7,13 +7,13 @@
   @media screen and (max-width: $web-up) {
     padding: 25px;
   }
-    
+
   &__wrap {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    
+
     @media screen and (max-width: $web-up) {
       flex-direction: column;
       width: 85%;
@@ -24,10 +24,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: $wild-sand;
     padding-bottom: 15px;
     width: 350px;
-    transition: all .25s linear;
+    transition: all 0.25s linear;
     overflow: hidden;
     margin: 0 2%;
 
@@ -42,13 +42,13 @@
   }
 
   &__box:hover .projects__tag {
-    color: #77773c;
+    color: $yellow-metal;
   }
 
   &__link {
     text-decoration: none;
-    color: black;
-    transition: all .35s linear;
+    color: $black-solid;
+    transition: all 0.35s linear;
   }
 
   &__frame {
@@ -62,7 +62,7 @@
       max-width: 100%;
     }
   }
-  
+
   &__image {
     max-width: 100%;
 
@@ -87,22 +87,22 @@
 
   &__tag,
   &__desc {
-    color: black;
+    color: $black-solid;
   }
 
   &__tag {
     @media screen and (max-width: $web-up) {
-    font-size: 16px;
+      font-size: 16px;
     }
   }
 
   &__desc {
     font-size: 14px;
-    color: #555;
+    color: $emperor;
 
     @media screen and (max-width: $web-up) {
       line-height: 26px;
       width: 90%;
     }
   }
-} 
+}
