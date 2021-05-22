@@ -3,7 +3,7 @@
   width: 100%;
   border-bottom-width: 50px;
   padding: 50px;
-  background-color: #f5f5f5;
+  background-color: $wild-sand;
 
   @media screen and (max-width: $web-up) {
     flex-direction: column-reverse;
@@ -52,7 +52,7 @@
       height: 56px;
       margin: 0 15px;
       cursor: pointer;
-      transition: all .25s linear;
+      transition: all 0.25s linear;
     }
 
     @media screen and (max-width: $web-up) {
@@ -79,13 +79,13 @@
       visibility: hidden;
       position: relative;
       margin-top: 25px;
-      border: 2px solid lightgray;
-      background-color: lightgray;
-      color: white;
+      border: 2px solid $gray-alto;
+      background-color: $gray-alto;
+      color: $white-solid;
       border-radius: 5px;
       width: 0;
       text-align: center;
-      transition: all .25s linear;
+      transition: all 0.25s linear;
     }
 
     @media screen and (max-width: $web-up) {
