@@ -79,9 +79,9 @@
       visibility: hidden;
       position: relative;
       margin-top: 25px;
-      border: 2px solid $gray-alto;
-      background-color: $gray-alto;
-      color: $white-solid;
+      border: 2px solid var(--var-gray-alto);
+      background-color: var(--var-gray-alto);
+      color: var(--var-white);
       border-radius: 5px;
       width: 0;
       text-align: center;

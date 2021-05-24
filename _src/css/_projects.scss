@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 50px;
+  background-color: var(--var-white);
 
   @media screen and (max-width: $web-up) {
     padding: 25px;
@@ -42,12 +43,12 @@
   }
 
   &__box:hover .projects__tag {
-    color: $yellow-metal;
+    color: var(--var-yellow-metal);
   }
 
   &__link {
     text-decoration: none;
-    color: $black-solid;
+    color: var(--var-darkest);
     transition: all 0.35s linear;
   }
 
@@ -87,7 +88,7 @@
 
   &__tag,
   &__desc {
-    color: $black-solid;
+    color: var(--var-darkest);
   }
 
   &__tag {
@@ -98,7 +99,7 @@
 
   &__desc {
     font-size: 14px;
-    color: $emperor;
+    color: var(--var-emperor);
 
     @media screen and (max-width: $web-up) {
       line-height: 26px;

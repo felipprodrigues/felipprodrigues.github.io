@@ -1,5 +1,5 @@
 // // COLOR THEME FUNCTION
-const btn = document.querySelector('.btn-toggle');
+const btn = document.querySelector('.custom-checkbox');
 
 // Listen for a click on the button
 btn.addEventListener('click', function() {

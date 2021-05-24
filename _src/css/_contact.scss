@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $gray-mine-shaft;
+  background-color: var(--var-gray-mine-shaft);
   padding: 50px;
 
   &__wrap {
@@ -33,7 +33,7 @@
   }
 
   &__title {
-    color: $white-solid;
+    color: var(--var-white);
 
     @media screen and (max-width: $web-up) {
       font-size: 22px;

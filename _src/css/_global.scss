@@ -13,6 +13,33 @@ body {
 body {
   width: 100%;
   margin: 0;
+  transition: ease-in 1s;
+
+  // LIGHT COLORS
+  --var-white: #fff;
+  --var-wild-sand: #f5f5f5;
+  // DARKER COLORS
+  --var-darkest: #222222;
+  --var-gray-mine-shaft: #2f2f2f;
+  --var-emperor: #555;
+  --var-gray-alto: #d3d3d3;
+  // COLOR MIX
+  --var-green-christi: #6fb30b;
+  --var-green-limeade: #568c06;
+  --var-green-japanese-laurel: #008000;
+  --var-yellow-metal: #77773c;
+  // TEXT COLORS
+  --var-dark-text: #000;
+  --var-ligh-title: #fff;
+}
+
+body.dark-theme {
+  // DARKER COLORS
+  --var-darkest: white;
+  --var-gray-mine-shaft: #423d33;
+  --var-white: #424242;
+  --var-wild-sand: ;
+  --var-dark-text: #c4f6ba;
 }
 
 h1,
@@ -27,8 +54,4 @@ p {
   line-height: 1.8;
   font-family: "Libre Baskerville", serif;
   font-size: 16px;
-}
-
-button {
-  display: none;
 }
