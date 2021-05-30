@@ -23,6 +23,8 @@ body {
   --var-gray-mine-shaft: #2f2f2f;
   --var-emperor: #555;
   --var-gray-alto: #d3d3d3;
+  --var-box-shadow--up-left: #6a6868;
+  --var-box-shadow-down-right: #6a6868;
   // COLOR MIX
   --var-green-christi: #6fb30b;
   --var-green-limeade: #568c06;
@@ -35,11 +37,15 @@ body {
 
 body.dark-theme {
   // DARKER COLORS
-  --var-darkest: white;
-  --var-gray-mine-shaft: #423d33;
-  --var-white: #424242;
-  --var-wild-sand: ;
+  --var-darkest: #1f1f1f;
+  --var-gray-mine-shaft: #1f1f1f;
+  --var-white: #303234;
+  --var-wild-sand: #303234;
   --var-dark-text: #c4f6ba;
+
+  // BOX-SHADOW
+  --var-box-shadow-up-left: #494949;
+  --var-box-shadow-down-right: #000;
 }
 
 h1,
@@ -54,4 +60,8 @@ p {
   line-height: 1.8;
   font-family: "Libre Baskerville", serif;
   font-size: 16px;
+}
+
+.projects__box:hover.dark-theme {
+  box-shadow: -9px -9px 16px #494949, 9px 9px 16px #000;
 }
