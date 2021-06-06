@@ -1,19 +1,24 @@
 .resume
   .vs
-    .vs__navbar.navbar
+    .vs__tab.tab
+      .tab.tab__files
+        //- svg
+        //-   use(xlink:href="assets/defs.svg#icon-jade")
+        span _resume.jade
+        //- svg
+        //-   use(xlink:href="assets/defs.svg#icon-jade")
+        
+        
+      .tab__search
+      .tab__files
+      .tab__files
+      
+    aside.vs__navbar.navbar
       ul.navbar
         li.navbar__elements
-          svg  
-            use(xlink:href="assets/defs.svg#icon-files")
-          svg  
-            use(xlink:href="assets/defs.svg#icon-search")
-          svg  
-            use(xlink:href="assets/defs.svg#icon-source-control")
-          svg  
-            use(xlink:href="assets/defs.svg#icon-debugger")
-          svg  
-            use(xlink:href="assets/defs.svg#icon-extension-blocks")
-    .vs__files.files 
-      ul.files   
-        
-        
+          for icon, slug in public.resume._data
+            a.button
+              svg.vsc__sidebar  
+                use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
+
+

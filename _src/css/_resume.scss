@@ -31,7 +31,7 @@
 
   .vs {
     width: 85%;
-    background: #1e1e1e;
+    background: $cod-gray;
     min-height: 550px;
     position: relative;
     border-radius: 10px;
@@ -42,6 +42,8 @@
       background: #333333;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
+      position: absolute;
+      top: 0;
 
       .navbar {
         display: flex;
@@ -63,11 +65,29 @@
 
           & svg {
             max-width: 25px;
-            height: 25px;
-            margin: 15px 0;
+            max-height: 25px;
             fill: #7a7a7a;
           }
         }
+      }
+    }
+
+    &__tab {
+      width: calc(100% - 50px);
+      position: relative;
+      background-color: $shark;
+      left: 50px;
+      top: 25px;
+      height: 37px;
+
+      .tab {
+        display: flex;
+        justify-content: space-around;
+        color: $gold-sand;
+        background-color: $cod-gray;
+        max-width: 100px;
+        height: inherit;
+        align-items: center;
       }
     }
   }
