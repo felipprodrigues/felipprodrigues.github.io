@@ -1,11 +1,19 @@
 .container 
   #header.header 
-    button.btn-toggle 
+    label(for="checkbox").switch
+      input(type="checkbox")#switch__checkbox.switch__checkbox 
+      span.switch__checkmark.checkmark
+        svg.checkmark.checkmark__svg
+          use(xlink:href="assets/defs.svg#icon-moon")
+        svg.checkmark.checkmark__svg 
+          use(xlink:href="assets/defs.svg#icon-sun")
+        .switch__overlay
+
     .header__frame
       img.header__image(src="/assets/profile.png", alt="Oops!")
     .header__title
       h1.header__name Felipe Rodrigues
-      span.header__subtitle Freelance Web Developer 
+      span.header__subtitle Junior Web Developer 
 
   section.bio
     h2.container__title--padded Hi there!
@@ -23,6 +31,9 @@
 
   section.education
     != partial("education/_education")  
+
+  section.resume
+    != partial("resume/_resume")  
 
   section#projects.projects
     != partial("projects/_projects") 

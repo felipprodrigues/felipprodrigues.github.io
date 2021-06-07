@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 50px;
+  background-color: var(--var-white);
 
   @media screen and (max-width: $web-up) {
     height: auto;
@@ -14,12 +15,12 @@
   }
 
   &__hook {
-    color: $green-christi;
+    color: var(--var-green-christi);
     transition: all 0.25s linear;
   }
 
   &__hook:hover {
     text-decoration: none;
-    color: $green-limeade;
+    color: var(--var-green-limeade);
   }
 }

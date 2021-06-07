@@ -1,0 +1,17 @@
+{
+  "icon-1": {
+    "icon": "files"
+  },
+  "icon-2": {
+    "icon": "search"
+  },
+  "icon-3": {
+    "icon": "source-control"
+  },
+  "icon-4": {
+    "icon": "debugger"
+  },
+  "icon-5": {
+    "icon": "extension-blocks"
+  }
+}

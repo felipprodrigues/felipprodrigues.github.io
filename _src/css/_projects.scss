@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 50px;
+  background-color: var(--var-white);
 
   @media screen and (max-width: $web-up) {
     padding: 25px;
@@ -24,12 +25,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $wild-sand;
+    background-color: var(--var-wild-sand);
     padding-bottom: 15px;
     width: 350px;
     transition: all 0.25s linear;
     overflow: hidden;
     margin: 0 2%;
+    box-shadow: -9px -9px 16px 0px var(--var-box-shadow-up-left),
+      9px 9px 16px 0px var(--var-box-shadow-down-right);
 
     @media screen and (max-width: $web-up) {
       margin-bottom: 100px;
@@ -40,14 +43,21 @@
   &__box:hover {
     box-shadow: 1px 2px 10px 3px rgba(106, 104, 104, 0.47);
   }
+  .dark-theme.projects__box:hover {
+    box-shadow: none;
+  }
 
   &__box:hover .projects__tag {
-    color: $yellow-metal;
+    color: var(--var-hover-card);
+  }
+
+  &__box:hover .projects__desc {
+    font-size: 13.7px;
   }
 
   &__link {
     text-decoration: none;
-    color: $black-solid;
+    color: var(--var-darkest);
     transition: all 0.35s linear;
   }
 
@@ -85,9 +95,7 @@
     }
   }
 
-  &__tag,
-  &__desc {
-    color: $black-solid;
+  &__tag {
   }
 
   &__tag {
@@ -98,7 +106,8 @@
 
   &__desc {
     font-size: 14px;
-    color: $emperor;
+    color: var(--var-desc-text);
+    transition: all 0.25s linear;
 
     @media screen and (max-width: $web-up) {
       line-height: 26px;
