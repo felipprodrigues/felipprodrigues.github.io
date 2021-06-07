@@ -1,5 +1,5 @@
 .resume {
-  display: none;
+  display: flex;
   justify-content: center;
   padding: 50px;
   width: inherit;
@@ -85,9 +85,14 @@
         justify-content: space-around;
         color: $gold-sand;
         background-color: $cod-gray;
-        max-width: 100px;
+        max-width: 120px;
         height: inherit;
         align-items: center;
+
+        &__icon {
+          max-width: 20px;
+          fill: $emperor;
+        }
       }
     }
   }
