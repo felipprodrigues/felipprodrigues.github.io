@@ -48,7 +48,11 @@
   }
 
   &__box:hover .projects__tag {
-    color: var(--var-yellow-metal);
+    color: var(--var-hover-card);
+  }
+
+  &__box:hover .projects__desc {
+    font-size: 13.7px;
   }
 
   &__link {
@@ -91,9 +95,7 @@
     }
   }
 
-  &__tag,
-  &__desc {
-    color: var(--var-darkest);
+  &__tag {
   }
 
   &__tag {
@@ -104,7 +106,8 @@
 
   &__desc {
     font-size: 14px;
-    color: var(--var-emperor);
+    color: var(--var-desc-text);
+    transition: all 0.25s linear;
 
     @media screen and (max-width: $web-up) {
       line-height: 26px;

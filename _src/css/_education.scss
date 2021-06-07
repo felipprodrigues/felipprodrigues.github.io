@@ -1,9 +1,13 @@
+.education::before.darktheme {
+  border-top: 1px solid white;
+}
+
 .education {
   display: flex;
   width: 100%;
   border-bottom-width: 50px;
   padding: 50px;
-  background-color: $wild-sand;
+  background-color: var(--var-education);
 
   @media screen and (max-width: $web-up) {
     flex-direction: column-reverse;
@@ -63,7 +67,7 @@
 
   &__icon:hover {
     @media screen and (min-width: $web) {
-      fill: #568c06;
+      fill: var(--var-icon-hover);
     }
   }
 
