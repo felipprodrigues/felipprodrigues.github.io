@@ -73,6 +73,8 @@
   }
 
   &__subtitle {
+    color: var(--var-head-subtitle);
+
     @media screen and (max-width: $web-up) {
       font-size: 18px;
     }
