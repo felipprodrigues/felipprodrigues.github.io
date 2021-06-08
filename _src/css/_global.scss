@@ -33,6 +33,7 @@ body {
   --var-yellow-metal: #77773c;
   // TEXT COLORS
   --var-name: #fff;
+  --var-head-subtitle: #fff;
   --var-titles: #000;
   --var-dark-text: #000;
   --var-desc-text: #555;
@@ -42,8 +43,10 @@ body {
   --var-pic-border: #f5f5f5;
   // HOVER
   --var-icon-hover: #568c06;
-  // SASS SVG
+  // VS SASS SVG
   --var-light: #f5f5f5;
+  // EDUCATION SVG
+  --var-xray: #000;
 }
 
 body.dark-theme {
@@ -56,10 +59,11 @@ body.dark-theme {
 
   //DARKMODE TEXT
   --var-name: #f5deb3;
+  --var-head-subtitle: #f5deb3d6;
   --var-dark-text: #d3d3d3;
   --var-desc-text: #d3d3d3;
   --var-highlight-text: #c4f6ba;
-  --var-hover-card: #3d7d5cb0;
+  --var-hover-card: #f5deb3;
   --var-titles: #fff7f7;
   --var-contact-title: #fff7f7;
 
@@ -73,7 +77,10 @@ body.dark-theme {
   // PICTURE BORDER
   --var-pic-border: #555;
 
+  // SASS SVG
   --var-light: #303234;
+  // EDUCATION SVG
+  --var-xray: #959CA6;
 }
 
 h1,
