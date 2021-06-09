@@ -13,19 +13,18 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 30px;
-    background: $gray-mine-shaft;
+    background: $emperor;
   }
 
   &__checkmark {
     width: 40px;
     height: 40px;
-    background-color: black;
 
     .checkmark {
       &__svg {
         max-width: 25px;
         max-height: 25px;
-        fill: yellow;
+        fill: $blue-malibu;
       }
     }
   }
@@ -48,15 +47,16 @@
     position: absolute;
     height: 30px;
     width: 30px;
-    border-radius: 50%;
-    background-color: $yellow-metal;
+    border-radius: 40%;
     left: 3px;
     transition: all 0.25s linear;
     z-index: 998;
+    background: $silver-sand;
+    box-shadow: inset 0 8px 32px 0 $jacksons-purple;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   input:checked + .switch__checkmark .switch__overlay {
     transform: translateX(38px);
-    background-color: $wild-sand;
   }
 }
