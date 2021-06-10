@@ -1,5 +1,5 @@
 .resume {
-  display: none;
+  display: flex;
   justify-content: center;
   padding: 50px;
   width: inherit;
@@ -72,28 +72,42 @@
       }
     }
 
-    &__tab {
+    &__tab,
+    &__content {
       width: calc(100% - 50px);
-      position: relative;
-      background-color: $shark;
+      position: relative; 
       left: 50px;
+      display: flex;
+    }
+
+    &__tab {
+      background-color: $shark;
       top: 25px;
       height: 37px;
-
+      
       .tab {
         display: flex;
         justify-content: space-around;
         color: $gold-sand;
         background-color: $cod-gray;
-        max-width: 120px;
+        width: 150px;
         height: inherit;
         align-items: center;
+
+        &__files:not(:first-of-type) {
+          background-color: #252526;
+        }
 
         &__icon {
           max-width: 20px;
           fill: $emperor;
+          max-height: 20px;
         }
       }
+    }
+
+    &__content {
+      top: 25px;
     }
   }
 }
