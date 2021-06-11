@@ -108,6 +108,79 @@
 
     &__content {
       top: 25px;
+
+      .content{
+
+        &__lines {
+          width: 75px;
+          flex-direction: column;
+          display: flex;
+        }
+      
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__box {
+          display: inherit;
+          flex-direction: row;
+
+            .content__position {
+              color: #f5deb3 !important;
+            }
+            .content__subtitle {
+              color: #D88E73 !important;
+            }
+
+          svg {
+            max-width: 100px;
+          }
+
+          &__title {
+            display: inherit;
+            flex-direction: column;
+
+
+
+          }
+        }
+
+        &__qualifiers {
+          font-family: Monaco;
+          
+          span {
+            padding-left: 40px;
+            color: $green-limeade;
+          }
+
+          li {
+          color: #D4D4D4;
+          list-style-type: none;
+          }
+        }
+        &__qualifiers--blue {
+            color: #87DDFF !important;
+          }
+
+
+      }
+
     }
   }
+}
+
+// TO DELETE
+tr {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  align-items: center;
+}
+
+table {
+  color: white;
+  border: 2px solid white ;
+  min-height: 100%;
 }

@@ -1,17 +1,25 @@
 {
   "icon-1": {
-    "icon": "files"
+    "icon": "files",
+    "keys": "Collaborate with the lead team designer to implement new features in the design system"
   },
   "icon-2": {
-    "icon": "search"
+    "icon": "search",
+    "keys": "Streamline UI documentation in isolation for the mobile application using React for the storybook "
   },
   "icon-3": {
-    "icon": "source-control"
+    "icon": "source-control",
+    "keys": "Document and update styles and components "
   },
   "icon-4": {
-    "icon": "debugger"
+    "icon": "debugger",
+    "keys": "Implement newly designed components "
   },
   "icon-5": {
-    "icon": "extension-blocks"
+    "icon": "extension-blocks",
+    "keys": "Refactoring based on the Atomic Design Principle and BEM organizing structure"
+  },
+  "icon-6": {
+    "keys": "Deployment on GitHub"
   }
 }

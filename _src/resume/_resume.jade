@@ -9,13 +9,43 @@
         span _education.jade
         svg.tab__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    .vs__content 
+    .vs__content.content
+      table 
+          td 1
+          td 2
+          td 3
+          td 4
+          td 1
+          td 2
+          td 3
+          td 4
+          td 1
+          td 2
+          td 3
+          td 4
+          td 1
+          td 2
+          td 3
+          td 4
+          td 4
+      .content__info
+        .content__box
+          svg
+            use(xlink:href="assets/defs.svg#icon-eventene")
+          .content__title
+            h1.content__position // Front End Developer Intern 
+            h2.content__subtitle // Eventene 
+        .content__qualifiers
+          span // Key Qualifications and Responsibilities
+          ul 
+            each icon, slug in public.resume._data
+              li.content__qualifiers--blue li
+              li #{ icon.keys }
+              
 
-        
-        
-      .tab__search
-      .tab__files
-      .tab__files
+
+
+
       
     aside.vs__navbar.navbar
       ul.navbar
