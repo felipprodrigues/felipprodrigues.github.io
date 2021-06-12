@@ -39,8 +39,11 @@
           span // Key Qualifications and Responsibilities
           ul 
             each icon, slug in public.resume._data
-              li.content__qualifiers--blue li
-              li #{ icon.keys }
+              li.content__qualifiers--blue
+                | li 
+                span.texto #{ icon.keys }
+
+              
               
 
 
