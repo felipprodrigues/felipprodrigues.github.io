@@ -73,11 +73,6 @@
     <symbol id="icon-close" viewBox="0 0 24 24">
       <desc>Close Icon</desc>
       <path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" />
-    </symbol> 
-    <symbol id="icon-eventene" viewBox="0 0 24 24">
-      <desc>Close Icon</desc>
-      <svg width="220" height="193" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="translate(0 .004)" fill="url(#paint0_linear)"/><use xlink:href="#path1_fill" transform="translate(67.565)" fill="url(#paint1_linear)"/><defs><linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-314 290 -226.934 -245.715 427.467 25.853)"><stop offset="0" stop-color="#08AEEA"/><stop offset="1" stop-color="#1FDFB2"/></linearGradient><linearGradient id="paint1_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-215 186 -146.328 -169.143 217.099 84.571)"><stop offset="0" stop-color="#08AEEA"/><stop offset="1" stop-color="#1FDFB2"/></linearGradient><path id="path0_fill" fill-rule="evenodd" d="M126.501 142.452H27.43l5.073-16.35h86.063L89.791 66.863H50.897l5.086-16.35h25.873L57.323 0 44.644 40.843l-.017-.013-34.238 110.26.018.013L0 184.652c.867 3.511 3.096 6.48 6.114 8.344h144.911l-24.524-50.54"/><path id="path1_fill" fill-rule="evenodd" d="M148.259.004H0l24.109 49.647-.044.035.412.832 53.134 109.436.044-.035 16.043 33.055 1.821-5.873 7.133-22.938 6.738-21.707H83.478l-7.948-16.35h38.938l18.385-59.238h-86.08l-7.935-16.35h99.101l13.876-44.675c-.694-2.237-1.9-4.248-3.547-5.843"/></defs></svg> 
-    </symbol>
-    
+    </symbol>     
   </defs>
 </svg>

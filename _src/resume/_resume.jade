@@ -9,25 +9,15 @@
         span _education.jade
         svg.tab__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    .vs__content.content
-      table 
-          td 1
-          td 2
-          td 3
-          td 4
-          td 1
-          td 2
-          td 3
-          td 4
-          td 1
-          td 2
-          td 3
-          td 4
-          td 1
-          td 2
-          td 3
-          td 4
-          td 4
+    aside.vs__navbar.navbar
+      ul.navbar
+        li.navbar__elements
+          for icon, slug in public.resume._data
+            a.button
+              svg.vsc__sidebar  
+                use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
+    .vs__content
+      //- INCLUDE LINE NUMBER
       .content__info
         .content__box
           svg
@@ -41,21 +31,23 @@
             each icon, slug in public.resume._data
               li.content__qualifiers--blue
                 | li 
-                span.texto #{ icon.keys }
+                span.texto #{ icon.mainKeys }
+      .content__info
+        .content__box
+          svg
+            use(xlink:href="assets/defs.svg#icon-eventene")
+          .content__title
+            h1.content__position // Freelance  
+            h2.content__subtitle // Camélias Produtos e Serviços 
+        .content__qualifiers
+          span.content__briefing // Supervised implementation of a project which aims to help locals and service providers from within a community to commercialize their businesses and crafts. PUG, SCSS, JS 
+          span.is-commented-out // Key Qualifications and Responsibilities
+          ul 
+            each icon, slug in public.resume._data
+              li.content__qualifiers--blue
+                | li 
+                span.texto #{ icon.secondaryKeys }
 
-              
-              
 
-
-
-
-      
-    aside.vs__navbar.navbar
-      ul.navbar
-        li.navbar__elements
-          for icon, slug in public.resume._data
-            a.button
-              svg.vsc__sidebar  
-                use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
 
 

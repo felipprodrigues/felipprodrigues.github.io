@@ -1,5 +1,5 @@
 .resume {
-  display: flex;
+  display: none;
   justify-content: center;
   padding: 50px;
   width: inherit;
@@ -35,6 +35,7 @@
     min-height: 550px;
     position: relative;
     border-radius: 10px;
+    overflow: hidden;
 
     &__navbar {
       width: 50px;
@@ -80,6 +81,10 @@
       display: flex;
     }
 
+    &__content {
+      flex-direction: column;
+    }
+
     &__tab {
       background-color: $shark;
       top: 25px;
@@ -110,6 +115,7 @@
       top: 25px;
 
       .content{
+        flex-direction: column;
 
         &__lines {
           width: 75px;
@@ -167,18 +173,4 @@
 
     }
   }
-}
-
-// TO DELETE
-tr {
-  display: flex;
-  flex-direction: column;
-  width: 50px;
-  align-items: center;
-}
-
-table {
-  color: white;
-  border: 2px solid white ;
-  min-height: 100%;
 }

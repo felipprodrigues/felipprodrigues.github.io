@@ -1,25 +1,31 @@
 {
   "icon-1": {
     "icon": "files",
-    "keys": "Collaborate with the lead team designer to implement new features in the design system"
+    "mainKeys": "Collaborate with the lead team designer to implement new features in the design system",
+    "secondaryKeys": "Collaborate with the lead team designer to implement new features in the design system"
   },
   "icon-2": {
     "icon": "search",
-    "keys": "Streamline UI documentation in isolation for the mobile application using React for the storybook "
+    "mainKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook ",
+    "secondaryKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook "
   },
   "icon-3": {
     "icon": "source-control",
-    "keys": "Document and update styles and components "
+    "mainKeys": "Document and update styles and components ",
+    "secondaryKeys": "Document and update styles and components "
   },
   "icon-4": {
     "icon": "debugger",
-    "keys": "Implement newly designed components "
+    "mainKeys": "Implement newly designed components ",
+    "secondaryKeys": "Implement newly designed components "
   },
   "icon-5": {
     "icon": "extension-blocks",
-    "keys": "Refactoring based on the Atomic Design Principle and BEM organizing structure"
+    "mainKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure",
+    "secondaryKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure"
   },
   "icon-6": {
-    "keys": "Deployment on GitHub"
+    "mainKeys": "Deployment on GitHub",
+    "secondaryKeys": "Deployment on GitHub"
   }
 }
