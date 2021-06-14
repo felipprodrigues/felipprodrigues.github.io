@@ -43,9 +43,6 @@
   &__box:hover {
     box-shadow: 1px 2px 10px 3px rgba(106, 104, 104, 0.47);
   }
-  .dark-theme.projects__box:hover {
-    box-shadow: none;
-  }
 
   &__box:hover .projects__tag {
     color: var(--var-hover-card);
@@ -93,9 +90,6 @@
     @media screen and (max-width: $web-up) {
       padding: 0 15px;
     }
-  }
-
-  &__tag {
   }
 
   &__tag {

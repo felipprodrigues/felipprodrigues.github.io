@@ -1,52 +1,34 @@
-.resume
-  .vs
-    .vs__tab.tab
-      .tab.tab__files
-        span _resume.jade
-        svg.tab__icon
+.resume__container
+  aside.aside
+    ul.aside__list
+      li.aside__elements
+        for icon, slug in public.resume._data
+          a.button
+            svg.aside__icons  
+              use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
+
+  .breadcrumbs
+    .breadcrumbs__tabs.is-selected      
+        span.breadcrumbs__item _resume.jade
+        svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-      .tab.tab__files
-        span _education.jade
-        svg.tab__icon
+    .breadcrumbs__tabs.is-unselected
+        span.breadcrumbs__item _education.jade
+        svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    aside.vs__navbar.navbar
-      ul.navbar
-        li.navbar__elements
-          for icon, slug in public.resume._data
-            a.button
-              svg.vsc__sidebar  
-                use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
-    .vs__content
-      //- INCLUDE LINE NUMBER
-      .content__info
-        .content__box
-          svg
-            use(xlink:href="assets/defs.svg#icon-eventene")
-          .content__title
-            h1.content__position // Front End Developer Intern 
-            h2.content__subtitle // Eventene 
-        .content__qualifiers
-          span // Key Qualifications and Responsibilities
-          ul 
-            each icon, slug in public.resume._data
-              li.content__qualifiers--blue
-                | li 
-                span.texto #{ icon.mainKeys }
-      .content__info
-        .content__box
-          svg
-            use(xlink:href="assets/defs.svg#icon-eventene")
-          .content__title
-            h1.content__position // Freelance  
-            h2.content__subtitle // Camélias Produtos e Serviços 
-        .content__qualifiers
-          span.content__briefing // Supervised implementation of a project which aims to help locals and service providers from within a community to commercialize their businesses and crafts. PUG, SCSS, JS 
-          span.is-commented-out // Key Qualifications and Responsibilities
-          ul 
-            each icon, slug in public.resume._data
-              li.content__qualifiers--blue
-                | li 
-                span.texto #{ icon.secondaryKeys }
+
+  .work-space
+    .work-space__holder
+      .work-space__header
+        h1.work-space__title // Front End Developer Intern 
+        h2.work-space__subtitle // Eventene 
+      .work-space__qualifiers
+        span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
+        ul.work-space__list 
+          each keys, slug in public.resume._data
+            li.work-space__items--blue
+              | li 
+              span.work-space__desc #{ keys.mainKeys }
 
 
 

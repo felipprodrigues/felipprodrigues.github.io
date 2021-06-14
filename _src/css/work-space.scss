@@ -1,0 +1,47 @@
+.work-space {
+  flex-direction: column;
+  top: 25px;
+
+  &__holder {
+    margin-left: 50px;
+  }
+
+  &__header {
+    display: inherit;
+    flex-direction: column;
+  }
+
+  &__title,
+  &__subtitle,
+  &__list,
+  &__comment {
+    font-family: Monaco;
+  }
+
+  &__title {
+    color: #f5deb3 !important;
+  }
+
+  &__subtitle {
+    color: #D88E73 !important;
+  }
+
+  &__qualifiers {
+    padding-left: 20px;
+    margin-top: 2rem;
+  }
+
+  &__list {
+    padding: 20px;
+    margin: 0;
+  }
+
+  &__items--blue {
+    color: #87DDFF !important;
+    list-style-type: none;
+  }
+
+  &__desc {
+    color: #D4D4D4;
+  }
+}
