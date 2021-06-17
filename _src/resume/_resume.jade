@@ -1,8 +1,10 @@
+- var icons  = [ 'nome dos icons' ] //- variavel
+
 .resume__container
   aside.aside
     ul.aside__list
       li.aside__elements
-        for icon, slug in public.resume._data
+        for icon in icons
           a.button
             svg.aside__icons  
               use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
