@@ -1,31 +1,23 @@
 {
   "keys-1": {
-    "icon": "files",
-    "mainKeys": "Collaborate with the lead team designer to implement new features in the design system",
-    "secondaryKeys": "Collaborate with the lead team designer to implement new features in the design system"
+    "mainTitle":"// Front End Developer Intern ",
+    "mainSubtitle":"// Eventene ",
+    "commentedOut": "// Key Qualifications and Responsibilities",
+    "mainKeys": "Collaborate with the lead team designer to implement new features in the design system"
   },
   "keys-2": {
-    "icon": "search",
-    "mainKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook ",
-    "secondaryKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook "
+    "mainKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook "
   },
   "keys-3": {
-    "icon": "source-control",
-    "mainKeys": "Document and update styles and components ",
-    "secondaryKeys": "Document and update styles and components "
+    "mainKeys": "Document and update styles and components "
   },
   "keys-4": {
-    "icon": "debugger",
-    "mainKeys": "Implement newly designed components ",
-    "secondaryKeys": "Implement newly designed components "
+    "mainKeys": "Implement newly designed components "
   },
   "keys-5": {
-    "icon": "extension-blocks",
-    "mainKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure",
-    "secondaryKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure"
+    "mainKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure"
   },
   "keys-6": {
-    "mainKeys": "Deployment on GitHub",
-    "secondaryKeys": "Deployment on GitHub"
+    "mainKeys": "Deployment on GitHub"
   }
 }

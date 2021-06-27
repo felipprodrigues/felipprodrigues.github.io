@@ -1,4 +1,4 @@
-- var icons  = [ 'nome dos icons' ] //- variavel
+- var icons  = [ 'files', 'search', 'source-control', 'debugger', 'extension-blocks' ] //- variavel
 
 .resume__container
   aside.aside
@@ -8,22 +8,31 @@
           a.button
             svg.aside__icons  
               use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
+              //- REVIEW INTERPOLATION
 
   .breadcrumbs
     .breadcrumbs__tabs.is-selected      
-        span.breadcrumbs__item _resume.jade
+        span.breadcrumbs__item _eventene.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
     .breadcrumbs__tabs.is-unselected
-        span.breadcrumbs__item _education.jade
+        span.breadcrumbs__item _camelias-produtos-e-serviços.jade
+        svg.breadcrumbs__icon
+          use(xlink:href="assets/defs.svg#icon-close")
+    .breadcrumbs__tabs.is-unselected
+        span.breadcrumbs__item _tainas-website.jade
+        svg.breadcrumbs__icon
+          use(xlink:href="assets/defs.svg#icon-close")
+    .breadcrumbs__tabs.is-unselected
+        span.breadcrumbs__item _theater-themed-template.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
 
   .work-space
     .work-space__holder
       .work-space__header
-        h1.work-space__title // Front End Developer Intern 
-        h2.work-space__subtitle // Eventene 
+        h1.work-space__title // Front End Developer Intern
+        h2.work-space__subtitle // Eventene
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
         ul.work-space__list 
@@ -31,7 +40,4 @@
             li.work-space__items--blue
               | li 
               span.work-space__desc #{ keys.mainKeys }
-
-
-
 

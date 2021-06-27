@@ -7,7 +7,7 @@
   &__tabs {
     display: flex;
     justify-content: space-around;
-    min-width: 150px;
+    padding: 0 25px;
     align-items: center;
     cursor: pointer;
   }
@@ -20,5 +20,6 @@
     max-width: 20px;
     fill: $emperor;
     max-height: 20px;
+    margin-left: 15px;
   }
 }
