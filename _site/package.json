@@ -1,0 +1,24 @@
+{
+  "name": "felipe",
+  "version": "0.0.1",
+  "description": "felipe's website",
+  "author": "Felipe Rodrigues <dev.rodriguesfelipp@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "harp server _src & browser-sync start --no-open --proxy 'localhost:9000' --files '**/*.jade, **/*.scss, **/*.json, **/*.js, **/*.md' --no-notify",
+    "build": "harp compile _src docs && touch docs/CNAME && echo felipprodrigues.github.io >> docs/CNAME"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "harp": "^0.32.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipprodrigues/felipprodrigues.github.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felipprodrigues/felipprodrigues.github.io/issues"
+  },
+  "homepage": "https://github.com/felipprodrigues/felipprodrigues.github.io#readme"
+}

@@ -1,0 +1,63 @@
+- var eventene  = { title: `// Front End Developer Intern`, subtitle: `// Eventene` }  
+- var camelias  = { title: `// Freelance Front End Developer`, subtitle: `// Camelias Produtos e Serviços`,  } 
+- var tainasWebsite  = { title: `// Freelance Front End Developer`, subtitle: `// Tainá's Website` } 
+- var theaterThemed  = { title: `// Freelance Front End Developer`, subtitle: `// Theater Themed Template` } 
+
+.resume__container
+  aside.aside
+    ul.aside__list
+      li.aside__elements
+        //- for icon in icons
+          a.button
+            svg.aside__icons  
+              //- use(xlink:href="assets/defs.svg#icon-#{ icons.icon }")
+              //- REVIEW INTERPOLATION
+
+  .breadcrumbs
+    .breadcrumbs__tabs.is-selected(data-trigger)
+        span.breadcrumbs__item _eventene.jade
+        svg.breadcrumbs__icon
+          use(xlink:href="assets/defs.svg#icon-close")
+    .breadcrumbs__tabs.is-unselected
+        span.breadcrumbs__item _camelias-produtos-e-serviços.jade
+        svg.breadcrumbs__icon
+          use(xlink:href="assets/defs.svg#icon-close")
+    .breadcrumbs__tabs.is-unselected
+        span.breadcrumbs__item _tainas-website.jade
+        svg.breadcrumbs__icon
+          use(xlink:href="assets/defs.svg#icon-close")
+    .breadcrumbs__tabs.is-unselected
+        span.breadcrumbs__item _theater-themed-template.jade
+        svg.breadcrumbs__icon
+          use(xlink:href="assets/defs.svg#icon-close")
+
+  .work-space
+    .work-space__holder(data-preview)
+      .work-space__header
+      if eventene
+        h1.work-space__title #{ eventene.title }
+        h2.work-space__subtitle #{ eventene.subtitle }
+      else if camelias
+        h1.work-space__title #{ camelias.title }
+        h2.work-space__subtitle #{ camelias.subtitle }
+      else if tainasWebsite
+        h1.work-space__title #{ tainasWebsite.title }
+        h2.work-space__subtitle #{ tainasWebsite.subtitle }
+      else if theaterThemed
+        h1.work-space__title #{ theaterThemed.title }
+        h2.work-space__subtitle #{ theaterThemed.subtitle }
+      .work-space__qualifiers
+        span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
+        ul.work-space__list 
+          each keys, slug in public.resume._data
+            li.work-space__items--blue
+              | li 
+              if eventene
+                span.work-space__desc #{ keys.mainKeys }
+              else if camelias
+                span.work-space__desc #{ keys.secondaryKeys }
+              else if tainasWebsite
+                span.work-space__desc #{ keys.tertiaryKeys }
+              else if theaterThemed
+                span.work-space__desc #{ keys.quaternaryKeys }
+

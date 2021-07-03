@@ -1,10 +1,9 @@
 .resume {
   display: none;
   justify-content: center;
-  padding: 50px;
-  width: inherit;
+  padding: 100px 50px;
 
-  .vs::before {
+  &__container::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -16,7 +15,7 @@
     border-top-right-radius: 10px;
   }
 
-  .vs::after {
+  &__container::after {
     content: "";
     position: absolute;
     background: $persimmon-hex;
@@ -29,148 +28,68 @@
     box-shadow: 16px 0 0 0 $yellow-orange, 33px 0 0 0 $green-malachite;
   }
 
-  .vs {
+  &__container {
     width: 85%;
     background: $cod-gray;
     min-height: 550px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-
-    &__navbar {
-      width: 50px;
-      height: 100%;
-      background: #333333;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      position: absolute;
-      top: 0;
-
-      .navbar {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-
-        &__elements {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-
-          &:first-child {
-            margin-top: 25px;
-          }
-
-          & svg {
-            max-width: 25px;
-            max-height: 25px;
-            fill: #7a7a7a;
-          }
-        }
-      }
-    }
-
-    &__tab,
-    &__content {
-      width: calc(100% - 50px);
-      position: relative; 
-      left: 50px;
-      display: flex;
-    }
-
-    &__content {
-      flex-direction: column;
-    }
-
-    &__tab {
-      background-color: $shark;
-      top: 25px;
-      height: 37px;
-      
-      .tab {
-        display: flex;
-        justify-content: space-around;
-        color: $gold-sand;
-        background-color: $cod-gray;
-        width: 150px;
-        height: inherit;
-        align-items: center;
-
-        &__files:not(:first-of-type) {
-          background-color: #252526;
-        }
-
-        &__icon {
-          max-width: 20px;
-          fill: $emperor;
-          max-height: 20px;
-        }
-      }
-    }
-
-    &__content {
-      top: 25px;
-
-      .content{
-        flex-direction: column;
-
-        &__lines {
-          width: 75px;
-          flex-direction: column;
-          display: flex;
-        }
-      
-
-        &__info {
-          display: flex;
-          flex-direction: column;
-        }
-
-        &__box {
-          display: inherit;
-          flex-direction: row;
-
-            .content__position {
-              color: #f5deb3 !important;
-            }
-            .content__subtitle {
-              color: #D88E73 !important;
-            }
-
-          svg {
-            max-width: 100px;
-          }
-
-          &__title {
-            display: inherit;
-            flex-direction: column;
-
-
-
-          }
-        }
-
-        &__qualifiers {
-          font-family: Monaco;
-          
-          span {
-            color: #D4D4D4;
-          }
-
-          li {
-          color: #D4D4D4;
-          list-style-type: none;
-          }
-        }
-        &__qualifiers--blue {
-            color: #87DDFF !important;
-          }
-
-      }
-
-    }
   }
+
+  .breadcrumbs,
+  .work-space {
+    width: calc(100% - 50px);
+    position: relative; 
+    left: 50px;
+    display: flex;
+  }
+  // RESUME LAST BRACKET
 }
+
+
+
+
+
+//       &__holder {
+//         display: inherit;
+//         flex-direction: row;
+
+//           .content__position {
+//             color: #f5deb3 !important;
+//           }
+//           .content__subtitle {
+//             color: #D88E73 !important;
+//           }
+
+//         svg {
+//           max-width: 100px;
+//         }
+
+//         &__title {
+//           display: inherit;
+//           flex-direction: column;
+//         }
+//       }
+
+//       &__qualifiers {
+//         font-family: Monaco;
+        
+//         span {
+//           color: #D4D4D4;
+//         }
+
+//         li {
+//         color: #D4D4D4;
+//         list-style-type: none;
+//         }
+//       }
+//       &__qualifiers--blue {
+//           color: #87DDFF !important;
+//         }
+
+//     }
+
+//   }
+// }
+
