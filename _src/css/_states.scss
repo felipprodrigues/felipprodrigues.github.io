@@ -13,3 +13,11 @@
 .is-unselected {
   background-color: $mine-shaft !important;
 }
+
+.is-shown {
+  display: flex !important;
+}
+
+.is-hidden {
+  display: none !important;
+}

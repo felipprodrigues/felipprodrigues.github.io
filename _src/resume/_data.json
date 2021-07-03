@@ -1,23 +1,38 @@
 {
   "keys-1": {
-    "mainTitle":"// Front End Developer Intern ",
-    "mainSubtitle":"// Eventene ",
-    "commentedOut": "// Key Qualifications and Responsibilities",
-    "mainKeys": "Collaborate with the lead team designer to implement new features in the design system"
+    "mainKeys": "Collaborate with the lead team designer to implement new features in the design system",
+    "secondaryKeys":"Full implementation of HTML and CSS structures based on the BEM methodology",
+    "tertiaryKeys":"Full implementation of a static website for an architect and researcher following a minimalist design concept",
+    "quaternaryKeys":"Full implementation of a theater-themed static open source website template design"
   },
   "keys-2": {
-    "mainKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook "
+    "mainKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook ",
+    "secondaryKeys":"Creation of modular and responsive application",
+    "tertiaryKeys":"Setup and Creation of GitHub repository",
+    "quaternaryKeys":"Setup and Creation of GitHub repository"
   },
   "keys-3": {
-    "mainKeys": "Document and update styles and components "
+    "mainKeys": "Document and update styles and components ",
+    "secondaryKeys":"GitHub based organization and project deployment",
+    "tertiaryKeys":"Creation of modular and responsive application",
+    "quaternaryKeys":"Creation of modular and responsive application"
   },
   "keys-4": {
-    "mainKeys": "Implement newly designed components "
+    "mainKeys": "Implement newly designed components ",
+    "secondaryKeys":"Code structure based on BEM methodology",
+    "tertiaryKeys":"Organized based on BEM methodology",
+    "quaternaryKeys":"Code structure based on BEM methodology"
   },
   "keys-5": {
-    "mainKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure"
+    "mainKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure",
+    "secondaryKeys":"",
+    "tertiaryKeys":"GitHub based organization and project deployment",
+    "quaternaryKeys":""
   },
   "keys-6": {
-    "mainKeys": "Deployment on GitHub"
+    "mainKeys": "Deployment using GitHub",
+    "secondaryKeys":"",
+    "tertiaryKeys":"",
+    "quaternaryKeys":""
   }
 }
