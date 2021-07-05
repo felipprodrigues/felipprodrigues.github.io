@@ -14,25 +14,26 @@
               //- REVIEW INTERPOLATION
 
   .breadcrumbs
-    .breadcrumbs__tabs.is-selected(data-trigger)
+    a.breadcrumbs__tabs.is-selected(data-trigger="eventene")
         span.breadcrumbs__item _eventene.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    .breadcrumbs__tabs.is-unselected
+    a.breadcrumbs__tabs(data-trigger="camelias")
         span.breadcrumbs__item _camelias-produtos-e-serviços.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    .breadcrumbs__tabs.is-unselected
+    a.breadcrumbs__tabs(data-trigger="taina")
         span.breadcrumbs__item _tainas-website.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    .breadcrumbs__tabs.is-unselected
+    a.breadcrumbs__tabs(data-trigger="theater")
         span.breadcrumbs__item _theater-themed-template.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
 
+  //- SEPARATE SEVERAL DIFFERENT WORK-SPACE DATA-ATTR
   .work-space
-    .work-space__holder(data-preview)
+    .work-space__holder(data-preview="eventene")
       .work-space__header
       if eventene
         h1.work-space__title #{ eventene.title }
@@ -61,3 +62,21 @@
               else if theaterThemed
                 span.work-space__desc #{ keys.quaternaryKeys }
 
+    //- .work-space__holder(data-preview="camelias")
+    //-   .work-space__header
+    //-     h1.work-space__title #{ camelias.title }
+    //-     h2.work-space__subtitle #{ camelias.subtitle }
+    //-   .work-space__qualifiers
+    //-     span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
+    //-     ul.work-space__list 
+    //-       each keys, slug in public.resume._data
+    //-         li.work-space__items--blue
+    //-           | li 
+    //-           if eventene
+    //-             span.work-space__desc #{ keys.mainKeys }
+    //-           else if camelias
+    //-             span.work-space__desc #{ keys.secondaryKeys }
+    //-           else if tainasWebsite
+    //-             span.work-space__desc #{ keys.tertiaryKeys }
+    //-           else if theaterThemed
+    //-             span.work-space__desc #{ keys.quaternaryKeys }
