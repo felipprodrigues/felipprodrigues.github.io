@@ -14,26 +14,26 @@
               //- REVIEW INTERPOLATION
 
   .breadcrumbs
-    a.breadcrumbs__tabs.is-selected(data-trigger="eventene")
+    a.breadcrumbs__tabs.is-selected(data-to-trigger="1")
         span.breadcrumbs__item _eventene.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    a.breadcrumbs__tabs(data-trigger="camelias")
+    a.breadcrumbs__tabs(data-to-trigger="2")
         span.breadcrumbs__item _camelias-produtos-e-serviços.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    a.breadcrumbs__tabs(data-trigger="taina")
+    a.breadcrumbs__tabs(data-to-trigger="3")
         span.breadcrumbs__item _tainas-website.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    a.breadcrumbs__tabs(data-trigger="theater")
+    a.breadcrumbs__tabs(data-to-trigger="4")
         span.breadcrumbs__item _theater-themed-template.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
 
   //- SEPARATE SEVERAL DIFFERENT WORK-SPACE DATA-ATTR
   .work-space
-    .work-space__holder(data-preview="eventene")
+    .work-space__holder(data-preview="1")
       .work-space__header
         h1.work-space__title #{ eventene.title }
         h2.work-space__subtitle #{ eventene.subtitle }
@@ -45,7 +45,7 @@
               | li 
               span.work-space__desc #{ keys.mainKeys }
 
-    .work-space__holder.is-hidden(data-preview="camelias")
+    .work-space__holder.is-hidden(data-preview="2")
       .work-space__header
         h1.work-space__title #{ camelias.title }
         h2.work-space__subtitle #{ camelias.subtitle }
@@ -57,7 +57,7 @@
               | li 
               span.work-space__desc #{ keys.secondaryKeys }
               
-    .work-space__holder.is-hidden(data-preview="taina")
+    .work-space__holder.is-hidden(data-preview="3")
       .work-space__header
         h1.work-space__title #{ camelias.title }
         h2.work-space__subtitle #{ camelias.subtitle }
@@ -69,7 +69,7 @@
               | li 
               span.work-space__desc #{ keys.tertiaryKeys }
               
-    .work-space__holder.is-hidden(data-preview="theater")
+    .work-space__holder.is-hidden(data-preview="4")
       .work-space__header
         h1.work-space__title #{ camelias.title }
         h2.work-space__subtitle #{ camelias.subtitle }
