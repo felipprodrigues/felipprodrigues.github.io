@@ -12,7 +12,7 @@
     document.querySelectorAll(".breadcrumbs__tabs").forEach(a => {
       a.addEventListener("click", () => {
         const breadcrumbs = a.parentElement;
-        const breadcrumbsContainer = breadcrumbs.parentElement;
+        const breadcrumbsContainer = breadcrumbs.nextSibling;
         const tabNumber = a.dataset.trigger;
         const tabToActivate = breadcrumbsContainer.querySelector(`work-space__holder[data-preview="${tabNumber}"]`);
 
@@ -21,14 +21,14 @@
           a.classList.remove("is-selected");
         });
 
-        breadcrumbsContainer.querySelectorAll(".breadcrumbs").forEach(a => {
-          a.classList.remove(".is-selected");
+        breadcrumbsContainer.querySelectorAll('.work-space').forEach(a => {
+          a.classList.remove(".is-hidden");
         });
 
         // FIX FINAL 
         a.classList.add("is-selected");
-        tabToActivate.classList.add("is-shown")
-
+        tabToActivate.classList.remove("is-hidden").add("is-shown")
+        
 
 
 
