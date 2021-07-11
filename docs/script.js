@@ -1,12 +1,12 @@
-(function(){
+(function() {
   
-  // COLOR THEME FUNCTION
-  const btn = document.querySelector('.switch');
-  // Listen for a click on the button
-  btn.addEventListener('click', function() {
-    // Then toggle (add/remove) the .dark-theme class to the body
-    document.body.classList.toggle('dark-theme'); 
-  }); 
+    // COLOR THEME FUNCTION
+    const btn = document.querySelector('.switch');
+    // Listen for a click on the button
+    btn.addEventListener('click', function() {
+      // Then toggle (add/remove) the .dark-theme class to the body
+      document.body.classList.toggle('dark-theme'); 
+    }); 
 
   function setupTabs() {
     document.querySelectorAll(".breadcrumbs__tabs").forEach(a => {
@@ -22,18 +22,19 @@
         });
 
         breadcrumbsContainer.querySelectorAll(".breadcrumbs").forEach(a => {
-          a.classList.remove(".is-selected");
+          a.classList.remove("is-selected");
         });
 
-        // Fix
-        
+        // Work around this one
+        tabToActivate.querySelectorAll(".breadcrumbs").forEach(a => {
+          a.classList.remove("is-hidden");
+        });
+
+
         a.classList.add("is-selected");
-        tabToActivate.classList.add("is-hidden")
 
-        
-
-
-
+        // FIX
+        tabToActivate.classList.add("is-shown")
       });
     });
   }
