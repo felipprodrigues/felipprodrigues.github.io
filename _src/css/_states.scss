@@ -16,6 +16,7 @@
 
 .is-shown {
   display: flex !important;
+  flex-direction: column !important;
 }
 
 .is-hidden {

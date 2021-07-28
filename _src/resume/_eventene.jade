@@ -1,7 +1,7 @@
-- var eventene  = { title: `// Front End Developer Intern`, subtitle: `// Eventene` }  
-- var camelias  = { title: `// Freelance Front End Developer`, subtitle: `// Camelias Produtos e Serviços`,  } 
-- var tainasWebsite  = { title: `// Freelance Front End Developer`, subtitle: `// Tainá's Website` } 
-- var theaterThemed  = { title: `// Freelance Front End Developer`, subtitle: `// Theater Themed Template` } 
+- var eventene  = { title: `// Front End Developer Intern`, subtitle: `// Eventene` }
+- var camelias  = { title: `// Freelance Front End Developer`, subtitle: `// Camelias Produtos e Serviços`,  }
+- var tainasWebsite  = { title: `// Freelance Front End Developer`, subtitle: `// Tainá's Website` }
+- var theaterThemed  = { title: `// Freelance Front End Developer`, subtitle: `// Theater Themed Template` }
 
 .resume__container
   aside.aside
@@ -9,24 +9,24 @@
       li.aside__elements
         //- for icon in icons
           a.button
-            svg.aside__icons  
+            svg.aside__icons
               //- use(xlink:href="assets/defs.svg#icon-#{ icons.icon }")
               //- REVIEW INTERPOLATION
 
   .breadcrumbs
-    a.breadcrumbs__tabs.is-selected(data-to-trigger="1")
+    a.breadcrumbs__tabs.is-selected(data-trigger="1")
         span.breadcrumbs__item _eventene.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    a.breadcrumbs__tabs(data-to-trigger="2")
+    a.breadcrumbs__tabs(data-trigger="2")
         span.breadcrumbs__item _camelias-produtos-e-serviços.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    a.breadcrumbs__tabs(data-to-trigger="3")
+    a.breadcrumbs__tabs(data-trigger="3")
         span.breadcrumbs__item _tainas-website.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
-    a.breadcrumbs__tabs(data-to-trigger="4")
+    a.breadcrumbs__tabs(data-trigger="4")
         span.breadcrumbs__item _theater-themed-template.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
@@ -39,44 +39,44 @@
         h2.work-space__subtitle #{ eventene.subtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list 
+        ul.work-space__list
           each keys, slug in public.resume._data
             li.work-space__items--blue
-              | li 
+              | li
               span.work-space__desc #{ keys.mainKeys }
 
-    .work-space__holder.is-hidden(data-preview="2")
+    .work-space__holder(data-preview="2")
       .work-space__header
         h1.work-space__title #{ camelias.title }
         h2.work-space__subtitle #{ camelias.subtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list 
+        ul.work-space__list
           each keys, slug in public.resume._data
             li.work-space__items--blue
-              | li 
+              | li
               span.work-space__desc #{ keys.secondaryKeys }
-              
-    .work-space__holder.is-hidden(data-preview="3")
+
+    .work-space__holder(data-preview="3")
       .work-space__header
         h1.work-space__title #{ camelias.title }
         h2.work-space__subtitle #{ camelias.subtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list 
+        ul.work-space__list
           each keys, slug in public.resume._data
             li.work-space__items--blue
-              | li 
+              | li
               span.work-space__desc #{ keys.tertiaryKeys }
-              
-    .work-space__holder.is-hidden(data-preview="4")
+
+    .work-space__holder(data-preview="4")
       .work-space__header
         h1.work-space__title #{ camelias.title }
         h2.work-space__subtitle #{ camelias.subtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list 
+        ul.work-space__list
           each keys, slug in public.resume._data
             li.work-space__items--blue
-              | li   
+              | li
               span.work-space__desc #{ keys.quaternaryKeys }

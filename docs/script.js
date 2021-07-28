@@ -1,40 +1,43 @@
 (function() {
-  
+
     // COLOR THEME FUNCTION
     const btn = document.querySelector('.switch');
     // Listen for a click on the button
     btn.addEventListener('click', function() {
       // Then toggle (add/remove) the .dark-theme class to the body
-      document.body.classList.toggle('dark-theme'); 
-    }); 
+      document.body.classList.toggle('dark-theme');
+    });
 
   function setupTabs() {
-    document.querySelectorAll(".breadcrumbs__tabs").forEach(a => {
-      a.addEventListener("click", () => {
-        const breadcrumbs = a.parentElement;
-        const breadcrumbsContainer = breadcrumbs.nextElementSibling;
-        const tabNumber = a.dataset.toTrigger;
+    document.querySelectorAll(".breadcrumbs__tabs").forEach(parameter => {
+      parameter.addEventListener("click", () => {
+        const breadcrumbs = parameter.parentElement;
+        const breadcrumbsContainer = breadcrumbs.nextSibling;
+        const tabNumber = parameter.dataset.trigger;
         const tabToActivate = breadcrumbsContainer.querySelector(`.work-space__holder[data-preview="${tabNumber}"]`);
 
-        // FIX FINAL 
-        breadcrumbs.querySelectorAll(".breadcrumbs__tabs").forEach(a => {
-          a.classList.remove("is-selected");
+        breadcrumbs.querySelectorAll(`.breadcrumbs__tabs`).forEach(item => {
+          item.classList.remove(`is-selected`);
         });
+        parameter.classList.add(`is-selected`);
 
-        breadcrumbsContainer.querySelectorAll(".breadcrumbs").forEach(a => {
-          a.classList.remove("is-selected");
-        });
+        breadcrumbsContainer.querySelectorAll(`.work-space__holder`).forEach(content => {
+          console.log(content.classList.toggle('is-shown'));
+        })
 
-        // Work around this one
-        tabToActivate.querySelectorAll(".breadcrumbs").forEach(a => {
-          a.classList.remove("is-hidden");
-        });
+        tabToActivate.classList.toggle("is-hidden");
 
 
-        a.classList.add("is-selected");
+
+        // console.log(breadcrumbs);
+        console.log(breadcrumbsContainer);
+        console.log(tabNumber);
+        console.log(tabToActivate);
+
+
+
 
         // FIX
-        tabToActivate.classList.add("is-shown")
       });
     });
   }
