@@ -7,6 +7,11 @@
     margin-left: 50px;
   }
 
+  &__holder--active {
+    display: block;
+
+  }
+
   &__header {
     display: inherit;
     flex-direction: column;

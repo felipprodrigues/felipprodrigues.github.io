@@ -22,10 +22,10 @@
         parameter.classList.add(`is-selected`);
 
         breadcrumbsContainer.querySelectorAll(`.work-space__holder`).forEach(content => {
-          console.log(content.classList.toggle('is-shown'));
+          content.classList.remove('work-space__holder--active');
         })
 
-        tabToActivate.classList.toggle("is-hidden");
+        tabToActivate.classList.add("work-space__holder--active");
 
 
 
@@ -36,8 +36,6 @@
 
 
 
-
-        // FIX
       });
     });
   }
