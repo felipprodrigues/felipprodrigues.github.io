@@ -1,17 +1,11 @@
-- var eventene  = { title: `// Front End Developer Intern`, subtitle: `// Eventene` }
-- var camelias  = { title: `// Freelance Front End Developer`, subtitle: `// Camelias Produtos e Serviços`  }
-- var tainasWebsite  = { title: `// Freelance Front End Developer`, subtitle: `// Tainá's Website` }
-- var theaterThemed  = { title: `// Freelance Front End Developer`, subtitle: `// Theater Themed Template` }
+- var headerVar  = { titleSingle: `// Front End Developer Intern`, titleMultiple: `// Freelance Front End Developer`, eventeneSubtitle: `// Eventene`, cameliasSubtitle: `// Camelias Produtos e Serviços`, tainaSubtitle: `// Tainá's Website`,  theaterSubtitle: `// Theater Themed Template` }
+
 
 .resume__container
   aside.aside
     ul.aside__list
       li.aside__elements
-        //- for icon in icons
-          a.button
-            svg.aside__icons
-              //- use(xlink:href="assets/defs.svg#icon-#{ icons.icon }")
-              //- REVIEW INTERPOLATION
+
 
   .breadcrumbs
     a.breadcrumbs__tabs.is-selected(data-trigger="1")
@@ -35,8 +29,8 @@
   .work-space
     .work-space__holder.work-space__holder--active(data-preview="1")
       .work-space__header
-        h1.work-space__title #{ eventene.title }
-        h2.work-space__subtitle #{ eventene.subtitle }
+        h1.work-space__title #{ headerVar.titleSingle }
+        h2.work-space__subtitle #{ headerVar.eventeneSubtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
         ul.work-space__list
@@ -47,8 +41,8 @@
 
     .work-space__holder(data-preview="2")
       .work-space__header
-        h1.work-space__title #{ camelias.title }
-        h2.work-space__subtitle #{ camelias.subtitle }
+        h1.work-space__title #{ headerVar.titleMultiple }
+        h2.work-space__subtitle #{ headerVar.cameliasSubtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
         ul.work-space__list
@@ -59,8 +53,8 @@
 
     .work-space__holder(data-preview="3")
       .work-space__header
-        h1.work-space__title #{ tainasWebsite.title }
-        h2.work-space__subtitle #{ tainasWebsite.subtitle }
+        h1.work-space__title #{ headerVar.titleMultiple }
+        h2.work-space__subtitle #{ headerVar.tainaSubtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
         ul.work-space__list
@@ -71,8 +65,8 @@
 
     .work-space__holder(data-preview="4")
       .work-space__header
-        h1.work-space__title #{ theaterThemed.title }
-        h2.work-space__subtitle #{ theaterThemed.subtitle }
+        h1.work-space__title #{ headerVar.titleMultiple }
+        h2.work-space__subtitle #{ headerVar.theaterSubtitle }
       .work-space__qualifiers
         span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
         ul.work-space__list
