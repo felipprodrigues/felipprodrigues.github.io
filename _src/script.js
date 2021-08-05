@@ -44,22 +44,9 @@
         const tabsLeap = sideListGrandParent.nextElementSibling;
         const tabsLeapChild = tabsLeap.nextElementSibling;
 
-        // const example = tabsLeap
-
-        // example.remove()
-
         tabsLeapChild.querySelectorAll('.work-space__holder').forEach(event => {
           event.classList.remove('work-space__holder--active');
         });
-
-
-        // console.log(sideListGrandParent);
-        // console.log(tabsLeap);
-        console.log(sideList);
-        console.log(sideListParent);
-        console.log(sideListGrandParent);
-        console.log(tabsLeap);
-        console.log(tabsLeapChild);
 
       });
     });
