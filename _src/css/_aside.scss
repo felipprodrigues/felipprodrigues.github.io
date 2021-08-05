@@ -32,4 +32,9 @@
     max-height: 25px;
     fill: #7a7a7a;
   }
+
+  &__icons:hover,
+  &__icons:visited {
+    fill: white;
+  }
 }

@@ -9,39 +9,66 @@
     });
 
   function setupTabs() {
-    document.querySelectorAll(".breadcrumbs__tabs").forEach(parameter => {
-      parameter.addEventListener("click", () => {
-        const breadcrumbs = parameter.parentElement;
-        const breadcrumbsContainer = breadcrumbs.nextSibling;
-        const tabNumber = parameter.dataset.trigger;
-        const tabToActivate = breadcrumbsContainer.querySelector(`.work-space__holder[data-preview="${tabNumber}"]`);
+    document.querySelectorAll(".breadcrumbs__tabs").forEach(event => {
+      event.addEventListener("click", () => {
+        const tabs = event.parentElement;
+        const tabsContainer = tabs.nextSibling;
+        const tabNumber = event.dataset.trigger;
+        const tabToActivate = tabsContainer.querySelector(`.work-space__holder[data-preview="${tabNumber}"]`);
 
-        breadcrumbs.querySelectorAll(`.breadcrumbs__tabs`).forEach(item => {
+        tabs.querySelectorAll(`.breadcrumbs__tabs`).forEach(item => {
           item.classList.remove(`is-selected`);
         });
-        parameter.classList.add(`is-selected`);
 
-        breadcrumbsContainer.querySelectorAll(`.work-space__holder`).forEach(content => {
+        tabsContainer.querySelectorAll(`.work-space__holder`).forEach(content => {
           content.classList.remove('work-space__holder--active');
         })
 
+        event.classList.add(`is-selected`);
         tabToActivate.classList.add("work-space__holder--active");
 
-
-
-        // console.log(breadcrumbs);
-        console.log(breadcrumbsContainer);
+        // console.log(tabs);
+        console.log(tabsContainer);
         console.log(tabNumber);
         console.log(tabToActivate);
+      });
+    });
+  };
+
+  function sidebar() {
+    document.querySelectorAll('.button').forEach(e => {
+      e.addEventListener('click', () => {
+        const sideList = e.parentElement;
+        const sideListParent = sideList.parentElement;
+        const sideListGrandParent = sideListParent.parentElement;
+        const tabsLeap = sideListGrandParent.nextElementSibling;
+        const tabsLeapChild = tabsLeap.nextElementSibling;
+
+        // const example = tabsLeap
+
+        // example.remove()
+
+        tabsLeapChild.querySelectorAll('.work-space__holder').forEach(event => {
+          event.classList.remove('work-space__holder--active');
+        });
 
 
+        // console.log(sideListGrandParent);
+        // console.log(tabsLeap);
+        console.log(sideList);
+        console.log(sideListParent);
+        console.log(sideListGrandParent);
+        console.log(tabsLeap);
+        console.log(tabsLeapChild);
 
       });
     });
-  }
+  };
+
 
   document.addEventListener("DOMContentLoaded", () => {
     setupTabs();
+    sidebar()
   })
 
 })();
