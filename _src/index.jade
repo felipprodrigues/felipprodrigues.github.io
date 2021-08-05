@@ -1,11 +1,11 @@
-.container 
-  #header.header 
+.container
+  #header.header
     label(for="checkbox").switch
-      input(type="checkbox")#switch__checkbox.switch__checkbox 
+      input(type="checkbox")#switch__checkbox.switch__checkbox
       span.switch__checkmark.checkmark
         svg.checkmark.checkmark__svg
           use(xlink:href="assets/defs.svg#icon-moon")
-        svg.checkmark.checkmark__svg 
+        svg.checkmark.checkmark__svg
           use(xlink:href="assets/defs.svg#icon-sun")
         .switch__overlay
 
@@ -13,7 +13,7 @@
       img.header__image(src="/assets/profile.png", alt="Oops!")
     .header__title
       h1.header__name Felipe Rodrigues
-      span.header__subtitle Junior Front End Developer 
+      span.header__subtitle Junior Front End Developer
 
   section.bio
     h2.container__title--padded Hi there!
@@ -23,20 +23,20 @@
       | Not long ago I wrote a paper on blockchain technology during graduation and fell in love with its complexity which soon after drove me to employ my communication notions to achieve the clearest ideas in a front-end perspective.
       br
       br
-      | Given the nature of open source environment, I invite you to check out further some of my work in the 
+      | Given the nature of open source environment, I invite you to check out further some of my work in the
       a.bio__hook(href="#projects") projects
-      | &nbsp;section, but if you really want to dive deep on how I coded them I strongly recommend visiting my 
+      | &nbsp;section, but if you really want to dive deep on how I coded them I strongly recommend visiting my
       a.bio__hook(href="https://github.com/felipprodrigues") github
       | &nbsp; page.
 
   section.education
-    != partial("education/_education")  
+    != partial("education/_education")
 
-  section.resume
-    != partial("resume/_eventene") 
+  //- section.resume
+  //-   != partial("resume/_eventene")
 
   section#projects.projects
-    != partial("projects/_projects") 
+    != partial("projects/_projects")
 
   section.contact
     != partial("contact/_contact")
