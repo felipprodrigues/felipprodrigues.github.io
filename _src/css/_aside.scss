@@ -52,5 +52,9 @@
       height: 50px;
       top: -7px;
     }
+
+    &--selected svg {
+      fill: white;
+    }
   }
 }
