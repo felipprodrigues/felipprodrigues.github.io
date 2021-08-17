@@ -39,13 +39,13 @@
     document.querySelectorAll('.button').forEach(e => {
       e.addEventListener('click', () => {
         const sideList = e.parentElement;
-        const sideListParent = sideList.parentElement;
-        const sideListGrandParent = sideListParent.parentElement;
-        const tabsLeap = sideListGrandParent.nextElementSibling;
-        const tabsLeapChild = tabsLeap.nextElementSibling;
+        const sideListParent = sideList.closest('aside');
+        const sideListSibling = sideListParent.nextElementSibling;
+        const sideListNextSibling = sideListSibling.nextElementSibling;
 
-        tabsLeapChild.querySelectorAll('.work-space__holder').forEach(event => {
+        sideListNextSibling.querySelectorAll('.work-space__holder').forEach(event => {
           event.classList.remove('work-space__holder--active');
+
         });
 
       });
