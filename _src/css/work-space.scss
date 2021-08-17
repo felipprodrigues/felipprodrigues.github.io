@@ -1,9 +1,15 @@
 .work-space {
   flex-direction: column;
   top: 25px;
+  min-height: 100%;
 
   &__holder {
+    display: none;
     margin-left: 50px;
+  }
+
+  &__holder--active {
+    display: block;
   }
 
   &__header {
@@ -43,5 +49,12 @@
 
   &__desc {
     color: #D4D4D4;
+  }
+
+  &--centered {
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -1,38 +1,22 @@
 {
-  "keys-1": {
-    "mainKeys": "Collaborate with the lead team designer to implement new features in the design system",
-    "secondaryKeys":"Full implementation of HTML and CSS structures based on the BEM methodology",
-    "tertiaryKeys":"Full implementation of a static website for an architect and researcher following a minimalist design concept",
-    "quaternaryKeys":"Full implementation of a theater-themed static open source website template design"
+  "icon-1": {
+    "icon": "files",
+    "attribute": "files"
   },
-  "keys-2": {
-    "mainKeys": "Streamline UI documentation in isolation for the mobile application using React for the storybook ",
-    "secondaryKeys":"Creation of modular and responsive application",
-    "tertiaryKeys":"Setup and Creation of GitHub repository",
-    "quaternaryKeys":"Setup and Creation of GitHub repository"
+  "icon-2": {
+    "icon": "search",
+    "attribute": "search"
   },
-  "keys-3": {
-    "mainKeys": "Document and update styles and components ",
-    "secondaryKeys":"GitHub based organization and project deployment",
-    "tertiaryKeys":"Creation of modular and responsive application",
-    "quaternaryKeys":"Creation of modular and responsive application"
+  "icon-3": {
+    "icon": "source-control",
+    "attribute": "source"
   },
-  "keys-4": {
-    "mainKeys": "Implement newly designed components ",
-    "secondaryKeys":"Code structure based on BEM methodology",
-    "tertiaryKeys":"Organized based on BEM methodology",
-    "quaternaryKeys":"Code structure based on BEM methodology"
+  "icon-4": {
+    "icon": "debugger",
+    "attribute": "debugger"
   },
-  "keys-5": {
-    "mainKeys": "Refactoring based on the Atomic Design Principle and BEM organizing structure",
-    "secondaryKeys":"",
-    "tertiaryKeys":"GitHub based organization and project deployment",
-    "quaternaryKeys":""
-  },
-  "keys-6": {
-    "mainKeys": "Deployment using GitHub",
-    "secondaryKeys":"",
-    "tertiaryKeys":"",
-    "quaternaryKeys":""
+  "icon-5": {
+    "icon": "extension-blocks",
+    "attribute": "extension"
   }
 }

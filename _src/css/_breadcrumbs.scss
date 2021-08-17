@@ -1,13 +1,13 @@
 .breadcrumbs {
   background-color: $shark;
   top: 25px;
-  height: 37px !important;
+  height: 37px;
   box-shadow: 3px 3px 4px -1px;
 
   &__tabs {
     display: flex;
     justify-content: space-around;
-    padding: 0 25px;
+    padding: 0 15px;
     align-items: center;
     cursor: pointer;
   }

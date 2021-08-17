@@ -1,5 +1,5 @@
 .resume {
-  display: none;
+  display: flex;
   justify-content: center;
   padding: 100px 50px;
 
@@ -44,52 +44,6 @@
     left: 50px;
     display: flex;
   }
-  // RESUME LAST BRACKET
 }
 
-
-
-
-
-//       &__holder {
-//         display: inherit;
-//         flex-direction: row;
-
-//           .content__position {
-//             color: #f5deb3 !important;
-//           }
-//           .content__subtitle {
-//             color: #D88E73 !important;
-//           }
-
-//         svg {
-//           max-width: 100px;
-//         }
-
-//         &__title {
-//           display: inherit;
-//           flex-direction: column;
-//         }
-//       }
-
-//       &__qualifiers {
-//         font-family: Monaco;
-
-//         span {
-//           color: #D4D4D4;
-//         }
-
-//         li {
-//         color: #D4D4D4;
-//         list-style-type: none;
-//         }
-//       }
-//       &__qualifiers--blue {
-//           color: #87DDFF !important;
-//         }
-
-//     }
-
-//   }
-// }
 
