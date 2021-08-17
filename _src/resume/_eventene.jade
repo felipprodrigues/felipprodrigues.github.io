@@ -5,7 +5,7 @@
     ul.aside__list
       li.aside__elements
         for icon, slug in public.resume._data
-          a.button(data-aside="#{ icon.attribute }")
+          a.aside__button(data-aside="#{ icon.attribute }")
             svg.aside__icons
               use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
 

@@ -36,7 +36,7 @@
   };
 
   function sidebar() {
-    document.querySelectorAll('.button').forEach(e => {
+    document.querySelectorAll('.aside__button').forEach(e => {
       e.addEventListener('click', () => {
         const sideList = e.parentElement;
         const sideListParent = sideList.closest('aside');
