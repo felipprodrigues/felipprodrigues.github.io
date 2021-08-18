@@ -1,7 +1,7 @@
 .work-space {
-  flex-direction: column;
   top: 25px;
-  min-height: 100%;
+  min-height: calc(100% - 65px);
+  min-width: calc(100% - 50px);
 
   &__holder {
     display: none;
@@ -9,7 +9,8 @@
   }
 
   &__holder--active {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   &__header {
@@ -56,5 +57,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__button {
+    background-color: #0065A1;
+    color: white;
+    padding: 10px;
+    border: none;
+    transition: all .25s linear;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #0079C0;
+    }
+  }
+
+  &__text {
+    color: white
   }
 }

@@ -3,8 +3,8 @@
 .resume__container
   aside.aside
     ul.aside__list
-      li.aside__elements
-        for icon, slug in public.resume._data
+      for icon, slug in public.resume._data
+        li.aside__elements
           a.aside__button(data-aside="#{ icon.attribute }")
             svg.aside__icons
               use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
@@ -27,18 +27,56 @@
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
 
-  //- SEPARATE SEVERAL DIFFERENT WORK-SPACE DATA-ATTR
   .work-space
-    .work-space__holder.work-space__holder--active(data-preview="tabOne")
-      .work-space__header
-        h1.work-space__title #{ headerVar.titleSingle }
-        h2.work-space__subtitle #{ headerVar.eventeneSubtitle }
-      .work-space__qualifiers
-        span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list
-          li.work-space__items--blue
-            //- FIX CLASS
-            span.work-space__items--white
+    //- DATA ATTRIBUTE = FILES
+    .work-space__holder(data-panel="files")
+      //- TAB ONE
+      .work-space__holder--inner.work-space__holder--active(data-preview="tabOne")
+        .work-space__header
+          h1.work-space__title #{ headerVar.titleSingle }
+          h2.work-space__subtitle #{ headerVar.eventeneSubtitle }
+        .work-space__qualifiers
+          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.work-space__list
+            li.work-space__items--blue
+              //- FIX CLASS
+              span.work-space__items--white
+                //- |
+                //- |
+                //- |
+                //- |
+                //- |
+                //- |
+                //- |
+                //- |
+
+      //- TAB TWO
+      .work-space__holder--inner(data-preview="tabTwo")
+        .work-space__header
+          h1.work-space__title #{ headerVar.titleMultiple }
+          h2.work-space__subtitle #{ headerVar.cameliasSubtitle }
+        .work-space__qualifiers
+          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.work-space__list
+            li.work-space__items--blue
+              //- |
+              //- |
+              //- |
+              //- |
+              //- |
+              //- |
+              //- |
+
+      //- TAB THREE
+      .work-space__holder--inner(data-preview="tabThree")
+        .work-space__header
+          h1.work-space__title #{ headerVar.titleMultiple }
+          h2.work-space__subtitle #{ headerVar.tainaSubtitle }
+        .work-space__qualifiers
+          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.work-space__list
+            li.work-space__items--blue
+
               //- |
               //- |
               //- |
@@ -48,48 +86,15 @@
               //- |
               //- |
 
-    .work-space__holder(data-preview="tabTwo")
-      .work-space__header
-        h1.work-space__title #{ headerVar.titleMultiple }
-        h2.work-space__subtitle #{ headerVar.cameliasSubtitle }
-      .work-space__qualifiers
-        span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list
-          li.work-space__items--blue
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-
-    .work-space__holder(data-preview="tabThree")
-      .work-space__header
-        h1.work-space__title #{ headerVar.titleMultiple }
-        h2.work-space__subtitle #{ headerVar.tainaSubtitle }
-      .work-space__qualifiers
-        span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list
-          li.work-space__items--blue
-
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-
-    .work-space__holder(data-preview="tabFour")
-      .work-space__header
-        h1.work-space__title #{ headerVar.titleMultiple }
-        h2.work-space__subtitle #{ headerVar.theaterSubtitle }
-      .work-space__qualifiers
-        span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-        ul.work-space__list
-          li.work-space__items--blue
+      //- TAB FOUR
+      .work-space__holder--inner(data-preview="tabFour")
+        .work-space__header
+          h1.work-space__title #{ headerVar.titleMultiple }
+          h2.work-space__subtitle #{ headerVar.theaterSubtitle }
+        .work-space__qualifiers
+          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.work-space__list
+            li.work-space__items--blue
 
             //- |
             //- |
@@ -103,26 +108,35 @@
     //=  BUTTON TABS ====================================================================================
 
     //- fix classes
-    .work-space__holder.no-space-out.has-center-block(data-panel="search")
+    //- DATA ATTRIBUTE = SEARCH
+    .work-space__holder.has-center-block.is-wide.no-space-out(data-panel="search")
+      a(href="path_to_file" download="proposed_file_name").work-space__button Preview resume
+        //- svg
+        //-   use(xlink:href="assets/defs.svg#icon-preview")
+      span or
+      a(href="path_to_file" download="proposed_file_name").work-space__button Download resume
+        //- svg
+        //-   use(xlink:href="assets/defs.svg#icon-download")
 
-        button.works-space__button Click here to download my resume
-
-
-
-
+    //- DATA ATTRIBUTE = SOURCE
     .work-space__holder(data-panel="source")
       .work-space__header
         h1.work-space__title Source Engine
 
+        p.work-space__text This projects runs on HTML(Pug) CSS(SCSS) and Vanilla JavaScript, but not only
 
+        p.work-space__text I also have experience working with Git, Shopify's Liquid, Jekyll, Jquery, Webforms and somewhat of React
+
+    //- DATA ATTRIBUTE = DEBUGGER
     .work-space__holder(data-panel="debugger")
       .work-space__header
         h1.work-space__title Debugger Engine
 
-
+    //- DATA ATTRIBUTE = EXTENSION
     .work-space__holder(data-panel="extension")
-      .work-space__header
-        h1.work-space__title Extension Engine
+      p.work-space__text You can visit the github page for this website and use this
+      a.work-space__text(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank") URL
+      p.work-space__text to check the live source code of this entire project
 
 
 
