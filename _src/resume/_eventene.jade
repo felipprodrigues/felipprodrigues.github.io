@@ -1,4 +1,7 @@
-- var headerVar  = { titleSingle: `// Front End Developer Intern`, titleMultiple: `// Freelance Front End Developer`, eventeneSubtitle: `// Eventene`, cameliasSubtitle: `// Camelias Produtos e Serviços`, tainaSubtitle: `// Tainá's Website`,  theaterSubtitle: `// Theater Themed Template` }
+- const headerVar  = { titleSingle: `// Front End Developer Intern`, titleMultiple: `// Freelance Front End Developer`, eventeneSubtitle: `// Eventene`, cameliasSubtitle: `// Camelias Produtos e Serviços`, tainaSubtitle: `// Tainá's Website`,  theaterSubtitle: `// Theater Themed Template` }
+- const breadcrumbsItems = [ `_eventene.jade`, `_camelias-produtos-e-serviços.jade`, `_tainas-website.jade`,  `_theater-themed-template.jade` ]
+- const breadcrumbsAttributes = ['tabOne','tabTwo', 'tabThree', 'tabFour']
+
 
 .resume__container
   aside.aside
@@ -11,9 +14,9 @@
 
   .breadcrumbs
     a.breadcrumbs__tabs.is-selected(data-trigger="tabOne")
-        span.breadcrumbs__item _eventene.jade
-        svg.breadcrumbs__icon
-          use(xlink:href="assets/defs.svg#icon-close")
+      span.breadcrumbs__item _eventene.jade
+      svg.breadcrumbs__icon
+        use(xlink:href="assets/defs.svg#icon-close")
 
     a.breadcrumbs__tabs(data-trigger="tabTwo")
         span.breadcrumbs__item _camelias-produtos-e-serviços.jade

@@ -36,35 +36,6 @@
     });
   };
 
-  //! REVIEW THIS FUNCTION
-  // REMOVE BREADCRUMBS
-  function removeBradcrumbs() {
-    document.querySelectorAll('.aside__elements').forEach(button => {
-      button.addEventListener('click', () => {
-        const buttonClick = button.parentElement;
-        const buttonValue = button.querySelector(`[data-aside]`);
-        const asideSibling = button.closest('aside').nextElementSibling;
-        const buttonActivate = buttonValue.querySelectorAll(`[data-panel="${buttonValue}"]`);
-
-        console.log(buttonValue)
-        console.log(buttonClick)
-        console.log(asideSibling)
-        console.log(buttonActivate)
-
-
-        // console.log(event)
-        // event.querySelectorAll('.aside__button').forEach(button => {
-        //   if( dataAtt !== 'files' ) {
-        //     asideSibling.classList.add('is-hidden')
-        //   } else if( dataAtt === 'files' ){
-        //     asideSibling.classList.remove('is-hidden')
-        //   }
-
-
-      });
-    });
-    // ADD BREADCRUMBS WHEN ATT. ASIDE-FILES
-  }
 
   function sidebar() {
     document.querySelectorAll('.aside__button').forEach(e => {
@@ -105,11 +76,44 @@
     });
   };
 
+  // REMOVE BREADCRUMBS
+  function removeBradcrumbs() {
+    document.querySelectorAll('.aside__button').forEach(button => {
+      button.addEventListener('click', () => {
+        const buttonValue = button.dataset.aside;
+        const buttonParent = button.closest('aside')
+        const parentSibling = buttonParent.nextSibling
+
+        if(buttonValue !== 'files' ){
+          parentSibling.classList.add('is-hidden')
+        } else {
+          parentSibling.classList.remove('is-hidden')
+        }
+      });
+    });
+  };
+
+  function activeElements() {
+    const overallList = document.querySelector('.aside__list');
+    const firstChild = overallList.firstElementChild;
+    const attFiles = document.querySelector('[data-aside="files"]');
+    const workspace = document.querySelector('.work-space');
+    const workspaceFirstChild = workspace.firstElementChild;
+
+    // SETS THE ELEMENT AS ACTIVE
+    firstChild.classList.add('aside__elements--active');
+    // SETS THE BUTTON AS ACTIVE
+    attFiles.classList.add('aside__button--selected');
+    // SETS THE WORK-SPACE AS ACTIVE
+    workspaceFirstChild.classList.add('work-space__holder--active');
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     lightDark();
     setupTabs();
-    removeBradcrumbs();
     sidebar();
+    removeBradcrumbs();
+    activeElements();
   })
-})();
+}());
 
