@@ -1,68 +1,41 @@
 (function() {
 
-    // COLOR THEME FUNCTION
-    const btn = document.querySelector('.switch');
-    // Listen for a click on the button
-    btn.addEventListener('click', function() {
-      // Then toggle (add/remove) the .dark-theme class to the body
+  function lightDark() {
+    const lightSwitch = document.querySelector('.switch');
+    lightSwitch.addEventListener('click', function() {
+      // Toggle the .dark-theme class to the body
       document.body.classList.toggle('dark-theme');
     });
+  }
 
-
-  //! FIX SETUPTABS FUNCTION TO INCLUDE INNER SPACE-HOLDERS
   function setupTabs() {
     document.querySelectorAll(".breadcrumbs__tabs").forEach(event => {
       event.addEventListener("click", () => {
         const tabs = event.parentElement;
-        const tabsContainer = tabs.nextSibling;
+        const workSpaceContainer = tabs.nextSibling;
         const tabNumber = event.dataset.trigger;
-        const tabToActivate = tabsContainer.querySelector(`.work-space__holder--inner[data-preview="${tabNumber}"]`);
+        const tabToActivate = workSpaceContainer.querySelector(`[data-preview="${tabNumber}"]`);
 
-        // REMOVE SELECTED CLASS FROM TABS
+        //= REMOVE SELECTED CLASS FROM TABS
         tabs.querySelectorAll(`.breadcrumbs__tabs`).forEach(item => {
           item.classList.remove(`is-selected`);
         });
 
-        // REMOVE WORK SPACE FROM CONTENT
-        tabsContainer.querySelectorAll(`.work-space__holder--iner`).forEach(content => {
-          content.classList.remove('work-space__holder--active');
+        //= REMOVE WORK SPACE FROM CONTENT
+        workSpaceContainer.querySelectorAll(`.work-space__holder--within`).forEach(content => {
+          content.classList.remove('is-active');
         })
 
-        // ADD SELECTED CLASS TO CLICKED TAB
+        //* ADD SELECTED CLASS TO CLICKED TAB
         event.classList.add(`is-selected`);
 
-        // SELECTS THE RELATIVE WORK-SPACE CONTENT
-        tabToActivate.classList.add('work-space__holder--active');
+        //* SELECTS THE RELATIVE WORK-SPACE CONTENT
+        tabToActivate.classList.add('is-active');
+
       });
     });
   };
 
-  //! REVIEW THIS FUNCTION
-  // REMOVE BREADCRUMBS
-  function removeBradcrumbs() {
-    // ADD CLICK ON SIDELIST BUTTONS
-    document.querySelectorAll('.aside__elements').forEach(event => {
-      event.addEventListener('click', () => {
-        const buttonClick = event.parentElement
-        const asideSibling = event.closest('aside').nextElementSibling;
-        const dataAtt = event.dataset.aside
-        const buttonActivate = event.querySelectorAll(`[data-aside="${dataAtt}"]`);
-
-        // console.log(event)
-        event.querySelectorAll('.aside__button').forEach(button => {
-          if( button.dataset !== 'files' ) {
-            asideSibling.classList.add('is-hidden')
-          }
-        })
-
-        // console.log(asideSibling)
-        // console.log(buttonActivate)
-
-
-      });
-    });
-    // ADD BREADCRUMBS WHEN ATT. ASIDE-FILES
-  }
 
   function sidebar() {
     document.querySelectorAll('.aside__button').forEach(e => {
@@ -103,12 +76,44 @@
     });
   };
 
+  // REMOVE BREADCRUMBS
+  function removeBradcrumbs() {
+    document.querySelectorAll('.aside__button').forEach(button => {
+      button.addEventListener('click', () => {
+        const buttonValue = button.dataset.aside;
+        const buttonParent = button.closest('aside')
+        const parentSibling = buttonParent.nextSibling
+
+        if(buttonValue !== 'files' ){
+          parentSibling.classList.add('is-hidden')
+        } else {
+          parentSibling.classList.remove('is-hidden')
+        }
+      });
+    });
+  };
+
+  function activeElements() {
+    const overallList = document.querySelector('.aside__list');
+    const firstChild = overallList.firstElementChild;
+    const attFiles = document.querySelector('[data-aside="files"]');
+    const workspace = document.querySelector('.work-space');
+    const workspaceFirstChild = workspace.firstElementChild;
+
+    // SETS THE ELEMENT AS ACTIVE
+    firstChild.classList.add('aside__elements--active');
+    // SETS THE BUTTON AS ACTIVE
+    attFiles.classList.add('aside__button--selected');
+    // SETS THE WORK-SPACE AS ACTIVE
+    workspaceFirstChild.classList.add('work-space__holder--active');
+  }
 
   document.addEventListener("DOMContentLoaded", () => {
+    lightDark();
     setupTabs();
-    removeBradcrumbs();
     sidebar();
+    removeBradcrumbs();
+    activeElements();
   })
-
-})();
+}());
 
