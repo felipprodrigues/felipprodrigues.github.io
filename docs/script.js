@@ -1,38 +1,37 @@
 (function() {
 
-    // COLOR THEME FUNCTION
-    const btn = document.querySelector('.switch');
-    // Listen for a click on the button
-    btn.addEventListener('click', function() {
-      // Then toggle (add/remove) the .dark-theme class to the body
+  function lightDark() {
+    const lightSwitch = document.querySelector('.switch');
+    lightSwitch.addEventListener('click', function() {
+      // Toggle the .dark-theme class to the body
       document.body.classList.toggle('dark-theme');
     });
+  }
 
-
-  //! FIX SETUPTABS FUNCTION TO INCLUDE INNER SPACE-HOLDERS
   function setupTabs() {
     document.querySelectorAll(".breadcrumbs__tabs").forEach(event => {
       event.addEventListener("click", () => {
         const tabs = event.parentElement;
-        const tabsContainer = tabs.nextSibling;
+        const workSpaceContainer = tabs.nextSibling;
         const tabNumber = event.dataset.trigger;
-        const tabToActivate = tabsContainer.querySelector(`.work-space__holder--inner[data-preview="${tabNumber}"]`);
+        const tabToActivate = workSpaceContainer.querySelector(`[data-preview="${tabNumber}"]`);
 
-        // REMOVE SELECTED CLASS FROM TABS
+        //= REMOVE SELECTED CLASS FROM TABS
         tabs.querySelectorAll(`.breadcrumbs__tabs`).forEach(item => {
           item.classList.remove(`is-selected`);
         });
 
-        // REMOVE WORK SPACE FROM CONTENT
-        tabsContainer.querySelectorAll(`.work-space__holder--iner`).forEach(content => {
-          content.classList.remove('work-space__holder--active');
+        //= REMOVE WORK SPACE FROM CONTENT
+        workSpaceContainer.querySelectorAll(`.work-space__holder--within`).forEach(content => {
+          content.classList.remove('is-active');
         })
 
-        // ADD SELECTED CLASS TO CLICKED TAB
+        //* ADD SELECTED CLASS TO CLICKED TAB
         event.classList.add(`is-selected`);
 
-        // SELECTS THE RELATIVE WORK-SPACE CONTENT
-        tabToActivate.classList.add('work-space__holder--active');
+        //* SELECTS THE RELATIVE WORK-SPACE CONTENT
+        tabToActivate.classList.add('is-active');
+
       });
     });
   };
@@ -40,23 +39,26 @@
   //! REVIEW THIS FUNCTION
   // REMOVE BREADCRUMBS
   function removeBradcrumbs() {
-    // ADD CLICK ON SIDELIST BUTTONS
-    document.querySelectorAll('.aside__elements').forEach(event => {
-      event.addEventListener('click', () => {
-        const buttonClick = event.parentElement
-        const asideSibling = event.closest('aside').nextElementSibling;
-        const dataAtt = event.dataset.aside
-        const buttonActivate = event.querySelectorAll(`[data-aside="${dataAtt}"]`);
+    document.querySelectorAll('.aside__elements').forEach(button => {
+      button.addEventListener('click', () => {
+        const buttonClick = button.parentElement;
+        const buttonValue = button.querySelector(`[data-aside]`);
+        const asideSibling = button.closest('aside').nextElementSibling;
+        const buttonActivate = buttonValue.querySelectorAll(`[data-panel="${buttonValue}"]`);
+
+        console.log(buttonValue)
+        console.log(buttonClick)
+        console.log(asideSibling)
+        console.log(buttonActivate)
+
 
         // console.log(event)
-        event.querySelectorAll('.aside__button').forEach(button => {
-          if( button.dataset !== 'files' ) {
-            asideSibling.classList.add('is-hidden')
-          }
-        })
-
-        // console.log(asideSibling)
-        // console.log(buttonActivate)
+        // event.querySelectorAll('.aside__button').forEach(button => {
+        //   if( dataAtt !== 'files' ) {
+        //     asideSibling.classList.add('is-hidden')
+        //   } else if( dataAtt === 'files' ){
+        //     asideSibling.classList.remove('is-hidden')
+        //   }
 
 
       });
@@ -103,12 +105,11 @@
     });
   };
 
-
   document.addEventListener("DOMContentLoaded", () => {
+    lightDark();
     setupTabs();
     removeBradcrumbs();
     sidebar();
   })
-
 })();
 

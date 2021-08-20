@@ -3,9 +3,10 @@
   min-height: calc(100% - 65px);
   min-width: calc(100% - 50px);
 
-  &__holder {
+  &__holder,
+  &__holder--within {
     display: none;
-    margin-left: 50px;
+    margin-left: 25px;
   }
 
   &__holder--active {

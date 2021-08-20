@@ -14,14 +14,17 @@
         span.breadcrumbs__item _eventene.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
+
     a.breadcrumbs__tabs(data-trigger="tabTwo")
         span.breadcrumbs__item _camelias-produtos-e-serviços.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
+
     a.breadcrumbs__tabs(data-trigger="tabThree")
         span.breadcrumbs__item _tainas-website.jade
         svg.breadcrumbs__icon
           use(xlink:href="assets/defs.svg#icon-close")
+
     a.breadcrumbs__tabs(data-trigger="tabFour")
         span.breadcrumbs__item _theater-themed-template.jade
         svg.breadcrumbs__icon
@@ -31,7 +34,7 @@
     //- DATA ATTRIBUTE = FILES
     .work-space__holder(data-panel="files")
       //- TAB ONE
-      .work-space__holder--inner.work-space__holder--active(data-preview="tabOne")
+      .work-space__holder--within.is-active(data-preview="tabOne")
         .work-space__header
           h1.work-space__title #{ headerVar.titleSingle }
           h2.work-space__subtitle #{ headerVar.eventeneSubtitle }
@@ -51,7 +54,7 @@
                 //- |
 
       //- TAB TWO
-      .work-space__holder--inner(data-preview="tabTwo")
+      .work-space__holder--within(data-preview="tabTwo")
         .work-space__header
           h1.work-space__title #{ headerVar.titleMultiple }
           h2.work-space__subtitle #{ headerVar.cameliasSubtitle }
@@ -68,7 +71,7 @@
               //- |
 
       //- TAB THREE
-      .work-space__holder--inner(data-preview="tabThree")
+      .work-space__holder--within(data-preview="tabThree")
         .work-space__header
           h1.work-space__title #{ headerVar.titleMultiple }
           h2.work-space__subtitle #{ headerVar.tainaSubtitle }
@@ -87,7 +90,7 @@
               //- |
 
       //- TAB FOUR
-      .work-space__holder--inner(data-preview="tabFour")
+      .work-space__holder--within(data-preview="tabFour")
         .work-space__header
           h1.work-space__title #{ headerVar.titleMultiple }
           h2.work-space__subtitle #{ headerVar.theaterSubtitle }

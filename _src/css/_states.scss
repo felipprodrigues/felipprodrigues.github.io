@@ -31,3 +31,8 @@
 .is-wide {
   width: 100%;
 }
+
+.is-active {
+  display: flex !important;
+  flex-direction: column !important;
+}
