@@ -2,22 +2,22 @@
 
   function lightDark() {
     const lightSwitch = document.querySelector('.switch');
-    lightSwitch.addEventListener('click', function() {
+    lightSwitch.addEventListener('click', function(e) {
       // Toggle the .dark-theme class to the body
       document.body.classList.toggle('dark-theme');
     });
   }
 
   function setupTabs() {
-    document.querySelectorAll(".breadcrumbs__tabs").forEach(event => {
+    document.querySelectorAll(".tabs__holder").forEach(event => {
       event.addEventListener("click", () => {
-        const tabs = event.parentElement;
+        const tabs = event.closest('.tabs');
         const workSpaceContainer = tabs.nextSibling;
         const tabNumber = event.dataset.trigger;
         const tabToActivate = workSpaceContainer.querySelector(`[data-preview="${tabNumber}"]`);
 
         //= REMOVE SELECTED CLASS FROM TABS
-        tabs.querySelectorAll(`.breadcrumbs__tabs`).forEach(item => {
+        tabs.querySelectorAll(`.tabs__holder`).forEach(item => {
           item.classList.remove(`is-selected`);
         });
 
@@ -76,7 +76,7 @@
     });
   };
 
-  // REMOVE BREADCRUMBS
+  // REMOVE tabs
   function removeBradcrumbs() {
     document.querySelectorAll('.aside__button').forEach(button => {
       button.addEventListener('click', () => {
