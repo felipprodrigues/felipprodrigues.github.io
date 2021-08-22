@@ -1,7 +1,7 @@
 .aside {
   width: 50px;
   height: 100%;
-  background: #333333;
+  background: $mine-shaft-darker;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   position: absolute;
@@ -22,14 +22,20 @@
     align-items: center;
     width: 100%;
     position: relative;
+    transition: all .25s ease-in;
 
     &:first-child {
       margin-top: 25px;
     }
+
+    &:hover {
+      background-color: $gray-mine-shaft;
+    }
+
   }
 
   &__elements--active {
-    border-left: 1px solid $green-malachite;
+    border-left: 1px solid $wild-sand;
   }
 
   &__icons {

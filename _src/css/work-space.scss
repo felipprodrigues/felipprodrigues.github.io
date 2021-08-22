@@ -61,6 +61,8 @@
   }
 
   &__button {
+    display: flex;
+    align-items: center;
     background-color: #0065A1;
     color: white;
     padding: 10px;
@@ -70,6 +72,13 @@
 
     &:hover {
       background-color: #0079C0;
+    }
+
+    svg {
+      max-width: 15px;
+      max-height: 15px;
+      fill: $white-solid;
+      margin-left: 10px
     }
   }
 
