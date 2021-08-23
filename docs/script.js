@@ -99,13 +99,19 @@
     const attFiles = document.querySelector('[data-aside="files"]');
     const workspace = document.querySelector('.work-space');
     const workspaceFirstChild = workspace.firstElementChild;
+    const tabsItems = document.querySelector('.list__items');
+    const tabsItemFirstChild = tabsItems.firstElementChild;
 
-    // SETS THE ELEMENT AS ACTIVE
+
+    // SETS THE ASIDE ELEMENT AS ACTIVE
     firstChild.classList.add('aside__elements--active');
     // SETS THE BUTTON AS ACTIVE
     attFiles.classList.add('aside__button--selected');
     // SETS THE WORK-SPACE AS ACTIVE
     workspaceFirstChild.classList.add('work-space__holder--active');
+    // SETS THE FIRST TAB ELEMENT AS ACTIVE
+    tabsItemFirstChild.classList.add('is-selected');
+
   }
 
   document.addEventListener("DOMContentLoaded", () => {
