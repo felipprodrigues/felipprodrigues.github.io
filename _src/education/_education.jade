@@ -1,14 +1,14 @@
-.education__list
-  .education__frame  
+.education__holder
+  ul.education__list
     each icon, slug in public.education._data
-      .education__wrap
-        svg.education__icon  
+      li.education__items
+        svg.education__icon
           use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
         span.education__tag #{ icon.title }
 
 .education__box
   h2.container__title Education
   h3.container__subtitle Universidade do Sagrado Coração (USC)
-  p.container__text--center International Affais Bachelor's Degree (2011 - 2014) 
+  p.container__text--center International Affais Bachelor's Degree (2011 - 2014)
   p.container__text--center International Business Management Graduate Degree (2016 - 2017)
 
