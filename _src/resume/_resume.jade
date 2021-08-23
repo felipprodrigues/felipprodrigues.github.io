@@ -1,7 +1,6 @@
-- const headerVar  = { titleSingle: `// Front End Developer Intern`, titleMultiple: `// Freelance Front End Developer`, eventeneSubtitle: `// Eventene`, cameliasSubtitle: `// Camelias Produtos e Serviços`, tainaSubtitle: `// Tainá's Website`,  theaterSubtitle: `// Theater Themed Template` }
-- const tabsItems = [ `_eventene.jade`, `_camelias-produtos-e-serviços.jade`, `_tainas-website.jade`,  `_theater-themed-template.jade` ]
-
-
+- const headerVar  = { titleSingle: `// Front End Developer Intern`, titleMultiple: `// Freelance Front End Developer`, eventeneSubtitle: `// Eventene`, cameliasSubtitle: `// Camelias Produtos e Serviços`, tainaSubtitle: `// Tainá's Website`,  theaterSubtitle: `// Theater Themed Template` };
+- const tabsItems = [ `_eventene.jade`, `_camelias-produtos-e-serviços.jade`, `_tainas-website.jade`,  `_theater-themed-template.jade` ];
+- const tabsAttributes = [ 'tabOne', 'tabTwo', 'tabThree', 'tabFour' ];
 
 .resume__container
   aside.aside
@@ -14,37 +13,16 @@
 
   nav.tabs
     ul.list
-      li.list__items
-        a.tabs__holder.is-selected(data-trigger="tabOne")
-          span.tabs__item _eventene.jade
-          svg.tabs__icon
-            use(xlink:href="assets/defs.svg#icon-close")
-
-
-      li.list__items
-        a.tabs__holder(data-trigger="tabTwo")
-            span.tabs__item _camelias-produtos-e-serviços.jade
-            svg.tabs__icon
-              use(xlink:href="assets/defs.svg#icon-close")
-
-
-      li.list__items
-        a.tabs__holder(data-trigger="tabThree")
-            span.tabs__item _tainas-website.jade
-            svg.tabs__icon
-              use(xlink:href="assets/defs.svg#icon-close")
-
-
-      li.list__items
-        a.tabs__holder(data-trigger="tabFour")
-            span.tabs__item _theater-themed-template.jade
+      each att, i in tabsAttributes
+        li.list__items
+          a.tabs__holder(data-trigger="#{att}")
+            span.tabs__item #{ tabsItems[i] }
             svg.tabs__icon
               use(xlink:href="assets/defs.svg#icon-close")
 
   .work-space
-    //- DATA ATTRIBUTE = FILES
     .work-space__holder(data-panel="files")
-      //- TAB ONE
+      //- FIRST TAB
       .work-space__holder--within.is-active(data-preview="tabOne")
         .work-space__header
           h1.work-space__title #{ headerVar.titleSingle }
