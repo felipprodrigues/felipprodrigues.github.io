@@ -18,5 +18,13 @@
   "icon-5": {
     "icon": "git",
     "title": "Git"
+  },
+  "icon-6": {
+    "icon": "js",
+    "title": "JavaScript"
+  },
+  "icon-7": {
+    "icon": "jquery",
+    "title": "JQuery"
   }
 }
