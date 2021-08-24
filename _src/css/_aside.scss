@@ -32,6 +32,9 @@
       background-color: $gray-mine-shaft;
     }
 
+    &:hover svg {
+      fill: white;
+    }
   }
 
   &__elements--active {
@@ -51,7 +54,7 @@
 
   &__button {
     cursor: pointer;
-    margin: 10px 0;
+    padding: 10px;
     display: inherit;
     position: relative;
 

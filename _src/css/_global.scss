@@ -26,6 +26,8 @@ body {
   --var-gray-alto: #d3d3d3;
   --var-box-shadow--up-left: #6a6868;
   --var-box-shadow-down-right: #6a6868;
+  --var-box-shadow-vs-top: #494949;
+  --var-box-shadow-vs-bottom: #000;
   // COLOR MIX
   --var-green-christi: #6fb30b;
   --var-green-limeade: #568c06;
@@ -68,6 +70,8 @@ body.dark-theme {
   --var-contact-title: #fff7f7;
 
   // BOX-SHADOW
+  --var-box-shadow-vs-top: #494949;
+  --var-box-shadow-vs-bottom: #000;
   --var-box-shadow-up-left: #494949;
   --var-box-shadow-down-right: #000;
 

@@ -20,115 +20,72 @@
             svg.tabs__icon
               use(xlink:href="assets/defs.svg#icon-close")
 
-  .work-space
-    .work-space__holder(data-panel="files")
-      //- FIRST TAB
-      .work-space__holder--within.is-active(data-preview="tabOne")
-        .work-space__header
-          h1.work-space__title #{ headerVar.titleSingle }
-          h2.work-space__subtitle #{ headerVar.eventeneSubtitle }
-        .work-space__qualifiers
-          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.work-space__list
-            li.work-space__items--blue
-              //- FIX CLASS
-              span.work-space__items--white
-                //- |
-                //- |
-                //- |
-                //- |
-                //- |
-                //- |
-                //- |
-                //- |
+  .card
+    .card__holder(data-panel="files")
 
-      //- TAB TWO
-      .work-space__holder--within(data-preview="tabTwo")
-        .work-space__header
-          h1.work-space__title #{ headerVar.titleMultiple }
-          h2.work-space__subtitle #{ headerVar.cameliasSubtitle }
-        .work-space__qualifiers
-          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.work-space__list
-            li.work-space__items--blue
-              //- |
-              //- |
-              //- |
-              //- |
-              //- |
-              //- |
-              //- |
+      .card__holder--within.is-active(data-preview="tabOne")
+        .card__header
+          h1.card__title #{ headerVar.titleSingle }
+          h2.card__subtitle #{ headerVar.eventeneSubtitle }
+        .card__qualifiers
+          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.card__list
+            li.card__items
 
-      //- TAB THREE
-      .work-space__holder--within(data-preview="tabThree")
-        .work-space__header
-          h1.work-space__title #{ headerVar.titleMultiple }
-          h2.work-space__subtitle #{ headerVar.tainaSubtitle }
-        .work-space__qualifiers
-          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.work-space__list
-            li.work-space__items--blue
 
-              //- |
-              //- |
-              //- |
-              //- |
-              //- |
-              //- |
-              //- |
-              //- |
+      .card__holder--within(data-preview="tabTwo")
+        .card__header
+          h1.card__title #{ headerVar.titleMultiple }
+          h2.card__subtitle #{ headerVar.cameliasSubtitle }
+        .card__qualifiers
+          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.card__list
+            li.card__items
 
-      //- TAB FOUR
-      .work-space__holder--within(data-preview="tabFour")
-        .work-space__header
-          h1.work-space__title #{ headerVar.titleMultiple }
-          h2.work-space__subtitle #{ headerVar.theaterSubtitle }
-        .work-space__qualifiers
-          span.work-space__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.work-space__list
-            li.work-space__items--blue
 
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
-            //- |
+      .card__holder--within(data-preview="tabThree")
+        .card__header
+          h1.card__title #{ headerVar.titleMultiple }
+          h2.card__subtitle #{ headerVar.tainaSubtitle }
+        .card__qualifiers
+          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.card__list
+            li.card__items
 
-    //=  BUTTON TABS ====================================================================================
 
-    //- fix classes
-    //- DATA ATTRIBUTE = SEARCH
-    .work-space__holder.has-center-block.is-wide.no-space-out(data-panel="search")
-      a(href="path_to_file" download="proposed_file_name").work-space__button Preview resume
-        svg
-          use(xlink:href="assets/defs.svg#icon-preview")
-      span or
-      a(href="path_to_file" download="proposed_file_name").work-space__button Download resume
+
+      .card__holder--within(data-preview="tabFour")
+        .card__header
+          h1.card__title #{ headerVar.titleMultiple }
+          h2.card__subtitle #{ headerVar.theaterSubtitle }
+        .card__qualifiers
+          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+          ul.card__list
+            li.card__items
+
+
+
+
+    //=  BUTTONS ====================================================================================
+    .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")
+      a(href="path_to_file" download="proposed_file_name").card__button Download resume
         svg
           use(xlink:href="assets/defs.svg#icon-download")
 
-    //- DATA ATTRIBUTE = SOURCE
-    .work-space__holder(data-panel="source")
-      .work-space__header
-        h1.work-space__title Source Engine
+    .card__holder(data-panel="source")
+      .card__header
+        h1.card__title Source Engine
+        p.card__text This projects runs on HTML(Pug) CSS(SCSS) and Vanilla JavaScript, but not only
+        p.card__text I also have experience working with Git, Shopify's Liquid, Jekyll, Jquery, Webforms and somewhat of React
 
-        p.work-space__text This projects runs on HTML(Pug) CSS(SCSS) and Vanilla JavaScript, but not only
+    .card__holder(data-panel="debugger")
+      .card__header
+        h1.card__title Debugger Engine
 
-        p.work-space__text I also have experience working with Git, Shopify's Liquid, Jekyll, Jquery, Webforms and somewhat of React
-
-    //- DATA ATTRIBUTE = DEBUGGER
-    .work-space__holder(data-panel="debugger")
-      .work-space__header
-        h1.work-space__title Debugger Engine
-
-    //- DATA ATTRIBUTE = EXTENSION
-    .work-space__holder(data-panel="extension")
-      p.work-space__text You can visit the github page for this website and use this
-      a.work-space__text(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank") URL
-      p.work-space__text to check the live source code of this entire project
+    .card__holder(data-panel="extension")
+      p.card__text You can visit the github page for this website and use this
+      a.card__text(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank") URL
+      p.card__text to check the live source code of this entire project
 
 
 

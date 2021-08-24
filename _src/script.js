@@ -22,14 +22,14 @@
         });
 
         //= REMOVE WORK SPACE FROM CONTENT
-        workSpaceContainer.querySelectorAll(`.work-space__holder--within`).forEach(content => {
+        workSpaceContainer.querySelectorAll(`.card__holder--within`).forEach(content => {
           content.classList.remove('is-active');
         })
 
         //* ADD SELECTED CLASS TO CLICKED TAB
         event.classList.add(`is-selected`);
 
-        //* SELECTS THE RELATIVE WORK-SPACE CONTENT
+        //* SELECTS THE RELATIVE card CONTENT
         tabToActivate.classList.add('is-active');
 
       });
@@ -47,11 +47,11 @@
         const asideSecondSibling = asideFirstSibling.nextElementSibling;
         const buttonValue = e.dataset.aside;
         // ADD RELATIVE WORKSPACE
-        const workSpaceToActive = asideSecondSibling.querySelector(`.work-space__holder[data-panel="${buttonValue}"]`);
+        const workSpaceToActive = asideSecondSibling.querySelector(`.card__holder[data-panel="${buttonValue}"]`);
 
         // REMOVE WORKSPACE CONTENT
-        asideSecondSibling.querySelectorAll('.work-space__holder').forEach(event => {
-          event.classList.remove('work-space__holder--active');
+        asideSecondSibling.querySelectorAll('.card__holder').forEach(event => {
+          event.classList.remove('card__holder--active');
         });
 
         // REMOVE STYLE FROM SIBLING BUTTONS
@@ -63,7 +63,7 @@
         e.classList.add('aside__button--selected');
 
         // ADD WORKSPACE CONTENT
-        workSpaceToActive.classList.add("work-space__holder--active");
+        workSpaceToActive.classList.add("card__holder--active");
 
         // REMOVE BORDER FROM SELECTED BUTTON SIBLINGS
         asideList.querySelectorAll('.aside__elements').forEach(event => {
@@ -97,7 +97,7 @@
     const overallList = document.querySelector('.aside__list');
     const firstChild = overallList.firstElementChild;
     const attFiles = document.querySelector('[data-aside="files"]');
-    const workspace = document.querySelector('.work-space');
+    const workspace = document.querySelector('.card');
     const workspaceFirstChild = workspace.firstElementChild;
     const tabsItems = document.querySelector('.list__items');
     const tabsItemFirstChild = tabsItems.firstElementChild;
@@ -107,8 +107,8 @@
     firstChild.classList.add('aside__elements--active');
     // SETS THE BUTTON AS ACTIVE
     attFiles.classList.add('aside__button--selected');
-    // SETS THE WORK-SPACE AS ACTIVE
-    workspaceFirstChild.classList.add('work-space__holder--active');
+    // SETS THE card AS ACTIVE
+    workspaceFirstChild.classList.add('card__holder--active');
     // SETS THE FIRST TAB ELEMENT AS ACTIVE
     tabsItemFirstChild.classList.add('is-selected');
 

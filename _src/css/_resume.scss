@@ -36,11 +36,11 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 3px 3px 4px -1px;
+    box-shadow: -1px -1px 5px 1px var(--var-box-shadow-vs-top),4px 6px 8px 0 var(--var-box-shadow-vs-bottom)
   }
 
   .tabs,
-  .work-space {
+  .card {
     width: calc(100% - 50px);
     position: relative;
     left: 50px;
