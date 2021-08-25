@@ -34,6 +34,14 @@
     color: #D88E73 !important;
   }
 
+  &__title--faded,
+  &__subtitle--faded,
+  &__items--faded {
+    color: #D3D3D3;
+    opacity: 0.1;
+  }
+
+
   &__qualifiers {
     padding-left: 20px;
     margin-top: 2rem;
