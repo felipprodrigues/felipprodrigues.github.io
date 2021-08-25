@@ -1,6 +1,11 @@
 - const headerVar  = { titleSingle: `// Front End Developer Intern`, titleMultiple: `// Freelance Front End Developer`, eventeneSubtitle: `// Eventene`, cameliasSubtitle: `// Camelias Produtos e Serviços`, tainaSubtitle: `// Tainá's Website`,  theaterSubtitle: `// Theater Themed Template` };
 - const tabsItems = [ `_eventene.jade`, `_camelias-produtos-e-serviços.jade`, `_tainas-website.jade`,  `_theater-themed-template.jade` ];
 - const tabsAttributes = [ 'tabOne', 'tabTwo', 'tabThree', 'tabFour' ];
+- const eventList = [ 'Collaborate with the lead team designer to implement new features in the design system;', 'Streamline Webforms’ UI documentation in isolation in React Storybook;', 'Document and update styles and components;', 'Implement newly designed components;', 'Refactoring based on the Atomic Design Principle and BEM organizing structure;', 'Deployment on GitHub' ]
+- const camList = [ 'Full implementation of HTML and CSS structures based on the BEM methodology;', 'Creation of modular and responsive application;', 'GitHub based organization and project deployment' ]
+- const tanList = [ 'Creation of modular and responsive application;', 'Organized based on BEM methodology;', 'GitHub based organization and project deployment' ];
+- const themeList = [ 'Setup and Creation of GitHub repository;', 'Creation of modular and responsive web application;', 'Code structure based on BEM methodology;' ];
+
 
 .resume__container
   aside.aside
@@ -30,8 +35,10 @@
         .card__qualifiers
           span.card__comment.is-commented-out // Key Qualifications and Responsibilities
           ul.card__list
-            li.card__items
-
+            li.card__items--initial ul
+            each items in eventList
+              li.card__items li
+                | #{ items }
 
       .card__holder--within(data-preview="tabTwo")
         .card__header
@@ -40,8 +47,10 @@
         .card__qualifiers
           span.card__comment.is-commented-out // Key Qualifications and Responsibilities
           ul.card__list
-            li.card__items
-
+            li.card__items--initial ul
+            each items in camList
+              li.card__items li
+                | #{ items }
 
       .card__holder--within(data-preview="tabThree")
         .card__header
@@ -50,9 +59,10 @@
         .card__qualifiers
           span.card__comment.is-commented-out // Key Qualifications and Responsibilities
           ul.card__list
-            li.card__items
-
-
+            li.card__items--initial ul
+            each items in tanList
+              li.card__items li
+                | #{ items }
 
       .card__holder--within(data-preview="tabFour")
         .card__header
@@ -61,10 +71,10 @@
         .card__qualifiers
           span.card__comment.is-commented-out // Key Qualifications and Responsibilities
           ul.card__list
-            li.card__items
-
-
-
+            li.card__items--initial ul
+            each items in themeList
+              li.card__items li
+                | #{ items }
 
     //=  BUTTONS ====================================================================================
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")

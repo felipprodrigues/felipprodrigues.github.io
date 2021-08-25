@@ -85,4 +85,15 @@
   &__text {
     color: white
   }
+
+  &__list {
+    list-style-type: none;
+    line-height: 1.6rem;
+    color: #358FC4;
+  }
+
+  &__items {
+    padding-left: 10px;
+    color: #358FC4;
+  }
 }
