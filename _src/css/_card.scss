@@ -1,4 +1,4 @@
-.work-space {
+.card {
   top: 25px;
   min-height: calc(100% - 65px);
   min-width: calc(100% - 50px);
@@ -33,6 +33,14 @@
   &__subtitle {
     color: #D88E73 !important;
   }
+
+  &__title--faded,
+  &__subtitle--faded,
+  &__items--faded {
+    color: #D3D3D3;
+    opacity: 0.1;
+  }
+
 
   &__qualifiers {
     padding-left: 20px;
@@ -84,5 +92,16 @@
 
   &__text {
     color: white
+  }
+
+  &__list {
+    list-style-type: none;
+    line-height: 1.6rem;
+    color: #358FC4;
+  }
+
+  &__items {
+    padding-left: 10px;
+    color: #358FC4;
   }
 }
