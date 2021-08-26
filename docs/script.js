@@ -77,7 +77,7 @@
   };
 
   // REMOVE tabs
-  function removeBradcrumbs() {
+  function removeTabs() {
     document.querySelectorAll('.aside__button').forEach(button => {
       button.addEventListener('click', () => {
         const buttonValue = button.dataset.aside;
@@ -102,7 +102,6 @@
     const tabsItems = document.querySelector('.list__items');
     const tabsItemFirstChild = tabsItems.firstElementChild;
 
-
     // SETS THE ASIDE ELEMENT AS ACTIVE
     firstChild.classList.add('aside__elements--active');
     // SETS THE BUTTON AS ACTIVE
@@ -111,6 +110,7 @@
     workspaceFirstChild.classList.add('card__holder--active');
     // SETS THE FIRST TAB ELEMENT AS ACTIVE
     tabsItemFirstChild.classList.add('is-selected');
+    // SETS THE FIRST TAB ELEMENT AS ACTIVE
 
   }
 
@@ -118,7 +118,7 @@
     lightDark();
     setupTabs();
     sidebar();
-    removeBradcrumbs();
+    removeTabs();
     activeElements();
   })
 }());

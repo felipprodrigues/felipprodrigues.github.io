@@ -1,6 +1,8 @@
-- const headerVar  = { titleSingle: `Front End Developer Intern`, titleMultiple: `Freelance Front End Developer`, eventeneSubtitle: `Eventene`, cameliasSubtitle: `Camelias Produtos e Serviços`, tainaSubtitle: `Tainá's Website`,  theaterSubtitle: `Theater Themed Template`, download: 'Download resume',  source: 'Source Engine' };
+- const headerTitle  = [ `Front End Developer Intern`, `Freelance Front End Developer`, `Freelance Front End Developer`, `Freelance Front End Developer` ];
+- const headerSubtitle  = [ `Eventene`, `Camelias Produtos e Serviços`, `Tainá's Website`, `Theater Themed Template` ];
 - const tabsItems = [ `_eventene.jade`, `_camelias-produtos-e-serviços.jade`, `_tainas-website.jade`,  `_theater-themed-template.jade` ];
 - const tabsAttributes = [ 'tabOne', 'tabTwo', 'tabThree', 'tabFour' ];
+- const conditionalAttributes =  { one: 'tabOne', two: 'tabTwo', three: 'tabThree', four: 'tabFour' };
 - const eventList = [ 'Collaborate with the lead team designer to implement new features in the design system;', 'Streamline Webforms’ UI documentation in isolation in React Storybook;', 'Document and update styles and components;', 'Implement newly designed components;', 'Refactor based on the Atomic Design Principle and B.E.M organizing structure;', 'Deployment on GitHub' ]
 - const camList = [ 'Full implementation of HTML and CSS structures based on the BEM methodology;', 'Creation of modular and responsive application;', 'GitHub based organization and project deployment' ]
 - const tanList = [ 'Creation of modular and responsive application;', 'Organized based on BEM methodology;', 'GitHub based organization and project deployment' ];
@@ -30,67 +32,63 @@
   .card
     .card__holder(data-panel="files")
 
-      .card__holder--within.is-active(data-preview="tabOne")
-        .card__header
-          h1.card__title ﹤h1﹥ #{ headerVar.titleSingle } ﹤/h1﹥
-          h3.card__subtitle ﹤h3﹥ #{ headerVar.eventeneSubtitle } ﹤/h3﹥
-        .card__qualifiers
-          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.card__list
-            li.card__items--faded ﹤ul﹥
-            each items in eventList
-              li.card__items ﹤li﹥
-                | #{ items }
-            li.card__items--faded ﹤/ul﹥
-
-      .card__holder--within(data-preview="tabTwo")
-        .card__header
-          h1.card__title ﹤h1﹥ #{ headerVar.titleMultiple } ﹤/h1﹥
-          h3.card__subtitle ﹤h3﹥ #{ headerVar.cameliasSubtitle } ﹤/h3﹥
-        .card__qualifiers
-          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.card__list
-            li.card__items--faded ﹤ul﹥
-            each items in camList
-              li.card__items ﹤li﹥
-                | #{ items }
-            li.card__items--faded ﹤/ul﹥
-
-      .card__holder--within(data-preview="tabThree")
-        .card__header
-          h1.card__title ﹤h1﹥ #{ headerVar.titleMultiple } ﹤/h1﹥
-          h3.card__subtitle ﹤h3﹥ #{ headerVar.tainaSubtitle } ﹤/h3﹥
-        .card__qualifiers
-          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.card__list
-            li.card__items--faded ﹤ul﹥
-            each items in tanList
-              li.card__items ﹤li﹥
-                | #{ items }
-            li.card__items--faded ﹤/ul﹥
-
-      .card__holder--within(data-preview="tabFour")
-        .card__header
-          h1.card__title ﹤h1﹥ #{ headerVar.titleMultiple } ﹤/h1﹥
-          h3.card__subtitle ﹤h3﹥ #{ headerVar.theaterSubtitle } ﹤/h3﹥
-        .card__qualifiers
-          span.card__comment.is-commented-out // Key Qualifications and Responsibilities
-          ul.card__list
-            li.card__items--faded ﹤ul﹥
-            each items in themeList
-              li.card__items ﹤li﹥
-                | #{ items }
-            li.card__items--faded ﹤/ul﹥
+      each att, i in tabsAttributes
+        .card__holder--within(data-preview="#{att}")
+          .card__header
+            h1.card__title
+              span.card__items--faded ﹤h1﹥
+              | #{ headerTitle[i] }
+              span.card__items--faded ﹤/h1﹥
+            h3.card__subtitle
+              span.card__items--faded ﹤h3﹥
+              | #{ headerSubtitle[i] }
+              span.card__items--faded ﹤/h3﹥
+          if att === conditionalAttributes.one
+            .card__qualifiers
+              span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+              ul.card__list
+                li.card__items--faded ﹤ul﹥
+                each items in eventList
+                  li.card__items ﹤li﹥
+                    | #{ items }
+                li.card__items--faded ﹤/ul﹥
+          else if att === conditionalAttributes.two
+            .card__qualifiers
+              span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+              ul.card__list
+                li.card__items--faded ﹤ul﹥
+                each items in camList
+                  li.card__items ﹤li﹥
+                    | #{ items }
+                li.card__items--faded ﹤/ul﹥
+          else if att === conditionalAttributes.three
+            .card__qualifiers
+              span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+              ul.card__list
+                li.card__items--faded ﹤ul﹥
+                each items in tanList
+                  li.card__items ﹤li﹥
+                    | #{ items }
+                li.card__items--faded ﹤/ul﹥
+          else if att === conditionalAttributes.four
+            .card__qualifiers
+              span.card__comment.is-commented-out // Key Qualifications and Responsibilities
+              ul.card__list
+                li.card__items--faded ﹤ul﹥
+                each items in themeList
+                  li.card__items ﹤li﹥
+                    | #{ items }
+                li.card__items--faded ﹤/ul﹥
 
     //=  BUTTONS ====================================================================================
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")
-      a(href="path_to_file" download="proposed_file_name").card__button #{ headerVar.download }
+      //- a(href="path_to_file" download="proposed_file_name").card__button #{ headerVar.download }
         svg
           use(xlink:href="assets/defs.svg#icon-download")
 
     .card__holder(data-panel="source")
       .card__header
-        h1.card__title #{ headerVar.source }
+        //- h1.card__title #{ headerVar.source }
         p.card__text This projects runs on
           each tags in pageTags
             small.tags #{ tags }
