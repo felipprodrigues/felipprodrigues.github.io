@@ -11,7 +11,7 @@
     height: 25px;
     background-color: white;
     top: 0;
-    background: #3c3c3c;
+    background: #333;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -25,14 +25,14 @@
     border-radius: 50%;
     height: 10px;
     top: 7px;
-    left: 7px;
+    left: 4px;
     box-shadow: 16px 0 0 0 $yellow-orange, 33px 0 0 0 $green-malachite;
   }
 
   &__container {
     width: 85%;
     background: $cod-gray;
-    min-height: 550px;
+    min-height: 625px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;

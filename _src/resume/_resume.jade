@@ -3,12 +3,17 @@
 - const tabsItems = [ `_eventene.jade`, `_camelias-produtos-e-serviços.jade`, `_tainas-website.jade`,  `_theater-themed-template.jade` ];
 - const tabsAttributes = [ 'tabOne', 'tabTwo', 'tabThree', 'tabFour' ];
 - const conditionalAttributes =  { one: 'tabOne', two: 'tabTwo', three: 'tabThree', four: 'tabFour' };
-- const eventList = [ 'Collaborate with the lead team designer to implement new features in the design system;', 'Streamline Webforms’ UI documentation in isolation in React Storybook;', 'Document and update styles and components;', 'Implement newly designed components;', 'Refactor based on the Atomic Design Principle and B.E.M organizing structure;', 'Deployment on GitHub' ]
-- const camList = [ 'Full implementation of HTML and CSS structures based on the BEM methodology;', 'Creation of modular and responsive application;', 'GitHub based organization and project deployment' ]
-- const tanList = [ 'Creation of modular and responsive application;', 'Organized based on BEM methodology;', 'GitHub based organization and project deployment' ];
-- const themeList = [ 'Setup and Creation of GitHub repository;', 'Creation of modular and responsive web application;', 'Code structure based on BEM methodology;' ];
-- const pageTags = [ 'HTML(PUG)', `CSS(SCSS)`, 'Vanilla JavaScript' ];
+- const eventList = [ 'Collaborate with the stack (Ruby, TypeScript, Vue, React);', 'Closely collaborate with the lead team designer to implement new features in the design system;', 'Streamline Webforms’ UI documentation in isolation for React’s Storybook;', 'Fix and update UI’s bugs in Webforms', 'Update the Ruby on Rails running app;', 'Document and update styles and components;', 'Perform fluid UI components with JQuery;', 'Implement newly designed components;', 'Refactor based on the Atomic Design Principle and BEM organizing structure;', 'Work in different ecosystems;', 'Deployment on GitHub' ]
+- const camList = [ 'Translate mockup using Jade, SCSS;', 'Full implementation of HTML and CSS structures based on semantic HTML and BEM methodology;', 'Creation of modular and responsive application;', 'JQuery usage to perform fluid UX search and addition of new cards and tags;', 'GitHub based organization and project deployment' ]
+- const tanList = [ 'Translate mockup using Jade, SCSS for static layout;', 'Full implementation of HTML and CSS structures based on semantic HTML and BEM methodology;', 'Creation of modular and responsive application;', 'Deployment on GitHub' ];
+- const themeList = [ 'Translate mockup using Jade, SCSS for static layout;', 'Full HTML and SCSS implementation of the theater-themed static open source website template design;', 'Creation of modular and responsive web application;', 'SCSS Code structure based on BEM methodology;', 'Semantic HTML structure', 'Deployment on GitHub' ];
+- const pageTags = [ 'HTML(PUG)', 'CSS(SCSS)', 'Vanilla JavaScript' ];
 - const sourceTags = [ 'Git', `Shopify's Liquid`, 'Jekyll', 'Jquery', 'React' ];
+- const svgIconsInitial = [ 'html', 'css', 'js' ]
+- const svgTagsInitial = [ 'HTML', 'CSS', 'JavaScript' ]
+- const svgIconsLast = [ 'git', 'liquid', 'jekyll', 'jquery' ]
+- const svgTagsLast = [ 'Git', `Shopify's Liquid`, 'Jekyll', 'JQuery' ]
+
 
 
 .resume__container
@@ -49,8 +54,8 @@
               ul.card__list
                 li.card__items--faded ﹤ul﹥
                 each items in eventList
-                  li.card__items ﹤li﹥
-                    | #{ items }
+                  li.card__items.card__items--faded ﹤li﹥
+                    span.card__items.card__items--highlight #{ items }
                 li.card__items--faded ﹤/ul﹥
           else if att === conditionalAttributes.two
             .card__qualifiers
@@ -58,8 +63,8 @@
               ul.card__list
                 li.card__items--faded ﹤ul﹥
                 each items in camList
-                  li.card__items ﹤li﹥
-                    | #{ items }
+                  li.card__items.card__items--faded ﹤li﹥
+                    span.card__items.card__items--highlight #{ items }
                 li.card__items--faded ﹤/ul﹥
           else if att === conditionalAttributes.three
             .card__qualifiers
@@ -67,8 +72,8 @@
               ul.card__list
                 li.card__items--faded ﹤ul﹥
                 each items in tanList
-                  li.card__items ﹤li﹥
-                    | #{ items }
+                  li.card__items.card__items--faded ﹤li﹥
+                    span.card__items.card__items--highlight #{ items }
                 li.card__items--faded ﹤/ul﹥
           else if att === conditionalAttributes.four
             .card__qualifiers
@@ -76,34 +81,47 @@
               ul.card__list
                 li.card__items--faded ﹤ul﹥
                 each items in themeList
-                  li.card__items ﹤li﹥
-                    | #{ items }
+                  li.card__items.card__items--faded ﹤li﹥
+                    span.card__items.card__items--highlight #{ items }
                 li.card__items--faded ﹤/ul﹥
 
     //=  BUTTONS ====================================================================================
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")
-      //- a(href="path_to_file" download="proposed_file_name").card__button #{ headerVar.download }
+      a(href="/assets/far-resume.pdf" download="felipe-resume").card__button Download Resume
         svg
           use(xlink:href="assets/defs.svg#icon-download")
 
-    .card__holder(data-panel="source")
-      .card__header
-        //- h1.card__title #{ headerVar.source }
-        p.card__text This projects runs on
-          each tags in pageTags
-            small.tags #{ tags }
-        p.card__text but not only I also have experience working with
-          each tags in sourceTags
-            small.tags #{ tags }
+    .card__holder.has-center-block.is-wide.no-space-out(data-panel="source")
+      .card__block
+        p.card__items.card__items--highlight.card__items--default This projects was built with
+        ul.card__list.card__list--horizontal
+          each icon, i in svgIconsInitial
+            li.education__items
+              svg.education__icon
+                use(xlink:href="assets/defs.svg#icon-#{ icon }")
+              span #{ svgTagsInitial[i] }
+        p.card__items.card__items--highlight.card__items--default But not only I also have experience working with
+        ul.card__list.card__list--horizontal
+          each icon, i in svgIconsLast
+            li.education__items
+              svg.education__icon
+                use(xlink:href="assets/defs.svg#icon-#{ icon }")
+              span #{ svgTagsLast[i] }
+        //- each tags in pageTags
+        //-   small.tags #{ tags }
+        //- | but not only I also have experience working with
+        //- each tags in sourceTags
+        //-   small.tags #{ tags }
 
     .card__holder(data-panel="debugger")
       .card__header
         h1.card__title Debugger Engine
 
     .card__holder(data-panel="extension")
-      p.card__text You can visit the github page for this website and use this
-      a.card__text(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank") URL
-      p.card__text to check the live source code of this entire project
+      p.card__items.card__items--highlight Ok, Ok.. I know it may be a little boring to be inspecting the page and all that but I have a tip for you.
+      p.card__items.card__items--highlight So, instead of checking the repository of this project, which is this one by the way, you can directly visit the root code of this website by simply using this link
+      a.card__items.card__items--highlight(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank") URL
+      p.card__items.card__items--highlight and you'll be able to check the live source code.
 
 
 

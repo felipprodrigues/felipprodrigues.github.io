@@ -101,18 +101,20 @@
     const workspaceFirstChild = workspace.firstElementChild;
     const tabsItems = document.querySelector('.list__items');
     const tabsItemFirstChild = tabsItems.firstElementChild;
+    const cardList = document.querySelector('.card__holder');
+    const cardListFirstChild = cardList.firstElementChild;
 
     // SETS THE ASIDE ELEMENT AS ACTIVE
     firstChild.classList.add('aside__elements--active');
-    // SETS THE BUTTON AS ACTIVE
+    // SETS THE BUTTON AS SELECTED
     attFiles.classList.add('aside__button--selected');
     // SETS THE card AS ACTIVE
     workspaceFirstChild.classList.add('card__holder--active');
     // SETS THE FIRST TAB ELEMENT AS ACTIVE
     tabsItemFirstChild.classList.add('is-selected');
     // SETS THE FIRST TAB ELEMENT AS ACTIVE
-
-  }
+    cardListFirstChild.classList.add('is-active')
+  };
 
   document.addEventListener("DOMContentLoaded", () => {
     lightDark();
