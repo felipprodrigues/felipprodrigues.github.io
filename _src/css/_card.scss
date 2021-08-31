@@ -37,8 +37,7 @@
   &__title--faded,
   &__subtitle--faded,
   &__items--faded {
-    color: #D3D3D3;
-    opacity: 0.1;
+    color: #373636;
   }
 
 
@@ -97,11 +96,35 @@
   &__list {
     list-style-type: none;
     line-height: 1.6rem;
-    color: #358FC4;
+    color: #D3D3D3;
   }
 
-  &__items {
+  &__list--horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__items:not(.card__items--default) {
     padding-left: 10px;
-    color: #358FC4;
+  }
+
+  &__items--highlight {
+    color: $gray-alto;
+  }
+
+  &__items--default {
+    text-align: center;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }

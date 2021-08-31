@@ -11,7 +11,7 @@
     height: 25px;
     background-color: white;
     top: 0;
-    background: #3c3c3c;
+    background: #333;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -32,7 +32,7 @@
   &__container {
     width: 85%;
     background: $cod-gray;
-    min-height: 550px;
+    min-height: 625px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
