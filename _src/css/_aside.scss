@@ -57,9 +57,42 @@
     padding: 10px;
     display: inherit;
     position: relative;
+    transition: all .5s ease-in;
 
     &--selected svg {
       fill: white;
     }
+
+    &:hover + .aside__tooltip {
+      display: inline ruby;
+    }
+  }
+
+  &__tooltip,
+  &__tooltip:before {
+    position: absolute;
+    background: $shark;
+    border: 1px solid $tundora;
+  }
+
+  &__tooltip {
+    display: none;
+    left: 57px;
+    top: 10px;
+    color: $gray-alto;
+    padding: 3px 10px;
+    z-index: 9999;
+    font-size: 14px;
+  }
+
+  &__tooltip:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    left: -6px;
+    top: 5px;
+    transform: rotate(45deg);
+    border-top: transparent;
+    border-right: transparent;
   }
 }

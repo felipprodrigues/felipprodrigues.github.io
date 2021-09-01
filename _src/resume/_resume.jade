@@ -7,14 +7,10 @@
 - const camList = [ 'Translate mockup using Jade, SCSS;', 'Full implementation of HTML and CSS structures based on semantic HTML and BEM methodology;', 'Creation of modular and responsive application;', 'JQuery usage to perform fluid UX search and addition of new cards and tags;', 'GitHub based organization and project deployment' ]
 - const tanList = [ 'Translate mockup using Jade, SCSS for static layout;', 'Full implementation of HTML and CSS structures based on semantic HTML and BEM methodology;', 'Creation of modular and responsive application;', 'Deployment on GitHub' ];
 - const themeList = [ 'Translate mockup using Jade, SCSS for static layout;', 'Full HTML and SCSS implementation of the theater-themed static open source website template design;', 'Creation of modular and responsive web application;', 'SCSS Code structure based on BEM methodology;', 'Semantic HTML structure', 'Deployment on GitHub' ];
-- const pageTags = [ 'HTML(PUG)', 'CSS(SCSS)', 'Vanilla JavaScript' ];
-- const sourceTags = [ 'Git', `Shopify's Liquid`, 'Jekyll', 'Jquery', 'React' ];
-- const svgIconsInitial = [ 'html', 'css', 'js' ]
-- const svgTagsInitial = [ 'HTML', 'CSS', 'JavaScript' ]
-- const svgIconsLast = [ 'git', 'liquid', 'jekyll', 'jquery' ]
+- const svgIconsInitial = [ 'pug-color', 'sass-color', 'js-color' ]
+- const svgTagsInitial = [ 'Pug', 'SCSS', 'JavaScript' ]
+- const svgIconsLast = [ 'git-color', 'liquid-color', 'jekyll', 'jquery-color' ]
 - const svgTagsLast = [ 'Git', `Shopify's Liquid`, 'Jekyll', 'JQuery' ]
-
-
 
 .resume__container
   aside.aside
@@ -24,6 +20,7 @@
           a.aside__button(data-aside="#{ icon.attribute }")
             svg.aside__icons
               use(xlink:href="assets/defs.svg#icon-#{ icon.icon }")
+          span.aside__tooltip #{ icon.tooltip }
 
   nav.tabs
     ul.list
@@ -87,11 +84,25 @@
 
     //=  BUTTONS ====================================================================================
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")
-      a(href="/assets/far-resume.pdf" download="felipe-resume").card__button Download Resume
+      a#buttonPreview.card__button.card__button--spaced Preview Resume
+        svg
+          use(xlink:href="assets/defs.svg#icon-preview")
+      a.card__button.card__button--spaced(href="/assets/download/far-resume.pdf" download="felipe-resume") Download Resume
         svg
           use(xlink:href="assets/defs.svg#icon-download")
 
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="source")
+      p.card__items.card__items--highlight Feel free to explore how I made this project by simply checking it below or you can
+        a.card__items.card__items--link(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank")
+          |&nbsp; click here
+        |&nbsp; and get a full preview
+      iframe.card__screen(src="https://github1s.com/felipprodrigues/felipprodrigues.github.io/blob/HEAD/_src/index.jade", frameborder="0")
+
+    .card__holder(data-panel="debugger")
+      .card__header
+        h1.card__title Debugger Engine
+
+    .card__holder.has-center-block.is-wide.no-space-out(data-panel="extension")
       .card__block
         p.card__items.card__items--highlight.card__items--default This projects was built with
         ul.card__list.card__list--horizontal
@@ -107,21 +118,6 @@
               svg.education__icon
                 use(xlink:href="assets/defs.svg#icon-#{ icon }")
               span #{ svgTagsLast[i] }
-        //- each tags in pageTags
-        //-   small.tags #{ tags }
-        //- | but not only I also have experience working with
-        //- each tags in sourceTags
-        //-   small.tags #{ tags }
-
-    .card__holder(data-panel="debugger")
-      .card__header
-        h1.card__title Debugger Engine
-
-    .card__holder(data-panel="extension")
-      p.card__items.card__items--highlight Ok, Ok.. I know it may be a little boring to be inspecting the page and all that but I have a tip for you.
-      p.card__items.card__items--highlight So, instead of checking the repository of this project, which is this one by the way, you can directly visit the root code of this website by simply using this link
-      a.card__items.card__items--highlight(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank") URL
-      p.card__items.card__items--highlight and you'll be able to check the live source code.
 
 
 

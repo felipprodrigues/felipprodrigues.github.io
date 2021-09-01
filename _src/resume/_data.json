@@ -1,22 +1,27 @@
 {
   "icon-1": {
     "icon": "files",
-    "attribute": "files"
+    "attribute": "files",
+    "tooltip": "Explorer"
   },
   "icon-2": {
     "icon": "search",
-    "attribute": "search"
+    "attribute": "search",
+    "tooltip": "Search"
   },
   "icon-3": {
     "icon": "source-control",
-    "attribute": "source"
+    "attribute": "source",
+    "tooltip": "Source Control"
   },
   "icon-4": {
     "icon": "debugger",
-    "attribute": "debugger"
+    "attribute": "debugger",
+    "tooltip": "Run and Debug"
   },
   "icon-5": {
     "icon": "extension-blocks",
-    "attribute": "extension"
+    "attribute": "extension",
+    "tooltip": "Extensions"
   }
 }
