@@ -116,12 +116,22 @@
     cardListFirstChild.classList.add('is-active')
   };
 
+  function modal() {
+    const openModal = document.getElementById('buttonPreview');
+    openModal.addEventListener('click', function() {
+      console.log(openModal)
+
+    })
+
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     lightDark();
     setupTabs();
     sidebar();
     removeTabs();
     activeElements();
+    modal()
   })
 }());
 

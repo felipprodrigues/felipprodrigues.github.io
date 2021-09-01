@@ -76,6 +76,7 @@
     border: none;
     transition: all .25s linear;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
       background-color: #0079C0;
@@ -86,6 +87,10 @@
       max-height: 15px;
       fill: #fff;
       margin-left: 10px
+    }
+
+    &--spaced {
+      margin: 15px 0;
     }
   }
 

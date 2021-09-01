@@ -84,7 +84,10 @@
 
     //=  BUTTONS ====================================================================================
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")
-      a(href="/assets/far-resume.pdf" download="felipe-resume").card__button Download Resume
+      a#buttonPreview.card__button.card__button--spaced Preview Resume
+        svg
+          use(xlink:href="assets/defs.svg#icon-preview")
+      a.card__button.card__button--spaced(href="/assets/download/far-resume.pdf" download="felipe-resume") Download Resume
         svg
           use(xlink:href="assets/defs.svg#icon-download")
 
