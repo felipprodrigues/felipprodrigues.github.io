@@ -96,7 +96,7 @@
         a.card__items.card__items--link(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank")
           |&nbsp; click here
         |&nbsp; and get a full preview
-      iframe.card__screen(src="https://github1s.com/felipprodrigues/felipprodrigues.github.io/blob/HEAD/_src/index.jade", frameborder="0")
+      //- iframe.card__screen(src="https://github1s.com/felipprodrigues/felipprodrigues.github.io/blob/HEAD/_src/index.jade", frameborder="0")
 
     .card__holder(data-panel="debugger")
       .card__header
@@ -118,6 +118,12 @@
               svg.education__icon
                 use(xlink:href="assets/defs.svg#icon-#{ icon }")
               span #{ svgTagsLast[i] }
+
+.modal
+  .modal--inner
+    .modal__holder
+      img(src="/assets/modal/resume.png" alt='OOPS')
+    button.modal__button Close
 
 
 

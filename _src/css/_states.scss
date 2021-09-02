@@ -36,3 +36,8 @@
   display: flex !important;
   flex-direction: column !important;
 }
+
+.is-open {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
