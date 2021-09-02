@@ -118,12 +118,41 @@
 
   function modal() {
     const openModal = document.getElementById('buttonPreview');
-    openModal.addEventListener('click', function() {
-      console.log(openModal)
+    const modalOverlay = document.querySelector('.modal');
+    const modalContent = document.querySelector('.modal__button');
+    const modalByKey = window;
 
+    console.log(modalContent)
+
+    openModal.addEventListener('click', function (){
+      modalOverlay.classList.add('is-open');
+    });
+
+    function closeModal() {
+      modalOverlay.classList.remove('is-open');
+    }
+
+    // CLOSING FUNCTIONS
+    modalContent.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', function(event){
+      const outsideClick = event.target.closest('.modal--inner');
+      if( !outsideClick ) {
+        closeModal()
+      }
+    });
+    modalByKey.addEventListener('keydown', event => {
+      if( event.key === 'Escape' ) {
+        closeModal();
+      }
     })
 
-  }
+
+
+
+
+  };
+
+
 
   document.addEventListener("DOMContentLoaded", () => {
     lightDark();
