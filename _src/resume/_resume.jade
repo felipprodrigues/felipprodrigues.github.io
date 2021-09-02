@@ -1,6 +1,6 @@
 - const headerTitle  = [ `Front End Developer Intern`, `Freelance Front End Developer`, `Freelance Front End Developer`, `Freelance Front End Developer` ];
 - const headerSubtitle  = [ `Eventene`, `Camelias Produtos e Serviços`, `Tainá's Website`, `Theater Themed Template` ];
-- const tabsItems = [ `_eventene.jade`, `_camelias-produtos-e-serviços.jade`, `_tainas-website.jade`,  `_theater-themed-template.jade` ];
+- const tabsItems = [ `_eventene.jade`, `_camelias.jade`, `_taina.jade`,  `_theater.jade` ];
 - const tabsAttributes = [ 'tabOne', 'tabTwo', 'tabThree', 'tabFour' ];
 - const conditionalAttributes =  { one: 'tabOne', two: 'tabTwo', three: 'tabThree', four: 'tabFour' };
 - const eventList = [ 'Collaborate with the stack (Ruby, TypeScript, Vue, React);', 'Closely collaborate with the lead team designer to implement new features in the design system;', 'Streamline Webforms’ UI documentation in isolation for React’s Storybook;', 'Fix and update UI’s bugs in Webforms', 'Update the Ruby on Rails running app;', 'Document and update styles and components;', 'Perform fluid UI components with JQuery;', 'Implement newly designed components;', 'Refactor based on the Atomic Design Principle and BEM organizing structure;', 'Work in different ecosystems;', 'Deployment on GitHub' ]
@@ -13,7 +13,7 @@
 - const svgTagsLast = [ 'Git', `Shopify's Liquid`, 'Jekyll', 'JQuery' ]
 
 .resume__container
-  aside.aside
+  aside.aside.is-tablet-hidden
     ul.aside__list
       for icon, slug in public.resume._data
         li.aside__elements
@@ -31,9 +31,8 @@
             svg.tabs__icon
               use(xlink:href="assets/defs.svg#icon-close")
 
-  .card
-    .card__holder(data-panel="files")
-
+  .card.is-mobile-wide
+    .card__holder.is-wide(data-panel="files")
       each att, i in tabsAttributes
         .card__holder--within(data-preview="#{att}")
           .card__header
@@ -92,11 +91,11 @@
           use(xlink:href="assets/defs.svg#icon-download")
 
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="source")
-      p.card__items.card__items--highlight Feel free to explore how I made this project by simply checking it below or you can
+      p.card__items.card__items--highlight.card__items--padded Feel free to explore how I made this project by simply checking it below or you can
         a.card__items.card__items--link(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank")
           |&nbsp; click here
         |&nbsp; and get a full preview
-      //- iframe.card__screen(src="https://github1s.com/felipprodrigues/felipprodrigues.github.io/blob/HEAD/_src/index.jade", frameborder="0")
+      iframe.card__screen(src="https://github1s.com/felipprodrigues/felipprodrigues.github.io/blob/HEAD/_src/index.jade", frameborder="0")
 
     .card__holder(data-panel="debugger")
       .card__header
