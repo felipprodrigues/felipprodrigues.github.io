@@ -4,6 +4,10 @@
   padding: 100px 50px;
   background-color: var(--var-education);
 
+  @media screen and (max-width: $tablet-up) {
+    padding: 50px 15px;
+  }
+
   &__container::before {
     content: "";
     position: absolute;
@@ -36,7 +40,11 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: -1px -1px 5px 1px var(--var-box-shadow-vs-top),4px 6px 8px 0 var(--var-box-shadow-vs-bottom)
+    box-shadow: -1px -1px 5px 1px var(--var-box-shadow-vs-top),4px 6px 8px 0 var(--var-box-shadow-vs-bottom);
+
+    @media screen and (max-width: $web-up) {
+      width: 100%;
+    }
   }
 
   .tabs,
@@ -45,6 +53,10 @@
     position: relative;
     left: 50px;
     display: flex;
+
+    @media screen and (max-width: $tablet-up) {
+      left: 0;
+    }
   }
 }
 

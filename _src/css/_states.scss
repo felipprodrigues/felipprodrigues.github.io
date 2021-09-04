@@ -4,6 +4,10 @@
 
 .is-commented-out {
   color: $green-limeade !important;
+
+  @media screen and (max-width: $tablet-up) {
+    font-size: 13px;
+  }
 }
 
 .is-selected {
@@ -40,4 +44,24 @@
 .is-open {
   opacity: 1 !important;
   pointer-events: all !important;
+}
+
+// RESPONSIVE STATES
+.is-mobile-wide {
+  @media screen and (max-width: $tablet-up) {
+    width: 100% !important;
+    padding: 0 10px 10px 0;
+  }
+}
+
+.is-tablet-hidden {
+  @media screen and (max-width: $tablet-up) {
+    display: none !important;
+  }
+}
+
+.is-web-hidden {
+  @media screen and (max-width: $web-up) {
+    display: none !important;
+  }
 }
