@@ -79,4 +79,24 @@
       font-size: 18px;
     }
   }
+
+  &__holder {
+    display: none;
+
+    @media screen and (max-width: $tablet-up) {
+      display: inline;
+      position: absolute;
+      top: 1em;
+      right: 7.5em;
+    }
+  }
+
+  &__icon {
+    @media screen and (max-width: $tablet-up) {
+      max-width: 25px;
+      max-height: 25px;
+      fill: $blue-malibu;
+      filter: brightness(.7);
+    }
+  }
 }

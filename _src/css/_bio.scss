@@ -15,12 +15,12 @@
   }
 
   &__hook {
+    text-decoration: none;
     color: var(--var-green-christi);
     transition: all 0.25s linear;
   }
 
   &__hook:hover {
-    text-decoration: none;
     color: var(--var-green-limeade);
   }
 }
