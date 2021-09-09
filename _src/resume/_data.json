@@ -15,11 +15,6 @@
     "tooltip": "Source Control"
   },
   "icon-4": {
-    "icon": "debugger",
-    "attribute": "debugger",
-    "tooltip": "Run and Debug"
-  },
-  "icon-5": {
     "icon": "extension-blocks",
     "attribute": "extension",
     "tooltip": "Extensions"

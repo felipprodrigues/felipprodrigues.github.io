@@ -8,6 +8,9 @@
         svg.checkmark.checkmark__svg
           use(xlink:href="assets/defs.svg#icon-sun")
         .switch__overlay
+    a.header__holder(href="/assets/download/far-resume.pdf" download="felipe-resume")
+      svg.header__icon
+        use(xlink:href="assets/defs.svg#icon-download")
 
     .header__frame
       img.header__image(src="/assets/profile.png", alt="Oops!")
@@ -24,9 +27,11 @@
       br
       br
       | Given the nature of open source environment, I invite you to check out further some of my work in the
-      a.bio__hook(href="#projects") projects
+      a.bio__hook(href="#projects")
+        |&nbsp; projects
       |&nbsp; section, but if you really want to dive deep on how I coded them I strongly recommend visiting my
-      a.bio__hook(href="https://github.com/felipprodrigues") github
+      a.bio__hook(href="https://github.com/felipprodrigues")
+        |&nbsp; github
       |&nbsp; page.
 
   section.education
