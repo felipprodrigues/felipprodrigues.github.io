@@ -10,6 +10,12 @@
   }
 }
 
+.is-flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .is-selected {
   background-color: $cod-gray !important;
 }
@@ -64,4 +70,8 @@
   @media screen and (max-width: $web-up) {
     display: none !important;
   }
+}
+
+.hack-font {
+  font-family: Hack, monospace !important;
 }

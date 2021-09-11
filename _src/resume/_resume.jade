@@ -96,28 +96,40 @@
         |&nbsp; and get a full preview of the entire code
 
     // UPDATE INFO
-    .card__holder(data-panel="debugger")
+    .card__holder.is-wide(data-panel="debugger")
       .card__header
         h1.card__title Debugger Engine
-        p.card__title INCLUIR CURSOS FEITOS E EM ATIVIDADE
+        p.card__title This section is exclusively to display how I debug my personal projects and project snippets I might find hard to get around
+      .card__wrapper
+        .card__block.is-wide
+          ul.card__list
+            li.card__items.is-wide.is-flex-row
+              a.card__items--highlight.card__items--spaced(href="https://www.udacity.com/course/intro-to-programming-nanodegree--nd000") Introduction to Programming
+              span.card__items--tag Udacity
+            li.card__items.is-wide.is-flex-row
+              a.card__items--highlight.card__items--spaced(href="https://www.internetingishard.com/") Interneting is hard
+              span.card__items--tag Oliver James
+            li.card__items.is-wide.is-flex-row
+              a.card__items--highlight.card__items--spaced(href="https://mastery.games/flexboxzombies/") Flexbox Zombies
+              span.card__items--tag David Geddski
+            li.card__items.is-wide.is-flex-row
+              a.card__items--highlight.card__items--spaced(href="https://mastery.games/gridcritters/") Grid Critters
+              span.card__items--tag David Geddski
+            li.card__items.is-wide.is-flex-row
+              a.card__items--highlight.card__items--spaced(href="https://www.codecademy.com/learn/introduction-to-javascript") Learn JavaScript
+              span.card__items--tag Codecademy
+            li.card__items.is-wide.is-flex-row
+              a.card__items--highlight.card__items--spaced(href="https://blog.da2k.com.br/curso-javascript-ninja/") JavaScript Ninja
+              span.card__items--tag Fernando Daciuk
+            li.card__items.is-wide.is-flex-row
+              a.card__items--highlight.card__items--spaced(href="https://beginnerjavascript.com/") Beginner JavaScript
+              span.card__items--tag Wes Bos
 
-        a(href="https://www.udacity.com/course/intro-to-programming-nanodegree--nd000").card__title Introduction to Programming
-        a(href="https://www.internetingishard.com/").card__title Interneting is hard
-        a(href="https://mastery.games/flexboxzombies/").card__title Flexbox Zombies
-        a(href="https://mastery.games/gridcritters/").card__title Grid Critters
-        a(href="https://www.codecademy.com/learn/introduction-to-javascript").card__title Learn JavaScript - CodeCademy
-        a(href="https://blog.da2k.com.br/curso-javascript-ninja/").card__title JavaScript Ninja - Fernando Daciuk
-        a(href="https://beginnerjavascript.com/").card__title Beginner JavaScript - Wes Bos
-
-        br
-        br
-        br
-        br
-        p.card__title Some other frequently used links I visit to have my doubts cleared are:
+        .card__block.is-wide
+          .h3.card__title.hack-font Commonly Used:
           fieldset
             select(name="select")
-              option(value="valor1" selected) HTML Reference
-                a(href="#").is-hidden https://htmlreference.io/
+              option(value="valor1" selected) HTML Reference https://htmlreference.io/
               option(value="valor2") MDN Web Docs https://developer.mozilla.org/en-US/
               option(value="valor3") CSS Tricks https://css-tricks.com/
               option(value="valor4") BEM Methodology https://en.bem.info/methodology/

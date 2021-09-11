@@ -169,9 +169,26 @@
     padding: 0 25px;
   }
 
+  &__items--spaced {
+    line-height: 2.3em;
+  }
+
+  &__items--tag {
+    color: $blue-azure-radiance;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__block {
     display: flex;
     flex-direction: column;
+  }
+
+  &__block--limited {
+    width: 85%;
   }
 
   &__screen {
