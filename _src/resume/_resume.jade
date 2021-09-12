@@ -82,33 +82,51 @@
                 li.card__items--faded ﹤/ul﹥
 
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")
-      a#buttonPreview.card__button.card__button--spaced Preview Resume
+      a#buttonPreview.card__button.card__button--spaced.no-decoration Preview Resume
         svg
           use(xlink:href="assets/defs.svg#icon-preview")
-      a.card__button.card__button--spaced(href="/assets/download/far-resume.pdf" download="felipe-resume") Download Resume
+      a.card__button.card__button--spaced.no-decoration(href="/assets/download/far-resume.pdf" download="felipe-resume") Download Resume
         svg
           use(xlink:href="assets/defs.svg#icon-download")
 
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="source")
       p.card__items.card__items--highlight.card__items--padded Feel free to explore how this project was made by simply clicking
-        a.card__items.card__items--link(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank")
+        a.card__items.card__items--link.no-decoration(href="https://github1s.com/felipprodrigues/felipprodrigues.github.io" target="_blank")
           |&nbsp; here
         |&nbsp; and get a full preview of the entire code
 
     // UPDATE INFO
-    .card__holder(data-panel="debugger")
+    .card__holder.is-wide(data-panel="debugger")
       .card__header
         h1.card__title Debugger Engine
-        p.card__title INCLUIR CURSOS FEITOS E EM ATIVIDADE
-        p.card__title Grid Critters ( https://mastery.games/gridcritters/ )
-        p.card__title Flexbox Zombies ( https://mastery.games/flexboxzombies/ )
-        p.card__title Learn JavaScript - CodeCademy - ( https://www.codecademy.com/learn/introduction-to-javascript )
-        p.card__title JavaScript Ninja - Fernando Daciuk - ( https://blog.da2k.com.br/curso-javascript-ninja/ )
-        p.card__title Beginner JavaScript - Wes Bos - ( https://beginnerjavascript.com/ )
-        p.card__title Interneting is hard - ( https://www.internetingishard.com/ )
-        br
-        br
-        p.card__title Some other frequently used links I visit to have my doubts cleared are:
+        p.card__title This section is exclusively to display how I debug my personal projects and project snippets I might find hard to get around
+      .card__wrapper
+        .card__block.card__block--wider
+          ul.card__list
+            li.card__items.no-space-in
+              a.card__items--highlight.card__items--spaced.is-flex-spaced.no-decoration(target="_blank" href="https://www.udacity.com/course/intro-to-programming-nanodegree--nd000") Introduction to Programming
+                span.card__items--tag Udacity
+            li.card__items.no-space-in
+              a.card__items--highlight.card__items--spaced.is-flex-spaced.no-decoration(target="_blank" href="https://www.internetingishard.com/") Interneting is hard
+                span.card__items--tag Oliver James
+            li.card__items.no-space-in
+              a.card__items--highlight.card__items--spaced.is-flex-spaced.no-decoration(target="_blank" href="https://mastery.games/flexboxzombies/") Flexbox Zombies
+                span.card__items--tag David Geddski
+            li.card__items.no-space-in
+              a.card__items--highlight.card__items--spaced.is-flex-spaced.no-decoration(target="_blank" href="https://mastery.games/gridcritters/" ) Grid Critters
+                span.card__items--tag David Geddski
+            li.card__items.no-space-in
+              a.card__items--highlight.card__items--spaced.is-flex-spaced.no-decoration(target="_blank" href="https://www.codecademy.com/learn/introduction-to-javascript") Learn JavaScript
+                span.card__items--tag Codecademy
+            li.card__items.no-space-in
+              a.card__items--highlight.card__items--spaced.is-flex-spaced.no-decoration(target="_blank" href="https://blog.da2k.com.br/curso-javascript-ninja/") JavaScript Ninja
+                span.card__items--tag Fernando Daciuk
+            li.card__items.no-space-in
+              a.card__items--highlight.card__items--spaced.is-flex-spaced.no-decoration(target="_blank" href="https://beginnerjavascript.com/") Beginner JavaScript
+                span.card__items--tag Wes Bos
+
+        .card__block.card__block--wider
+          .h3.card__title.hack-font Commonly Used:
           fieldset
             select(name="select")
               option(value="valor1" selected) HTML Reference https://htmlreference.io/
@@ -119,17 +137,16 @@
 
 
 
-
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="extension")
       .card__block
-        p.card__items.card__items--highlight.card__items--default This projects was built with
+        p.card__items.card__items--highlight.has-center-text This projects was built with
         ul.card__list.card__list--horizontal
           each icon, i in svgIconsInitial
             li.education__items
               svg.education__icon
                 use(xlink:href="assets/defs.svg#icon-#{ icon }")
               span #{ svgTagsInitial[i] }
-        p.card__items.card__items--highlight.card__items--default But not only I also have experience working with
+        p.card__items.card__items--highlight.has-center-text But not only I also have experience working with
         ul.card__list.card__list--horizontal
           each icon, i in svgIconsLast
             li.education__items

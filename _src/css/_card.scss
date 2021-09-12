@@ -34,7 +34,7 @@
   &__subtitle,
   &__list,
   &__comment {
-    font-family: Monaco;
+    font-family: Hack, monospace;
   }
 
   &__title {
@@ -101,7 +101,6 @@
     padding: 10px;
     border: none;
     transition: all .25s linear;
-    text-decoration: none;
     cursor: pointer;
 
     &:hover {
@@ -144,7 +143,7 @@
     justify-content: center;
   }
 
-  &__items:not(.card__items--default):not(.card__items--highlight):not(.card__items--link) {
+  &__items:not(.card__items--default):not(.card__items--highlight):not(.card__items--link):not(.card__items--spaced) {
     padding-left: 15px;
 
     @media screen and (max-width: $tablet-up) {
@@ -156,22 +155,66 @@
     color: $gray-alto;
   }
 
-  &__items--default {
-    text-align: center;
-  }
-
   &__items--link {
     color: $harvest-gold;
-    text-decoration: none;
   }
 
   &__items--padded {
     padding: 0 25px;
   }
 
-  &__block {
+  &__items--spaced {
+    margin: 1em 0;
+    border-bottom: 1px solid transparent;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      border-color: cyan;
+    }
+
+
+
+    // &:hover > :hover,
+    // &:focus-within > :focus {
+    //   transform: scale(1.1);
+    //   opacity: 1;
+    // }
+
+    // &:hover > :focus:not(:hover) {
+    //   transform: scale(1.05);
+    // }
+
+    // &:hover > :focus:not(:hover) {
+    //   opacity: .5;
+    // }
+  }
+
+  &__items--tag {
+    color: $blue-azure-radiance;
+  }
+
+  &__wrapper {
     display: flex;
+  }
+
+  &__block {
     flex-direction: column;
+
+    &--wider {
+      min-width: 550px;
+    }
+
+    &--wider:first-of-type {
+      margin-right: 50px
+    }
+
+    &--wider:last-of-type {
+      margin-left: 50px
+    }
+  }
+
+  &__block--limited {
+    width: 85%;
   }
 
   &__screen {
