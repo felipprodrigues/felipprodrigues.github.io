@@ -2,6 +2,14 @@
   margin: 0 !important;
 }
 
+.no-space-in {
+  padding: 0 !important;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
 .is-commented-out {
   color: $green-limeade !important;
 
@@ -10,10 +18,9 @@
   }
 }
 
-.is-flex-row {
+.is-flex-spaced {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .is-selected {
@@ -33,10 +40,6 @@
   display: none !important;
 }
 
-.has-center-block {
-  justify-content: center ;
-  align-items: center;
-}
 
 .is-wide {
   width: 100%;
@@ -72,6 +75,11 @@
   }
 }
 
-.hack-font {
-  font-family: Hack, monospace !important;
+.has-center-text {
+  text-align: center;
+}
+
+.has-center-block {
+  justify-content: center ;
+  align-items: center;
 }
