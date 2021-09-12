@@ -133,7 +133,34 @@
     @media screen and (max-width: $tablet-up) {
       padding: 20px 0;
       line-height: 2rem
+    }
 
+    &--fadded {
+      pointer-events: none;
+      transition: all .25s ease-in-out ;
+
+      & > * {
+        pointer-events: auto;
+      }
+
+      &:hover > *,
+      &:focus-within > * {
+        opacity: .5;
+      }
+
+      &:hover > *:hover,
+      &:focus-within > :focus {
+        opacity: 1
+      }
+    }
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 40px);
+      grid-gap: 3em;
+      align-items: center;
+      padding-top: 2em;
     }
   }
 
@@ -164,37 +191,37 @@
   }
 
   &__items--spaced {
-    margin: 1em 0;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px dashed $gray-mine-shaft-faded;
     transition: all .25s ease-in-out;
 
     &:hover {
-      border-color: cyan;
+      opacity: 1;
+      border-bottom: 1px solid cyan;
     }
-
-
-
-    // &:hover > :hover,
-    // &:focus-within > :focus {
-    //   transform: scale(1.1);
-    //   opacity: 1;
-    // }
-
-    // &:hover > :focus:not(:hover) {
-    //   transform: scale(1.05);
-    // }
-
-    // &:hover > :focus:not(:hover) {
-    //   opacity: .5;
-    // }
   }
 
-  &__items--tag {
+  &__items--azure {
     color: $blue-azure-radiance;
+  }
+
+  &__items--tagged {
+    padding: 5px;
+    background: rgba( 255, 248, 248, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 3px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all .5s ease-in-out;
+
+    &:hover {
+      background: rgba( 237, 237, 237, 0.2 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      color: $white-solid;
+    }
   }
 
   &__wrapper {
     display: flex;
+    margin-top: 2em;
   }
 
   &__block {
@@ -204,17 +231,9 @@
       min-width: 550px;
     }
 
-    &--wider:first-of-type {
-      margin-right: 50px
-    }
-
     &--wider:last-of-type {
-      margin-left: 50px
+      margin: 0 25px 0 15rem
     }
-  }
-
-  &__block--limited {
-    width: 85%;
   }
 
   &__screen {
