@@ -16,11 +16,11 @@
 
   &__hook {
     text-decoration: none;
-    color: var(--var-green-christi);
+    color: $green-christi;
     transition: all 0.25s linear;
   }
 
   &__hook:hover {
-    color: var(--var-green-limeade);
+    color: $green-limeade;
   }
 }
