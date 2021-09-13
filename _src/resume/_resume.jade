@@ -15,6 +15,8 @@
 - const debugLinks = [ 'https://www.udacity.com/course/intro-to-programming-nanodegree--nd000', 'https://www.internetingishard.com/', 'https://mastery.games/flexboxzombies/', 'https://mastery.games/gridcritters/', 'https://www.codecademy.com/learn/introduction-to-javascript', 'https://blog.da2k.com.br/curso-javascript-ninja/', 'https://beginnerjavascript.com/' ]
 - const debugItems = [ 'Introduction to Programming', 'Interneting is hard', 'Flexbox Zombies', 'Grid Critters', 'Learn JavaScript', 'JavaScript Ninja', 'Beginner JavaScript' ]
 - const debugAuthor = [ 'Udacity', 'Oliver James', 'David Geddski', 'David Geddski', 'Codecademy', 'Fernando Daciuk', 'Wes Bos' ]
+- const debugReference = [ 'HTML Reference', 'MDN Web Docs', 'Stackoverflow', 'DevDocs', 'CSS Tricks', 'BEM MEthodology', 'Codepen' ]
+- const debugHook = [ 'https://htmlreference.io/', 'https://developer.mozilla.org/en-US/', 'https://stackoverflow.com/', 'https://devdocs.io/', 'https://css-tricks.com/', 'https://en.bem.info/methodology/', 'https://codepen.io' ]
 - const commentH1Open = [ `<h1>` ]
 - const commentH3Open = [ `<h3>` ]
 - const commentUlOpen = [ `<ul>` ]
@@ -48,53 +50,53 @@
         .card__holder--within(data-preview="#{att}")
           .card__header
             h1.card__title
-              span.card__items--faded #{ commentH1Open[i] }
+              span.card__items--faded #{ commentH1Open }
               | #{ headerTitle[i] }
-              span.card__items--faded #{ commentH1Close[i] }
+              span.card__items--faded #{ commentH1Close }
             h3.card__subtitle
-              span.card__items--faded #{ commentH3Open[i] }
+              span.card__items--faded #{ commentH3Open }
               | #{ headerSubtitle[i] }
-              span.card__items--faded #{ commentH3Close[i] }
+              span.card__items--faded #{ commentH3Close }
 
           if att === conditionalAttributes.one
             .card__qualifiers
               span.card__comment.is-commented-out #{ keyComment }
               ul.card__list
-                li.card__items--faded #{ commentUlOpen[i] }
+                li.card__items--faded #{ commentUlOpen }
                 each items in eventList
-                  li.card__items.card__items--faded #{ commentLiOpen[i] }
+                  li.card__items.card__items--faded #{ commentLiOpen }
                     span.card__items.card__items--highlight #{ items }
-                li.card__items--faded #{ commentUlClose[i] }
+                li.card__items--faded #{ commentUlClose }
 
           else if att === conditionalAttributes.two
             .card__qualifiers
               span.card__comment.is-commented-out #{ keyComment }
               ul.card__list
-                li.card__items--faded #{ commentUlOpen[i] }
+                li.card__items--faded #{ commentUlOpen }
                 each items in camList
-                  li.card__items.card__items--faded #{ commentLiOpen[i] }
+                  li.card__items.card__items--faded #{ commentLiOpen }
                     span.card__items.card__items--highlight #{ items }
-                li.card__items--faded #{ commentUlClose[i] }
+                li.card__items--faded #{ commentUlClose }
 
           else if att === conditionalAttributes.three
             .card__qualifiers
               span.card__comment.is-commented-out #{ keyComment }
               ul.card__list
-                li.card__items--faded #{ commentUlOpen[i] }
+                li.card__items--faded #{ commentUlOpen }
                 each items in tanList
-                  li.card__items.card__items--faded #{ commentLiOpen[i] }
+                  li.card__items.card__items--faded #{ commentLiOpen }
                     span.card__items.card__items--highlight #{ items }
-                li.card__items--faded #{ commentUlClose[i] }
+                li.card__items--faded #{ commentUlClose }
 
           else if att === conditionalAttributes.four
             .card__qualifiers
               span.card__comment.is-commented-out #{ keyComment }
               ul.card__list
-                li.card__items--faded #{ commentUlOpen[i] }
+                li.card__items--faded #{ commentUlOpen }
                 each items in themeList
-                  li.card__items.card__items--faded #{ commentLiOpen[i] }
+                  li.card__items.card__items--faded #{ commentLiOpen }
                     span.card__items.card__items--highlight #{ items }
-                li.card__items--faded #{ commentUlClose[i] }
+                li.card__items--faded #{ commentUlClose }
 
     .card__holder.has-center-block.is-wide.no-space-out(data-panel="search")
       a#buttonPreview.card__button.card__button--spaced.no-decoration Preview Resume
@@ -110,11 +112,7 @@
           |&nbsp; here
         |&nbsp; and get a full preview of the entire code
 
-    // UPDATE INFO
     .card__holder.is-wide(data-panel="debugger")
-      .card__header
-        h1.card__title Debug control
-
       .card__wrapper
         .card__block.card__block--wider
           h4.card__subtitle.hack-font How did I learn to debug?
@@ -127,43 +125,19 @@
         .card__block.card__block--wider
           h4.card__subtitle.hack-font Where do I generally find unthought solutions?
           ul.card__list.card__list--grid
-            li.card__items.no-space-in
-              a(target="_blank" href="https://htmlreference.io/").card__items--highlight.card__items--tagged.no-decoration HTML Reference
-            li.card__items.no-space-in
-              a(target="_blank" href="https://developer.mozilla.org/en-US/").card__items--highlight.card__items--tagged.no-decoration MDN Web Docs
-            li.card__items.no-space-in
-              a(target="_blank" href="https://css-tricks.com/").card__items--highlight.card__items--tagged.no-decoration CSS Tricks
-            li.card__items.no-space-in
-              a(target="_blank" href="https://en.bem.info/methodology/").card__items--highlight.card__items--tagged.no-decoration BEM Methodology
-            li.card__items.no-space-in
-              a(target="_blank" href="https://stackoverflow.com/").card__items--highlight.card__items--tagged.no-decoration Stackoverflow
-            li.card__items.no-space-in
-              a(target="_blank" href="https://codepen.io").card__items--highlight.card__items--tagged.no-decoration Codepen
-            li.card__items.no-space-in
-              a(target="_blank" href="https://devdocs.io/").card__items--highlight.card__items--tagged.no-decoration DevDocs
+            each item, i in debugReference
+              li.card__items.no-space-in
+                a(target="_blank" href="#{ debugHook[i] }").card__items--highlight.card__items--tagged.no-decoration #{ item }
 
-
-    .card__holder.has-center-block.is-wide.no-space-out(data-panel="extension")
+    .card__holder.is-wide(data-panel="extension")
       .card__block
-        p.card__items.card__items--highlight.has-center-text This projects was built with
+        p.card__items.card__items--highlight.has-center-text Extensions I work with
         ul.card__list.card__list--horizontal
-          each icon, i in svgIconsInitial
-            li.education__items
-              svg.education__icon
-                use(xlink:href="assets/defs.svg#icon-#{ icon }")
-              span #{ svgTagsInitial[i] }
-        p.card__items.card__items--highlight.has-center-text But not only I also have experience working with
-        ul.card__list.card__list--horizontal
-          each icon, i in svgIconsLast
-            li.education__items
-              svg.education__icon
-                use(xlink:href="assets/defs.svg#icon-#{ icon }")
-              span #{ svgTagsLast[i] }
 
 .modal
   .modal--inner
     .modal__holder
-      img(src="/assets/modal/resume.png" alt='Dont worries, you can also download it &#x1F609;')
+      img(src="/assets/modal/resume.png" alt='No worries, you can also download it &#x1F609;')
     button.modal__button Close
 
 
