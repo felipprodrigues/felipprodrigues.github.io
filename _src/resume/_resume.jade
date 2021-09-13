@@ -17,6 +17,12 @@
 - const debugAuthor = [ 'Udacity', 'Oliver James', 'David Geddski', 'David Geddski', 'Codecademy', 'Fernando Daciuk', 'Wes Bos' ]
 - const debugReference = [ 'HTML Reference', 'MDN Web Docs', 'Stackoverflow', 'DevDocs', 'CSS Tricks', 'BEM MEthodology', 'Codepen' ]
 - const debugHook = [ 'https://htmlreference.io/', 'https://developer.mozilla.org/en-US/', 'https://stackoverflow.com/', 'https://devdocs.io/', 'https://css-tricks.com/', 'https://en.bem.info/methodology/', 'https://codepen.io' ]
+- const extensions = [ 'Markup', 'Styles', 'Script' ]
+- const extensionMarkup = [ 'HTML', 'Jade / Pug', 'Slim' ]
+- const extensionStyle = [ 'CSS', 'SCSS', 'Styled Components' ]
+- const extensionScript = [ 'JavaScript', 'JQuery', 'React' ]
+//- - const extensions = [ 'Markup', 'Styles', 'Script' ]
+
 - const commentH1Open = [ `<h1>` ]
 - const commentH3Open = [ `<h3>` ]
 - const commentUlOpen = [ `<ul>` ]
@@ -133,6 +139,15 @@
       .card__block
         p.card__items.card__items--highlight.has-center-text Extensions I work with
         ul.card__list.card__list--horizontal
+          li.card__block.has-center-text Markup
+            each item in extensionMarkup
+              span.card__items--tagged #{ item }
+          li.card__block.has-center-text Style
+            each item in extensionStyle
+              span.card__items--tagged #{ item }
+          li.card__block.has-center-text Script
+            each item in extensionScript
+              span.card__items--tagged #{ item }
 
 .modal
   .modal--inner
