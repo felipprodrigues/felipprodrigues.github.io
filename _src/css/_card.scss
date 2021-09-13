@@ -161,6 +161,13 @@
       grid-gap: 3em;
       align-items: center;
       padding-top: 2em;
+
+      @media screen and (max-width: $web-up) {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,40px);
+        grid-gap: 1em;
+        padding-top: 1em;
+      }
     }
   }
 
@@ -222,17 +229,32 @@
   &__wrapper {
     display: flex;
     margin-top: 2em;
+
+    @media screen and (max-width: $web-up) {
+      flex-direction: column !important;
+    }
   }
 
   &__block {
+    display: flex;
     flex-direction: column;
 
     &--wider {
       min-width: 550px;
+
+      @media screen and (max-width: $web-up) {
+        padding-right: 25px;
+        min-width: unset;
+      }
     }
 
     &--wider:last-of-type {
-      margin: 0 25px 0 15rem
+      margin: 0 25px 0 15rem;
+
+      @media screen and (max-width: $web-up) {
+        padding-right: 25px;
+        margin: unset;
+      }
     }
   }
 
