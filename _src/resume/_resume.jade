@@ -17,6 +17,9 @@
 - const debugAuthor = [ 'Udacity', 'Oliver James', 'David Geddski', 'David Geddski', 'Codecademy', 'Fernando Daciuk', 'Wes Bos' ]
 - const debugReference = [ 'HTML Reference', 'MDN Web Docs', 'Stackoverflow', 'DevDocs', 'CSS Tricks', 'BEM MEthodology', 'Codepen' ]
 - const debugHook = [ 'https://htmlreference.io/', 'https://developer.mozilla.org/en-US/', 'https://stackoverflow.com/', 'https://devdocs.io/', 'https://css-tricks.com/', 'https://en.bem.info/methodology/', 'https://codepen.io' ]
+- const extensionMarkup = [ 'HTML', 'Jade / Pug', 'Slim', 'Jekyll', 'Liquid' ]
+- const extensionStyle = [ 'CSS', 'SCSS', 'Styled Components' ]
+- const extensionScript = [ 'JavaScript', 'JQuery', 'React' ]
 - const commentH1Open = [ `<h1>` ]
 - const commentH3Open = [ `<h3>` ]
 - const commentUlOpen = [ `<ul>` ]
@@ -115,15 +118,15 @@
     .card__holder.is-wide(data-panel="debugger")
       .card__wrapper
         .card__block.card__block--wider
-          h4.card__subtitle.hack-font How did I learn to debug?
+          h3.card__subtitle.hack-font How did I learn to debug?
           ul.card__list.card__list--fadded
             each item, i in debugItems
-              li.card__items.card__items--spaced
+              li.card__items.card__items--bordered
                 a.card__items--highlight.is-flex-spaced.no-decoration.is-padded(target="_blank" href="#{ debugLinks[i] }") #{ item }
                   span.card__items--azure #{ debugAuthor[i] }
 
         .card__block.card__block--wider
-          h4.card__subtitle.hack-font Where do I generally find unthought solutions?
+          h3.card__subtitle.hack-font Where do I generally find unthought solutions?
           ul.card__list.card__list--grid
             each item, i in debugReference
               li.card__items.no-space-in
@@ -131,8 +134,21 @@
 
     .card__holder.is-wide(data-panel="extension")
       .card__block
-        p.card__items.card__items--highlight.has-center-text Extensions I work with
-        ul.card__list.card__list--horizontal
+        h3.card__subtitle.hack-font.has-center-text Welcome to the extension section. Here I tell what markups, styles and scripts I commonly use to have my projects done
+        ul.card__list.card__list--horizontal.card__list--full
+          li.card__items.card__items--column.card__items--dispersed.has-center-text
+            span Markup
+            .card__bind
+              each item in extensionMarkup
+                  span.card__items--tagged.card__items--static.card__items--spaced #{ item }
+          li.card__items.card__items--column.card__items--dispersed.has-center-text
+            span Style
+            each item in extensionStyle
+              span.card__items--tagged.card__items--static.card__items--spaced #{ item }
+          li.card__items.card__items--column.card__items--dispersed.has-center-text
+            span Script
+            each item in extensionScript
+              span.card__items--tagged.card__items--static.card__items--spaced #{ item }
 
 .modal
   .modal--inner
