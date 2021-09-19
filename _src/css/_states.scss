@@ -24,7 +24,7 @@
 
 .is-flex-spaced {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
 
 .is-selected {
@@ -85,4 +85,9 @@
 .has-center-block {
   justify-content: center ;
   align-items: center;
+}
+
+.has-full-height {
+  min-height: 100%;
+  height: 100%;
 }
