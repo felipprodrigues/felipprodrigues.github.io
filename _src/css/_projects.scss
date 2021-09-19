@@ -31,8 +31,7 @@
     transition: all 0.25s linear;
     overflow: hidden;
     margin: 0 2%;
-    box-shadow: -9px -9px 16px 0px var(--var-box-shadow-up-left),
-      9px 9px 16px 0px var(--var-box-shadow-down-right);
+    box-shadow: 0 -1px 4px 0 var(--var-box-shadow-up-left), 6px 6px 6px 1px var(--var-box-shadow-down-right);
 
     @media screen and (max-width: $web-up) {
       margin-bottom: 100px;
