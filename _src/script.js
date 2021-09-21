@@ -36,7 +36,6 @@
     });
   };
 
-
   function sidebar() {
     document.querySelectorAll('.aside__button').forEach(e => {
       e.addEventListener('click', () => {
@@ -145,14 +144,7 @@
         closeModal();
       }
     })
-
-
-
-
-
   };
-
-
 
   document.addEventListener("DOMContentLoaded", () => {
     lightDark();

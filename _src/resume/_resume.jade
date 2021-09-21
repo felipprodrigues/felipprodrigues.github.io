@@ -25,7 +25,7 @@
 - const commentUl = { open: `<ul>`, close: `</ul>` }
 - const commentLi = [ `<li>` ]
 - const keyComment = [ '//- Key Qualifications and Responsibilities' ]
-- const debugComment = { h3: '//- How did I learn to debug?', h4: '//- Unthinkable solutions?'}
+- const debugComment = { commentList: '//- How did I learn to debug?', commentTags: '//- Some guides to unthinkable solutions'}
 
 .resume__container
   aside.aside.is-tablet-hidden
@@ -104,7 +104,7 @@
       a#buttonPreview.card__button.card__button--spaced.no-decoration Preview Resume
         svg
           use(xlink:href="assets/defs.svg#icon-preview")
-      a.card__button.card__button--spaced.no-decoration(href="/assets/download/far-resume.pdf" download="felipe-resume") Download Resume
+      a.card__button.card__button--spaced.no-decoration(href="assets/download/farResume.pdf" download="felipe-resume") Download Resume
         svg
           use(xlink:href="assets/defs.svg#icon-download")
 
@@ -118,7 +118,7 @@
       .card__wrapper.card__wrapper--centered
         .card__block.card__block--full
           .card__header
-            h3.card__comment.is-commented-out #{ debugComment.h3 }
+            span.card__comment.is-commented-out #{ debugComment.commentList }
           ul.card__list.card__list--fadded
             each item, i in debugItems
               li.card__items.card__items--bordered
@@ -127,38 +127,41 @@
       .card__wrapper.card__wrapper--centered
         .card__block.card__block--full
           .card__header
-            h4.card__comment.is-commented-out #{ debugComment.h4 }
+            span.card__comment.is-commented-out #{ debugComment.commentTags }
           ul.card__list.card__list--horizontal.is-flex-spaced
             each item, i in debugReference
-              li.card__items.no-space-in
+              li.card__items.has-responsive-margin.no-space-in
                 a(target="_blank" href="#{ debugHook[i] }").card__items--highlight.card__items--tagged.no-decoration #{ item }
 
     .card__holder.is-wide(data-panel="extension")
       .card__wrapper.card__wrapper--centered.has-full-height
         .card__block.card__block--full.card__block--justified
           .card__header
-            h3.card__subtitle.has-center-text
-              span.card__items.card__items--default.card__items--faded #{ commentH3.open }
-              | Tools commonly used
-              span.card__items.card__items--default.card__items--faded #{ commentH3.close }
+            span.card__comment.is-commented-out //- Commonly used tools
           .card__bind
-            ul.card__list.card__list--horizontal
-              each item in extensionMarkup
-                li.card__items.card__items--dispersed.no-space-in
-                  span.card__items--highlight.card__items--tagged.card__items--static.no-decoration #{ item }
-            ul.card__list.card__list--horizontal
-              each item in extensionStyle
-                li.card__items.card__items--dispersed.no-space-in
-                  span.card__items--highlight.card__items--tagged.card__items--static.no-decoration #{ item }
-            ul.card__list.card__list--horizontal
-              each item in extensionScript
-                li.card__items.card__items--dispersed.no-space-in
-                  span.card__items--highlight.card__items--tagged.card__items--static.no-decoration #{ item }
+            ul.card__list.card__list--spaced.is-flex-spaced.no-space-in
+              span Markup
+              .card__list.card__list--horizontal.no-space-in
+                each item in extensionMarkup
+                  li.card__items.card__items--dispersed.no-space-in
+                    span.card__items--highlight.card__items--tagged.card__items--static.no-decoration #{ item }
+            ul.card__list.card__list--spaced.is-flex-spaced.no-space-in
+              span Styles
+              .card__list.card__list--horizontal.no-space-in
+                each item in extensionStyle
+                  li.card__items.card__items--dispersed.no-space-in
+                    span.card__items--highlight.card__items--tagged.card__items--static.no-decoration #{ item }
+            ul.card__list.card__list--spaced.is-flex-spaced.no-space-in
+              span Scripts
+              .card__list.card__list--horizontal.no-space-in
+                each item in extensionScript
+                  li.card__items.card__items--dispersed.no-space-in
+                    span.card__items--highlight.card__items--tagged.card__items--static.no-decoration #{ item }
 
 .modal
   .modal--inner
     .modal__holder
-      img(src="/assets/modal/resume.png" alt='No worries, you can also download it &#x1F609;')
+      img(src="/assets/modal/farResPrev.png" alt='No worries, you can also download it &#x1F609;')
     button.modal__button Close
 
 
