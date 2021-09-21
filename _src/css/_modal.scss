@@ -40,13 +40,14 @@
       }
     }
 
-    @media screen and (max-width: $web-up ) {
-      height: 71vh;
+    @media screen and (min-width: $hd) {
+      height: 44vh;
     }
 
-    @media screen and (width: 1024px ) {
-      height: 58vh;
+    @media screen and (max-width: $web-up) {
+      height: 70vh;
     }
+
   }
 
   &.is-open .modal--inner {
@@ -54,10 +55,8 @@
   }
 
   &__holder {
-    height: 700px;
     overflow-x: scroll;
     border-radius: 10px;
-
   }
 
   &__button {
