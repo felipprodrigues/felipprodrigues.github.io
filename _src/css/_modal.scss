@@ -13,8 +13,6 @@
   pointer-events: none;
   transition: all 0.2s linear;
 
-
-
   &--inner {
     display: flex;
     flex-direction: column;
@@ -40,11 +38,15 @@
       }
     }
 
-    @media screen and (min-width: $hd) {
-      height: 44vh;
+    @media screen and (min-width: $qhd) {
+      height: 40vh !important;
     }
 
     @media screen and (max-width: $web-up) {
+      height: 66vh !important;
+    }
+
+    @media screen and (min-width: $tablet) {
       height: 70vh;
     }
 
