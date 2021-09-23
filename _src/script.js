@@ -1,6 +1,9 @@
 (function() {
 
   function lightDark() {
+    // FIX BUTTON ON REFRESH AND RECKON MACHINE COLOR STATE
+
+
     const lightSwitch = document.querySelector('.switch');
     lightSwitch.addEventListener('click', function(e) {
       // Toggle the .dark-theme class to the body
