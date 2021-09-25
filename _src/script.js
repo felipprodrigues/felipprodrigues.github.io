@@ -1,9 +1,32 @@
-function lightDark() {
-  const lightSwitch = document.querySelector('.switch');
-  lightSwitch.addEventListener('click', function(e) {
-    // Toggle the .dark-theme class to the body
-    document.body.classList.toggle('dark-theme');
-  });
+function toggleDark() {
+  let darkMode = localStorage.getItem('darkMode');
+  const darkModeToggle = document.querySelector('.switch');
+
+  console.log(darkMode)
+  console.log(darkModeToggle)
+
+  const enableDarkMode = () => {
+    document.body.classList.add('darkMode');
+    localStorage.setItem('darkMode', 'enabled');
+  }
+
+  const disableDarkMode = () => {
+    document.body.classList.remove('darkMode');
+    localStorage.setItem('darkMode', null);
+  }
+
+  if (darkMode === 'enabled' ){
+    enableDarkMode();
+  }
+
+  darkModeToggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode')
+    if(darkMode !== 'enabled' ) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  })
 }
 
 function setupTabs() {
@@ -143,7 +166,8 @@ function modal() {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  lightDark();
+  toggleDark();
+  // lightDark();
   setupTabs();
   sidebar();
   removeTabs();
