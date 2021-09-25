@@ -1,23 +1,5 @@
 function lightDark() {
   const lightSwitch = document.querySelector('.switch');
-  // FIX BUTTON ON REFRESH TO RECKON MACHINE COLOR STATE - TO BE REVIEWED
-
-  // const body = document.querySelector('body')
-
-  // if(body.classList !== 'dark-theme'){
-  //   localStorage.setItem("theme", "light");
-  //   body.classList.remove('dark-theme');
-  //   console.log(localStorage.theme)
-  // } else {
-  //   localStorage.setItem("theme", "dark-theme");
-  //   body.classList.add('dark-theme');
-  //   console.log(localStorage.theme)
-  // }
-
-  // if (localStorage.getItem("theme") === "dark-theme") {
-  //   body.classList.add('dark-theme');
-  // }
-
   lightSwitch.addEventListener('click', function(e) {
     // Toggle the .dark-theme class to the body
     document.body.classList.toggle('dark-theme');
