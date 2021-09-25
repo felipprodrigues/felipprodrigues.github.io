@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/felipprodrigues/felipprodrigues.github.io/issues"
   },
-  "homepage": "https://github.com/felipprodrigues/felipprodrigues.github.io#readme"
+  "homepage": "https://github.com/felipprodrigues/felipprodrigues.github.io#readme",
+  "dependencies": {}
 }
