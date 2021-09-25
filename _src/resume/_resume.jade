@@ -130,7 +130,7 @@
             span.card__comment.is-commented-out #{ debugComment.commentTags }
           ul.card__list.card__list--horizontal.is-flex-spaced
             each item, i in debugReference
-              li.card__items.has-responsive-margin.no-space-in
+              li.card__items.card__items--spaced.has-responsive-margin.no-space-in
                 a(target="_blank" href="#{ debugHook[i] }").card__items--highlight.card__items--tagged.no-decoration #{ item }
 
     .card__holder.is-wide(data-panel="extension")
