@@ -1,27 +1,32 @@
-function lightDark() {
-  const lightSwitch = document.querySelector('.switch');
-  lightSwitch.addEventListener('click', function(e) {
-    // Toggle the .dark-theme class to the body
-    document.body.classList.toggle('dark-theme');
-  });
+function toggleDark() {
+  let darkMode = localStorage.getItem('darkMode');
+  const darkModeToggle = document.querySelector('.switch');
 
-    // FIX BUTTON ON REFRESH TO RECKON MACHINE COLOR STATE - TO BE REVIEWED
+  console.log(darkMode)
+  console.log(darkModeToggle)
 
-  // const body = document.querySelector('body')
+  const enableDarkMode = () => {
+    document.body.classList.add('darkMode');
+    localStorage.setItem('darkMode', 'enabled');
+  }
 
-  // if(body.classList !== 'dark-theme'){
-  //   localStorage.setItem("theme", "light");
-  //   body.classList.remove('dark-theme');
-  //   console.log(localStorage.theme)
-  // } else {
-  //   localStorage.setItem("theme", "dark-theme");
-  //   body.classList.add('dark-theme');
-  //   console.log(localStorage.theme)
-  // }
+  const disableDarkMode = () => {
+    document.body.classList.remove('darkMode');
+    localStorage.setItem('darkMode', null);
+  }
 
-  // if (localStorage.getItem("theme") === "dark-theme") {
-  //   body.classList.add('dark-theme');
-  // }
+  if (darkMode === 'enabled' ){
+    enableDarkMode();
+  }
+
+  darkModeToggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode')
+    if(darkMode !== 'enabled' ) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  })
 }
 
 function setupTabs() {
@@ -161,7 +166,8 @@ function modal() {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  lightDark();
+  toggleDark();
+  // lightDark();
   setupTabs();
   sidebar();
   removeTabs();
