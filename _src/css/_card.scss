@@ -165,12 +165,8 @@
     &--horizontal {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
-
-      @media screen and (max-width: $web-up) {
-        flex-wrap: wrap;
-        word-break: unset;
-      }
     }
 
     &--spaced {
