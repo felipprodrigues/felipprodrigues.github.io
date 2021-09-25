@@ -1,7 +1,8 @@
 function lightDark() {
-  // FIX BUTTON ON REFRESH TO RECKON MACHINE COLOR STATE
   const lightSwitch = document.querySelector('.switch');
-  const body = document.querySelector('body')
+  // FIX BUTTON ON REFRESH TO RECKON MACHINE COLOR STATE - TO BE REVIEWED
+
+  // const body = document.querySelector('body')
 
   // if(body.classList !== 'dark-theme'){
   //   localStorage.setItem("theme", "light");
@@ -22,24 +23,6 @@ function lightDark() {
     document.body.classList.toggle('dark-theme');
   });
 }
-
-
-
-// function toggleNight() {
-
-//   const body = document.querySelector('body');
-// if (body.classList.contains('dark-theme')) {
-//   body.classList.remove('dark-theme');
-//   localStorage.setItem("theme", "light");
-// } else {
-//   body.classList.add('dark-theme');
-//   localStorage.setItem("theme", "dark-theme");
-// }
-// }
-
-// if (localStorage.getItem("theme") === "dark-theme") {
-//   body.classList.add('dark-theme');
-// }
 
 function setupTabs() {
   document.querySelectorAll(".tabs__holder").forEach(event => {
