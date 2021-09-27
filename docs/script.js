@@ -164,7 +164,6 @@ function modal() {
 
 document.addEventListener("DOMContentLoaded", () => {
   toggleDark();
-  // lightDark();
   setupTabs();
   sidebar();
   removeTabs();

@@ -11,13 +11,15 @@
 
   &__wrap {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
+    width: 85%;
+    overflow: scroll;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
 
-    @media screen and (max-width: $web-up) {
+    @media screen and (max-width: $tablet-up) {
       flex-direction: column;
       width: 85%;
+      overflow: inherit;
     }
   }
 
@@ -27,28 +29,45 @@
     align-items: center;
     background-color: var(--var-wild-sand);
     padding-bottom: 15px;
-    width: 350px;
+    min-width: 580px;
     transition: all 0.25s linear;
     overflow: hidden;
-    margin: 0 2%;
-    box-shadow: 0 -1px 4px 0 var(--var-box-shadow-up-left), 6px 6px 6px 1px var(--var-box-shadow-down-right);
+    border-radius: 8px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 2em;
+    box-shadow: var(--var-box-sdw-static) 0px 2px 8px 0px;
+
+
+    @media screen and (min-width: $qhd) {
+      min-width: 700px;
+    }
 
     @media screen and (max-width: $web-up) {
-      margin-bottom: 100px;
+      min-width: 550px;
+    }
+
+    @media screen and (max-width: $tablet-up) {
+      margin-bottom: 2em;
+      margin-top: 0;
+      margin-right: 0;
+      margin-left: 0;
+      min-width: unset;
       width: 100%;
     }
   }
 
+  &__box:last-of-type {
+    margin-right: 1%;
+  }
+
   &__box:hover {
-    box-shadow: 1px 2px 10px 3px rgba(106, 104, 104, 0.47);
+    box-shadow: var(--var-box-sdw-hvr-arnd) 0px 1px 2px 0px, var(--var-box-sdw-hvr-top) 0px 1px 3px 1px;
   }
 
   &__box:hover .projects__tag {
     color: var(--var-hover-card);
-  }
-
-  &__box:hover .projects__desc {
-    font-size: 13.7px;
   }
 
   &__link {
@@ -58,14 +77,21 @@
   }
 
   &__frame {
-    max-height: 202px;
-    max-width: 350px;
+    max-height: 275px;
     overflow: hidden;
     padding: 10px;
+    max-width: 100%;
+
+    @media screen and (min-width: $qhd) {
+      max-height: 320px;
+    }
 
     @media screen and (max-width: $web-up) {
+      max-height: 250px;
+    }
+
+    @media screen and (max-width: $tablet-up) {
       max-height: 100%;
-      max-width: 100%;
     }
   }
 

@@ -40,11 +40,10 @@ body {
   // PICTURE BORDER
   --var-pic-border: #f5f5f5;
 
-  // VS SASS SVG
-  --var-light: #f5f5f5;
-
-  // EDUCATION SVG
-  --var-xray: #000;
+  // PROJECTS CARDS BOX-SHADOW
+  --var-box-sdw-static: rgba(99, 99, 99, 0.2);
+  --var-box-sdw-hvr-arnd: rgba(60, 64, 67, 0.3);
+  --var-box-sdw-hvr-top: rgba(60, 64, 67, 0.15);
 }
 
 body.darkMode {
@@ -73,11 +72,14 @@ body.darkMode {
   // PICTURE BORDER
   --var-pic-border: #555;
 
-  // SASS SVG
-  --var-light: #303234;
+  // PROJECTS CARDS BOX-SHADOW
+  --var-box-sdw-static: rgba(99, 99, 99, 0.25);
+  --var-box-sdw-hvr-arnd: rgb(96, 103, 108, 1);
+  --var-box-sdw-hvr-top: rgba(60, 64, 67, .8);
+}
 
-  // EDUCATION SVG
-  --var-xray: #959CA6;
+body.darkMode .projects__image {
+  filter: brightness(0.9);
 }
 
 h1,
