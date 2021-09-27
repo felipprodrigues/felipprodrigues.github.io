@@ -1,25 +1,25 @@
 {
   "proj-1": {
     "sites": "https://www.eventene.com/",
-    "image": "0",
+    "image": "1",
     "title": "Eventene",
-    "desc": "Lorem ipsum"
+    "desc": "Eventene is an all-in-one Event Management System for creating, organizing, and running Events on a single platform."
   },
   "proj-2": {
     "sites": "https://camelias-residencial.github.io/produtos-servicos/",
-    "image": "1",
+    "image": "2",
     "title": "Camélias Produtos e Serviços",
     "desc": "Project designed aiming to ease and help locals and service providers from within a community"
   },
   "proj-3": {
     "sites": "https://tainasilva.com.br/",
-    "image": "2",
+    "image": "3",
     "title": "Tainá's Website",
     "desc": "A new website project for a Brazilian architect and researcher following a minimalist design concept"
   },
   "proj-4": {
     "sites": "https://theater-theme.github.io/",
-    "image": "3",
+    "image": "4",
     "title": "Theater-themed Template",
     "desc": "Study case of a theater-themed template laying it out afterwards to the open source community"
   }
