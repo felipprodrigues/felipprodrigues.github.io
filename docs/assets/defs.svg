@@ -44,6 +44,10 @@
 			<desc>Download Icon</desc>
 			<path d="M0 852.98a90.007 90.007 0 0 1 89.98-90.018h776.04a90.02 90.02 0 0 1 0 180.038H89.98A90.008 90.008 0 0 1 0 852.98zm416.813-226.847l-234.15-234.25a89.98 89.98 0 1 1 127.272-127.227l80.583 80.517V90.02a89.982 89.982 0 1 1 179.963 0v255.153l75.587-75.616A90.015 90.015 0 1 1 773.34 396.884l-229.153 229.35c-4.5 5.1-10.5 9.2-16.1 12.8a84.43 84.43 0 0 1-15 7.6 92.67 92.67 0 0 1-28.494 5.8 94.087 94.087 0 0 1-15-.6c-20.286-2.296-38.082-11.898-52.78-25.7z"/>
 		</symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24">
+			<desc>Information Icon</desc>
+			<svg fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+		</symbol>
     <!-- FOOTER ICONS -->
     <symbol id="icon-git" viewBox="0 0 50 50">
       <desc>Git Icon</desc>
