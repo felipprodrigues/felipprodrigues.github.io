@@ -286,27 +286,10 @@
     justify-content: space-evenly;
   }
 
-  &__info {
-    display: inline;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    svg {
-      max-width: 25px;
-      max-height: 25px;
-    }
-
-    &__message {
-
-    }
-  }
-
   svg {
     max-width: 15px;
     max-height: 15px;
     fill: #fff;
     margin-left: 10px
   }
-
 }
