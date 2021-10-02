@@ -134,32 +134,39 @@ function activeElements() {
 };
 
 function modal() {
-  const openModal = document.getElementById('buttonPreview');
+  const prevButton = document.getElementById('buttonPreview');
   const modalOverlay = document.querySelector('.modal');
   const modalContent = document.querySelector('.modal__button');
   const modalByKey = window;
 
-  openModal.addEventListener('click', function (){
+  //= OPEN MODAL
+  prevButton.addEventListener('click', function (){
     modalOverlay.classList.add('is-open');
   });
 
+  //= CLOSING FUNCTIONS
   function closeModal() {
     modalOverlay.classList.remove('is-open');
-  }
+  };
 
-  // CLOSING FUNCTIONS
-  modalContent.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', function(event){
+  function outsideClosingClick(event) {
     const outsideClick = event.target.closest('.modal--inner');
     if( !outsideClick ) {
       closeModal()
-    }
-  });
-  modalByKey.addEventListener('keydown', event => {
+    };
+  };
+
+  function escKeyToClose(event) {
     if( event.key === 'Escape' ) {
       closeModal();
     }
-  })
+  }
+
+  //= CLOSING EVENTS
+  modalContent.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', outsideClosingClick);
+  modalByKey.addEventListener('keydown', escKeyToClose);
+
 };
 
 document.addEventListener("DOMContentLoaded", () => {
