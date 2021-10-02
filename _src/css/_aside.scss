@@ -23,6 +23,7 @@
     width: 100%;
     position: relative;
     transition: all .25s ease-in;
+    border-left: 1px solid transparent;
 
     &:first-child {
       margin-top: 25px;
@@ -38,7 +39,7 @@
   }
 
   &__elements--active {
-    border-left: 1px solid $wild-sand;
+    border-color: $wild-sand;
   }
 
   &__icons {
