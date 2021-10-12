@@ -26,6 +26,10 @@ function toggleDark() {
   })
 }
 
+// function buttonPersist() {
+//   // INCLUDE LOCALSTORAGE FOR SWITCH BUTTON
+// }
+
 function setupTabs() {
   document.querySelectorAll(".tabs__holder").forEach(event => {
     event.addEventListener("click", () => {
