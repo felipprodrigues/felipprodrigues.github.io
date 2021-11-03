@@ -10,5 +10,9 @@
   "icon-3": {
     "icon": "linkedin",
     "links": "https://www.linkedin.com/in/felipe-rodrigues-2929351b8/"
+  },
+  "icon-4": {
+    "icon": "codepen",
+    "links": "https://codepen.io/rodriguesfelipp"
   }
 }
