@@ -166,8 +166,20 @@ function modal() {
   modalContent.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', outsideClosingClick);
   modalByKey.addEventListener('keydown', escKeyToClose);
-
 };
+
+function carousel() {
+  const fetchButton = document.querySelectorAll('[data-scroll]');
+
+  function clickToScroll() {
+    fetchButton.forEach(button => {
+      console.log(button)
+    })
+  }
+
+  //! FIX
+  buttonClick.addEventListener('click', clickToScroll);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   toggleDark();
@@ -176,5 +188,6 @@ document.addEventListener("DOMContentLoaded", () => {
   removeTabs();
   activeElements();
   modal();
+  carousel()
 })
 
