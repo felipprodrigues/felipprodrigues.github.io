@@ -169,17 +169,44 @@ function modal() {
 };
 
 function carousel() {
-  const fetchButton = document.querySelectorAll('[data-scroll]');
+  const buttonClick = document.querySelectorAll('[data-scroll]');
+  const prevButton = document.querySelector('[data-scroll="prevButton"]')
+  const nextButton = document.querySelector('[data-scroll="nextButton"]')
+  const projectBox = document.querySelectorAll('.projects__box');
 
-  function clickToScroll() {
-    fetchButton.forEach(button => {
-      console.log(button)
-    })
-  }
+  function handleClick() {
 
-  //! FIX
-  buttonClick.addEventListener('click', clickToScroll);
-}
+    buttonClick.forEach(click => {
+      click.addEventListener('click', function() {
+        //decrease axisX value by clicking right
+
+        // const projectBoxWidthCalc = projectBox.clientWidth; //! REVIEW THIS VALUE
+
+        //? INCLUDE ARROW KEYS
+
+        if(this === nextButton ) {
+          projectBox.forEach(e => {
+            e.style.left = '-61.5%';
+          });
+        }
+
+        if(this === prevButton) {
+          //increase axisX value by clicking left
+          projectBox.forEach(e => {
+            e.style.left = '0';
+          });
+        }
+
+
+
+      });
+    });
+  };
+
+
+
+  handleClick();
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   toggleDark();
@@ -188,6 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
   removeTabs();
   activeElements();
   modal();
-  carousel()
+  carousel();
 })
 
