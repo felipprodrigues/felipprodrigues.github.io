@@ -174,18 +174,24 @@ function carousel() {
   const nextButton = document.querySelector('[data-scroll="nextButton"]')
   const projectBox = document.querySelectorAll('.projects__box');
 
+
+
   function handleClick() {
 
     buttonClick.forEach(click => {
       click.addEventListener('click', function() {
         //decrease axisX value by clicking right
 
-        // const projectBoxWidthCalc = projectBox.clientWidth; //! REVIEW THIS VALUE
+
+        //! FIND BOX WIDTH VALUE
+        // const widthValue = projectBox.forEach(el => console.log(el.offsetWidth) )
+
 
         //? INCLUDE ARROW KEYS
-
-        if(this === nextButton ) {
+        if (this === nextButton || this.key === 'arrowRight') {
           projectBox.forEach(e => {
+            //! ADD BOX WIDTH VALUE
+
             e.style.left = '-61.5%';
           });
         }
@@ -198,12 +204,13 @@ function carousel() {
         }
 
 
-
       });
     });
   };
 
-
+  buttonClick.forEach(keyDown => {
+    keyDown.addEventListener('keydown', console.log('it works'))
+  })
 
   handleClick();
 };
