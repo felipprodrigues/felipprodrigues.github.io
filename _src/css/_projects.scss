@@ -79,6 +79,7 @@
     margin-right: 2em;
     box-shadow: var(--var-box-sdw-static) 0px 2px 8px 0px;
     position: relative;
+    transform: translateX(0);
     transition: all .25s linear;
 
     @media screen and (min-width: $qhd) {

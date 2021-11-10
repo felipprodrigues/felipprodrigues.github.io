@@ -172,45 +172,49 @@ function carousel() {
   const buttonClick = document.querySelectorAll('[data-scroll]');
   const prevButton = document.querySelector('[data-scroll="prevButton"]')
   const nextButton = document.querySelector('[data-scroll="nextButton"]')
-  const projectBox = document.querySelectorAll('.projects__box');
-
-
+  const cards = document.querySelectorAll('.projects__wrap .projects__box');
+  const wrapper = document.querySelector('.projects__wrap')
 
   function handleClick() {
+    buttonClick.forEach(button => {
+      button.addEventListener('click', function() {
 
-    buttonClick.forEach(click => {
-      click.addEventListener('click', function() {
-        //decrease axisX value by clicking right
-
-
-        //! FIND BOX WIDTH VALUE
-        // const widthValue = projectBox.forEach(el => console.log(el.offsetWidth) )
+        if(button === nextButton) {
 
 
-        //? INCLUDE ARROW KEYS
-        if (this === nextButton || this.key === 'arrowRight') {
-          projectBox.forEach(e => {
-            //! ADD BOX WIDTH VALUE
+          }
+        })
 
-            e.style.left = '-61.5%';
-          });
-        }
+      })
+    }
+  // console.log(projectBox)
 
-        if(this === prevButton) {
-          //increase axisX value by clicking left
-          projectBox.forEach(e => {
-            e.style.left = '0';
-          });
-        }
+  // const widthTotal = projectBox.currentTarget.offsetWidth;
+  // console.log(widthTotal)
 
 
-      });
-    });
-  };
+  // function handleClick() {
+  //   buttonClick.forEach(click => {
+  //     click.addEventListener('click', function() {
 
-  buttonClick.forEach(keyDown => {
-    keyDown.addEventListener('keydown', console.log('it works'))
-  })
+  //       let boxWidth = 945;
+
+  //       if(click === nextButton) {
+  //         projectBox.forEach(e => {
+  //           if(projectBox < 1000) {
+
+  //           }
+  //         })
+  //       }
+
+  //       if(click === prevButton) {
+  //         projectBox.forEach(e => {
+  //           e.style.transform = `translateX(0)`;
+  //         })
+  //       }
+  //     });
+  //   });
+  // };
 
   handleClick();
 };
