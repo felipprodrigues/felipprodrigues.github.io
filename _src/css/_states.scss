@@ -66,6 +66,12 @@
   }
 }
 
+.is-mobile-hidden {
+  @media screen and (max-width: $mobile-up) {
+    display: none;
+  }
+}
+
 .is-tablet-hidden {
   @media screen and (max-width: $tablet-up) {
     display: none !important;
