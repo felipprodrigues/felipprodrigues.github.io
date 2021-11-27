@@ -48,19 +48,6 @@
       width: 100%;
     }
   }
-
-  // DOUBLE CHECK THESE RULES
-  .tabs,
-  .card {
-    width: calc(100% - 50px);
-    position: relative;
-    left: 50px;
-    display: flex;
-
-    @media screen and (max-width: $tablet-up) {
-      left: 0;
-    }
-  }
 }
 
 
