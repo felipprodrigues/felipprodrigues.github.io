@@ -166,7 +166,57 @@ function modal() {
   modalContent.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', outsideClosingClick);
   modalByKey.addEventListener('keydown', escKeyToClose);
+};
 
+function carousel() {
+  const buttonClick = document.querySelectorAll('[data-scroll]');
+  const prevButton = document.querySelector('[data-scroll="prevButton"]')
+  const nextButton = document.querySelector('[data-scroll="nextButton"]')
+  const cards = document.querySelectorAll('.projects__wrap .projects__box');
+  const wrapper = document.querySelector('.projects__wrap')
+
+  function handleClick() {
+    buttonClick.forEach(button => {
+      button.addEventListener('click', function() {
+
+        if(button === nextButton) {
+
+
+          }
+        })
+
+      })
+    }
+  // console.log(projectBox)
+
+  // const widthTotal = projectBox.currentTarget.offsetWidth;
+  // console.log(widthTotal)
+
+
+  // function handleClick() {
+  //   buttonClick.forEach(click => {
+  //     click.addEventListener('click', function() {
+
+  //       let boxWidth = 945;
+
+  //       if(click === nextButton) {
+  //         projectBox.forEach(e => {
+  //           if(projectBox < 1000) {
+
+  //           }
+  //         })
+  //       }
+
+  //       if(click === prevButton) {
+  //         projectBox.forEach(e => {
+  //           e.style.transform = `translateX(0)`;
+  //         })
+  //       }
+  //     });
+  //   });
+  // };
+
+  handleClick();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -176,5 +226,6 @@ document.addEventListener("DOMContentLoaded", () => {
   removeTabs();
   activeElements();
   modal();
+  carousel();
 })
 
