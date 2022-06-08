@@ -1,5 +1,14 @@
 {
   "proj-1": {
+<<<<<<< Updated upstream
+=======
+    "sites": "https://www.moneymoneyinvest.com.br/",
+    "image": "1",
+    "title": "Money Money Invest",
+    "desc": "Money Money Invest is a peer lending platform, or P2P, that connects companies looking for financial investors and investors with money to lend. The company's focus is on credit to Small and Medium Enterprises (SMEs)."
+  },
+  "proj-2": {
+>>>>>>> Stashed changes
     "sites": "https://www.eventene.com/",
     "image": "1",
     "title": "Eventene",
